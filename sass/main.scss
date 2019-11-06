@@ -1,0 +1,64 @@
+@import 'variable';
+
+/* General
+-------------------------------------------------------------- */
+*,
+*:before,
+*:after
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body
+{ 
+	font-family: 'work sans',sans-serif; 
+	font-weight: 400; 
+	font-size: 14px; 
+	line-height: 1.5; 
+	-webkit-font-smoothing: antialiased; 
+	text-rendering: optimizeLegibility; 
+	min-height: 100vh;
+	background-color: #000;
+	color: #fff;
+}
+img
+{
+	max-width: 100%; 
+	vertical-align: middle; 
+	-ms-interpolation-mode: bicubic;
+}
+
+a
+{
+	display: inline-block;
+	text-decoration: none;
+	transition : $transition3s;
+}
+
+// page rules
+
+.sd-page
+{
+	&,
+	& .row,
+	& .row .sd-col
+	{
+		height: 100vh;
+	}
+
+	.sd-bg
+	{
+		background-color: #fff;
+		color: #000;
+	}
+}
+@media screen and (max-width: 768px)
+{
+	.sd-page .row .sd-col
+	{
+		height: 50%;
+		margin-top: auto;
+	}
+}

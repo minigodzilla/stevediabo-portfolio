@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap");
+/* General
+-------------------------------------------------------------- */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'work sans',sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff; }
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic; }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.sd-page,
+.sd-page .row,
+.sd-page .row .sd-col {
+  height: 100vh; }
+
+.sd-page .sd-bg {
+  background-color: #fff;
+  color: #000; }
+
+@media screen and (max-width: 768px) {
+  .sd-page .row .sd-col {
+    height: 50%;
+    margin-top: auto; } }
