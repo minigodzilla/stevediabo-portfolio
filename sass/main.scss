@@ -37,6 +37,215 @@ a
 	transition : $transition3s;
 }
 
+// stripes
+
+.sd-stripe
+{
+	position: absolute;
+	top: 0;
+	right: auto;
+	bottom: 0;
+	top: 0;
+	width: 50px;
+	height: 100%;
+	background-color: transparent;
+
+	&.sd-t
+	{
+		&-10
+		{
+			background-image: linear-gradient(135deg,
+				transparent 0%,
+				transparent 45%,
+				#ffffff 45%,
+				#ffffff 50%,
+				transparent 50%,
+				transparent 95%,
+				#ffffff 95%,
+				#ffffff 100%
+				);
+		}
+		&-20
+		{
+			background-image: linear-gradient(135deg,
+				transparent 0%,
+				transparent 40%,
+				#ffffff 40%,
+				#ffffff 50%,
+				transparent 50%,
+				transparent 90%,
+				#ffffff 90%,
+				#ffffff 100%
+				);
+		}
+		&-30
+		{
+			background-image: linear-gradient(135deg,
+				transparent 0%,
+				transparent 35%,
+				#ffffff 35%,
+				#ffffff 50%,
+				transparent 50%,
+				transparent 85%,
+				#ffffff 85%,
+				#ffffff 100%
+				);
+		}
+		&-40
+		{
+			background-image: linear-gradient(135deg,
+				transparent 0%,
+				transparent 30%,
+				#ffffff 30%,
+				#ffffff 50%,
+				transparent 50%,
+				transparent 80%,
+				#ffffff 80%,
+				#ffffff 100%
+				);
+		}
+		&-50
+		{
+			background-image: linear-gradient(135deg,
+				transparent 0%,
+				transparent 25%,
+				#ffffff 25%,
+				#ffffff 50%,
+				transparent 50%,
+				transparent 75%,
+				#ffffff 75%,
+				#ffffff 100%
+				);
+		}
+		&-60
+		{
+			background-image: linear-gradient(135deg,
+				transparent 0%,
+				transparent 20%,
+				#ffffff 20%,
+				#ffffff 50%,
+				transparent 50%,
+				transparent 70%,
+				#ffffff 70%,
+				#ffffff 100%
+				);
+		}
+		&-70
+		{
+			background-image: linear-gradient(135deg,
+				transparent 0%,
+				transparent 15%,
+				#ffffff 15%,
+				#ffffff 50%,
+				transparent 50%,
+				transparent 65%,
+				#ffffff 65%,
+				#ffffff 100%
+				);
+		}
+		&-80
+		{
+			background-image: linear-gradient(135deg,
+				transparent 0%,
+				transparent 10%,
+				#ffffff 10%,
+				#ffffff 50%,
+				transparent 50%,
+				transparent 60%,
+				#ffffff 60%,
+				#ffffff 100%
+				);
+		}
+		&-90
+		{
+			background-image: linear-gradient(135deg,
+				transparent 0%,
+				transparent 5%,
+				#ffffff 5%,
+				#ffffff 50%,
+				transparent 50%,
+				transparent 55%,
+				#ffffff 55%,
+				#ffffff 100%
+				);
+		}
+	}
+
+
+	&.sd-s
+	{
+		&-10	{ background-size: 10px  10px;  }
+		&-20	{ background-size: 20px  20px;  }
+		&-30	{ background-size: 30px  30px;  }
+		&-40	{ background-size: 40px  40px;  }
+		&-50	{ background-size: 50px  50px;  }
+		&-60	{ background-size: 60px  60px;  }
+		&-70	{ background-size: 70px  70px;  }
+		&-80	{ background-size: 80px  80px;  }
+		&-90	{ background-size: 90px  90px;  }
+		&-100	{ background-size: 100px 100px; }
+	}
+
+	&.sd-w
+	{
+		&-10	{ width: 10px;  }
+		&-20	{ width: 20px;  }
+		&-30	{ width: 30px;  }
+		&-40	{ width: 40px;  }
+		&-50	{ width: 50px;  }
+		&-60	{ width: 60px;  }
+		&-70	{ width: 70px;  }
+		&-80	{ width: 80px;  }
+		&-90	{ width: 90px;  }
+		&-100	{ width: 100px; }
+	}
+
+	&.sd-stripe-1
+	{
+		clip-path: polygon(0 100%, 100% 100%, 100% 200%, 0% 200%);
+
+		&.sd-animated
+		{
+			clip-path: polygon(0 -100%, 100% -100%, 100% 0%, 0% 0%);
+		}
+	}
+
+	&.sd-stripe-2
+	{
+		clip-path: polygon(0 0%, 100% 0%, 100% 50%, 0% 50%);
+
+		&.sd-animated
+		{
+			clip-path: polygon(0 -25%, 100% -25%, 100% 25%, 0% 25%);
+		}
+	}
+
+	// &.sd-animated
+	// {
+	// 	animation-name: magic;
+	// 	animation-duration: 10s;
+	// 	animation-iteration-count: infinite;
+	// 	animation-timing-function: linear;
+	// }
+
+	// @keyframes magic {
+	// 	0%		{ clip-path: polygon(0 100%, 100% 100%, 100% 150%, 0% 150%); }
+	// 	100%	{ clip-path: polygon(0 -50%, 100% -50%, 100% 0%, 0% 0%); }
+	// }
+}
+
+.sd-stripe-area
+{
+	position: absolute;
+	top: 0;
+	right: auto;
+	bottom: 0;
+	top: 0;
+	width: 200px;
+	height: 100%;
+}
+
+
 // page rules
 
 .sd-page
@@ -78,7 +287,6 @@ a
 	{
 		.sd-box
 		{
-
 		}
 	}
 

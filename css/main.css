@@ -30,6 +30,95 @@ a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
+.sd-stripe {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  background-color: transparent; }
+  .sd-stripe.sd-t-10 {
+    background-image: linear-gradient(135deg, transparent 0%, transparent 45%, #ffffff 45%, #ffffff 50%, transparent 50%, transparent 95%, #ffffff 95%, #ffffff 100%); }
+  .sd-stripe.sd-t-20 {
+    background-image: linear-gradient(135deg, transparent 0%, transparent 40%, #ffffff 40%, #ffffff 50%, transparent 50%, transparent 90%, #ffffff 90%, #ffffff 100%); }
+  .sd-stripe.sd-t-30 {
+    background-image: linear-gradient(135deg, transparent 0%, transparent 35%, #ffffff 35%, #ffffff 50%, transparent 50%, transparent 85%, #ffffff 85%, #ffffff 100%); }
+  .sd-stripe.sd-t-40 {
+    background-image: linear-gradient(135deg, transparent 0%, transparent 30%, #ffffff 30%, #ffffff 50%, transparent 50%, transparent 80%, #ffffff 80%, #ffffff 100%); }
+  .sd-stripe.sd-t-50 {
+    background-image: linear-gradient(135deg, transparent 0%, transparent 25%, #ffffff 25%, #ffffff 50%, transparent 50%, transparent 75%, #ffffff 75%, #ffffff 100%); }
+  .sd-stripe.sd-t-60 {
+    background-image: linear-gradient(135deg, transparent 0%, transparent 20%, #ffffff 20%, #ffffff 50%, transparent 50%, transparent 70%, #ffffff 70%, #ffffff 100%); }
+  .sd-stripe.sd-t-70 {
+    background-image: linear-gradient(135deg, transparent 0%, transparent 15%, #ffffff 15%, #ffffff 50%, transparent 50%, transparent 65%, #ffffff 65%, #ffffff 100%); }
+  .sd-stripe.sd-t-80 {
+    background-image: linear-gradient(135deg, transparent 0%, transparent 10%, #ffffff 10%, #ffffff 50%, transparent 50%, transparent 60%, #ffffff 60%, #ffffff 100%); }
+  .sd-stripe.sd-t-90 {
+    background-image: linear-gradient(135deg, transparent 0%, transparent 5%, #ffffff 5%, #ffffff 50%, transparent 50%, transparent 55%, #ffffff 55%, #ffffff 100%); }
+  .sd-stripe.sd-s-10 {
+    background-size: 10px  10px; }
+  .sd-stripe.sd-s-20 {
+    background-size: 20px  20px; }
+  .sd-stripe.sd-s-30 {
+    background-size: 30px  30px; }
+  .sd-stripe.sd-s-40 {
+    background-size: 40px  40px; }
+  .sd-stripe.sd-s-50 {
+    background-size: 50px  50px; }
+  .sd-stripe.sd-s-60 {
+    background-size: 60px  60px; }
+  .sd-stripe.sd-s-70 {
+    background-size: 70px  70px; }
+  .sd-stripe.sd-s-80 {
+    background-size: 80px  80px; }
+  .sd-stripe.sd-s-90 {
+    background-size: 90px  90px; }
+  .sd-stripe.sd-s-100 {
+    background-size: 100px 100px; }
+  .sd-stripe.sd-w-10 {
+    width: 10px; }
+  .sd-stripe.sd-w-20 {
+    width: 20px; }
+  .sd-stripe.sd-w-30 {
+    width: 30px; }
+  .sd-stripe.sd-w-40 {
+    width: 40px; }
+  .sd-stripe.sd-w-50 {
+    width: 50px; }
+  .sd-stripe.sd-w-60 {
+    width: 60px; }
+  .sd-stripe.sd-w-70 {
+    width: 70px; }
+  .sd-stripe.sd-w-80 {
+    width: 80px; }
+  .sd-stripe.sd-w-90 {
+    width: 90px; }
+  .sd-stripe.sd-w-100 {
+    width: 100px; }
+  .sd-stripe.sd-stripe-1 {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 200%, 0% 200%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 200%, 0% 200%); }
+    .sd-stripe.sd-stripe-1.sd-animated {
+      -webkit-clip-path: polygon(0 -100%, 100% -100%, 100% 0%, 0% 0%);
+              clip-path: polygon(0 -100%, 100% -100%, 100% 0%, 0% 0%); }
+  .sd-stripe.sd-stripe-2 {
+    -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 50%, 0% 50%);
+            clip-path: polygon(0 0%, 100% 0%, 100% 50%, 0% 50%); }
+    .sd-stripe.sd-stripe-2.sd-animated {
+      -webkit-clip-path: polygon(0 -25%, 100% -25%, 100% 25%, 0% 25%);
+              clip-path: polygon(0 -25%, 100% -25%, 100% 25%, 0% 25%); }
+
+.sd-stripe-area {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  top: 0;
+  width: 200px;
+  height: 100%; }
+
 .sd-page {
   height: 100vh;
   position: relative; }
