@@ -34,6 +34,8 @@ a {
   height: 100vh;
   position: relative; }
   .sd-page .sd-box {
+    background-color: #fff;
+    color: #000;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -41,22 +43,21 @@ a {
     right: 0;
     bottom: 0;
     left: 0; }
-  .sd-page.sd-page-1, .sd-page.sd-page-7 {
-    background-color: #000; }
-    .sd-page.sd-page-1 .sd-box, .sd-page.sd-page-7 .sd-box {
-      background-color: #fff;
-      color: #000;
+  .sd-page.sd-page-1 {
+    background-color: #000;
+    margin-bottom: 100vh; }
+    .sd-page.sd-page-1 .sd-box {
       width: 100%;
       height: 50%;
       top: auto;
       right: 0;
       bottom: 0;
-      left: 0; }
-  .sd-page.sd-page-2, .sd-page.sd-page-6, .sd-page.sd-page-8 {
-    background-color: #333; }
-  .sd-page.sd-page-3, .sd-page.sd-page-5, .sd-page.sd-page-9 {
+      left: 0;
+      display: -webkit-box;
+      display: flex; }
+  .sd-page.sd-page-3 .sd-box, .sd-page.sd-page-5 .sd-box {
     background-color: #666; }
-  .sd-page.sd-page-4 {
+  .sd-page.sd-page-4 .sd-box {
     background-color: #999; }
 
 @media screen and (min-width: 768px) {

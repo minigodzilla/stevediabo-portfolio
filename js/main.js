@@ -2,35 +2,6 @@
 var controller = new ScrollMagic.Controller();
 
 $(function () {
-	// build scene
-	// var scene = new ScrollMagic.Scene( {
-	// 	triggerElement: ".sd-page-1",
-	// 	triggerHook: 0,
-	// 	duration: 1000
-	// })
-	// .setPin(".sd-page-1")
-	// .addIndicators({name: "1 (duration: 1000)"}) // add indicators (requires plugin)
-	// .addTo(controller);
-
-	// // build scene
-	// var scene = new ScrollMagic.Scene( {
-	// 	triggerElement: ".sd-page-2",
-	// 	triggerHook: 0,
-	// 	duration: 1000
-	// })
-	// .setPin(".sd-page-2")
-	// .addIndicators({name: "1 (duration: 1000)"}) // add indicators (requires plugin)
-	// .addTo(controller);
-
-	// // build scene
-	// var scene = new ScrollMagic.Scene( {
-	// 	triggerElement: ".sd-page-2",
-	// 	triggerHook: 0,
-	// 	duration: 1000
-	// })
-	// .setPin(".sd-page-2")
-	// .addIndicators({name: "1 (duration: 1000)"}) // add indicators (requires plugin)
-	// .addTo(controller);
 
 	// Create an instance of the Scroll Magic Controller
 	let scrollController = new ScrollMagic.Controller();
@@ -39,28 +10,28 @@ $(function () {
 
 		const page1 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-1', triggerHook: 0, duration: '100%'
-		}).setPin(".sd-page-1")
-		// }).setPin(".sd-page-1", {pushFollowers: false})
-		.addIndicators({name: "pg1"})
+			triggerElement: '.sd-page-1', triggerHook: 0, duration: '200%'
+		// }).setPin(".sd-page-1")
+		}).setPin('.sd-page-1', { pushFollowers: false })
+		.addIndicators({name: 'pg1'})
 
 		const page2 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-2', triggerHook: 0, duration: '100%'
-		}).setPin(".sd-page-2")
-		.addIndicators({name: "pg2"})
+		}).setPin('.sd-page-2')
+		.addIndicators({name: 'pg2'})
 
 		const page3 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-3', triggerHook: 0, duration: '100%'
-		}).setPin(".sd-page-3")
-		.addIndicators({name: "pg3"})
+		}).setPin('.sd-page-3')
+		.addIndicators({name: 'pg3'})
 
 		const page4 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-4', triggerHook: 0, duration: '100%'
-		}).setPin(".sd-page-4")
-		.addIndicators({name: "pg4"})
+		}).setPin('.sd-page-4')
+		.addIndicators({name: 'pg4'})
 
 
 		// Add scenes to the controller
