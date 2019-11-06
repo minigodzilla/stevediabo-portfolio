@@ -41,24 +41,74 @@ a
 
 .sd-page
 {
-	&,
-	& .row,
-	& .row .sd-col
+	height: 100vh;
+	position: relative;
+
+	.sd-box
 	{
-		height: 100vh;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 	}
 
-	.sd-bg
+	&.sd-page-1,
+	&.sd-page-7
 	{
-		background-color: #fff;
-		color: #000;
+		background-color: #000;
+
+		.sd-box
+		{
+			background-color: #fff;
+			color: #000;
+			width: 100%;
+			height: 50%;
+			top: auto;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&.sd-page-2,
+	&.sd-page-6,
+	&.sd-page-8
+	{
+		background-color: #333;
+	}
+
+	&.sd-page-3,
+	&.sd-page-5,
+	&.sd-page-9
+	{
+		background-color: #666;
+	}
+
+	&.sd-page-4
+	{
+		background-color: #999;
 	}
 }
-@media screen and (max-width: 768px)
+
+// desktop stuff
+@media screen and (min-width: 768px)
 {
-	.sd-page .row .sd-col
+	.sd-page
 	{
-		height: 50%;
-		margin-top: auto;
+		&.sd-page-1
+		{
+			.sd-box
+			{
+				width: 50%;
+				height: 100%;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: auto;
+			}
+		}
 	}
 }
