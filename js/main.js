@@ -3,6 +3,9 @@ var controller = new ScrollMagic.Controller();
 
 $(function () {
 
+    var n = $(".sd-page");
+    n.length > 0 && n.css("min-height", n.height() + "px");
+
 	// Create an instance of the Scroll Magic Controller
 	let scrollController = new ScrollMagic.Controller();
 
@@ -46,6 +49,9 @@ $(function () {
 		page3.addTo (scrollController);
 		page4.addTo (scrollController);
 
+		// Smooth Scroll
+		var scroll = new SmoothScroll('a[href*="#"]', {
+			speed: 500
+		});
 	})();
-
 });
