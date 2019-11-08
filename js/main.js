@@ -3,55 +3,75 @@ var controller = new ScrollMagic.Controller();
 
 $(function () {
 
-    var n = $(".sd-page");
-    n.length > 0 && n.css("min-height", n.height() + "px");
-
 	// Create an instance of the Scroll Magic Controller
 	let scrollController = new ScrollMagic.Controller();
 
 	(() => {
 
+		// lock down the min-height of all the pages, based on the current px size of 100vh
+
+		var n = $(".sd-page");
+		n.length > 0 && n.css("min-height", n.height() + "px");
+
+		// pg 1
+
 		const page1tween = TweenMax.to('.sd-page-1 .sd-animated-item', 1, { className: '+=sd-animated', ease: Power0.easeNone });
 
-		const page1 = new ScrollMagic.Scene
+		const page1scene = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-1', triggerHook: 0, duration: '200%'
 		})
-		.setTween(page1tween)
 		.setPin('.sd-page-1', { pushFollowers: false })
-		//.addIndicators({name: 'pg1'})
+		.setTween(page1tween)
+		.addIndicators({name: 'pg1'})
 
-		const page2 = new ScrollMagic.Scene
+		// pg 2
+
+		const page2tween = TweenMax.to('.sd-page-2 .sd-animated-item', 1, { className: '+=sd-animated', ease: Power0.easeNone });
+
+		const page2scene = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-2', triggerHook: 0, duration: '100%'
 		})
-		.setPin('.sd-page-2')
-		//.addIndicators({name: 'pg2'})
+		.setPin('.sd-page-2', { pushFollowers: false })
+		.setTween(page2tween)
+		.addIndicators({name: 'pg2'})
 
-		const page3 = new ScrollMagic.Scene
+		// pg 3
+
+		const page3tween1 = TweenMax.to('.sd-page-3', 1, { className: '+=sd-animated', ease: Power0.easeNone });
+
+		const page3scene1 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-3', triggerHook: 0, duration: '100%'
+			triggerElement: '.sd-page-3', triggerHook: 0, duration: '400%'
 		})
 		.setPin('.sd-page-3')
-		//.addIndicators({name: 'pg3'})
+		.setTween(page3tween1)
+		.addIndicators({name: 'pg3'})
 
-		const page4 = new ScrollMagic.Scene
+		const page3timeline1 = new TimelineLite();
+		page3timeline1
+			.fromTo('.sd-page-3 .sd-detail-bg-box', 0.2, { scaleX: 0, ease: Power2.easeInOut }, { scaleX: 1, ease: Power2.easeInOut })
+			.fromTo('.sd-page-3 .sd-detail-fg-box', 0.1, { opacity: 0, ease: Power2.easeInOut }, { opacity: 1, ease: Power2.easeInOut });
+
+		const page3scene2 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-4', triggerHook: 0, duration: '100%'
+			triggerElement: '.sd-page-3', triggerHook: 0, offset: (n.height() * 1.5)
 		})
-		.setPin('.sd-page-4')
-		//.addIndicators({name: 'pg4'})
+		.setTween(page3timeline1)		
+		.addIndicators({name: 'pg3 t1'})
 
 
 		// Add scenes to the controller
-		page1.addTo (scrollController);
-		page2.addTo (scrollController);
-		page3.addTo (scrollController);
-		page4.addTo (scrollController);
+		page1scene.addTo (scrollController);
+		page2scene.addTo (scrollController);
+		page3scene1.addTo (scrollController);
+		page3scene2.addTo (scrollController);
 
 		// Smooth Scroll
 		var scroll = new SmoothScroll('a[href*="#"]', {
-			speed: 500
+			speed: 750
 		});
+
 	})();
 });

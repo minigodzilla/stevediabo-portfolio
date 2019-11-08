@@ -131,21 +131,20 @@ a {
   .sd-page .sd-stripe-area {
     bottom: 50%; }
   .sd-page .sd-box {
-    background-color: #fff;
-    color: #000;
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0; }
   .sd-page.sd-page-1 {
-    background-color: #000;
+    background-color: #888;
     background-image: url("../img/bg_p01.jpg");
     background-size: cover;
+    color: #fff;
     margin-bottom: 100vh; }
     .sd-page.sd-page-1 .sd-box {
+      background-color: #fff;
+      color: #000;
       width: 100%;
       height: 50%;
       top: auto;
@@ -187,11 +186,86 @@ a {
           -webkit-transform: translateY(-60px);
                   transform: translateY(-60px); }
   .sd-page.sd-page-2 {
-    position: relative; }
-  .sd-page.sd-page-3 .sd-box, .sd-page.sd-page-5 .sd-box {
-    background-color: #666; }
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #888;
+    color: #fff;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -2px;
+    font-weight: 300; }
+    .sd-page.sd-page-2 .sd-box .sd-text {
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px); }
+      .sd-page.sd-page-2 .sd-box .sd-text.sd-animated {
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px); }
+  .sd-page.sd-page-3 {
+    margin-top: 200vh;
+    background-color: #888;
+    background-image: url("../img/bg_p03.jpg");
+    background-size: auto 125%;
+    background-position: 50% 0%;
+    color: #fff; }
+    .sd-page.sd-page-3.sd-animated {
+      background-position: 50% 100%; }
+    .sd-page.sd-page-3 .sd-title-box .sd-year,
+    .sd-page.sd-page-3 .sd-title-box .sd-company {
+      position: absolute;
+      margin: 0;
+      line-height: 1;
+      text-transform: uppercase; }
+    .sd-page.sd-page-3 .sd-title-box .sd-year {
+      margin-top: -90px;
+      margin-left: -340px;
+      font-size: 48px;
+      font-weight: 500;
+      letter-spacing: 10px; }
+    .sd-page.sd-page-3 .sd-title-box .sd-company {
+      font-size: 96px;
+      font-weight: 600;
+      letter-spacing: 5px; }
+
+@-webkit-keyframes sd-detail-box-animation {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0; }
+  27.5% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes sd-detail-box-animation {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0; }
+  27.5% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+    .sd-page.sd-page-3 .sd-detail-bg-box {
+      background-color: #fff;
+      top: 10%;
+      right: 10%;
+      bottom: 10%;
+      left: 10%; }
+    .sd-page.sd-page-3 .sd-detail-fg-box {
+      color: #000;
+      top: 10%;
+      right: 10%;
+      bottom: 10%;
+      left: 10%;
+      padding: 50px; }
+      .sd-page.sd-page-3 .sd-detail-fg-box .sd-text .sd-video {
+        height: 100%; }
   .sd-page.sd-page-4 .sd-box {
     background-color: #999; }
+  .sd-page.sd-page-5 .sd-box {
+    background-color: #666; }
 
 @media screen and (min-width: 768px) {
   .sd-page.sd-page-1 .sd-stripe-area {

@@ -271,11 +271,7 @@ a
 
 	.sd-box
 	{
-		background-color: #fff;
-		color: #000;
 		position: absolute;
-		width: 100%;
-		height: 100%;
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -284,13 +280,16 @@ a
 
 	&.sd-page-1
 	{
-		background-color: #000;
+		background-color: #888;
 		background-image: url('../img/bg_p01.jpg');
 		background-size: cover;
+		color: #fff;
 		margin-bottom: 100vh;
 
 		.sd-box
 		{
+			background-color: #fff;
+			color: #000;
 			width: 100%;
 			height: 50%;
 			top: auto;
@@ -351,30 +350,117 @@ a
 
 	&.sd-page-2
 	{
-		position: relative;
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		background-color: #888;
+		color: #fff;
+		font-size: 36px;
+		line-height: 48px;
+		letter-spacing: -2px;
+		font-weight: 300;
 
 		// &::before
 		// {
 		// 	content: '';
-		// 	width: 50vw;
-		// 	height: 50vw;
-		// 	background-color: #fff;
+		// 	width: 100%;
+		// 	height: 20px;
+		// 	background-color: #000;
 		// 	position: absolute;
-		// 	top: -50vw;
-		// 	left: 50vw;
-		// 	clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+		// 	top: -20px;
+		// 	left: 0;
+		// 	mask-image: linear-gradient(0deg, rgba(0,0,0,0.1), transparent);
 		// }
+
 		.sd-box
 		{
+			.sd-text
+			{
+				transform: translateY(30px);
+
+				&.sd-animated
+				{
+					transform: translateY(-30px);
+				}
+			}
 		}
 	}
 
-	&.sd-page-3,
-	&.sd-page-5
+	&.sd-page-3
 	{
-		.sd-box
+		margin-top: 200vh;
+		background-color: #888;
+		background-image: url('../img/bg_p03.jpg');
+		background-size: auto 125%;
+		background-position: 50% 0%;
+		color: #fff;
+
+		&.sd-animated
 		{
-			background-color: #666;
+			background-position: 50% 100%;
+		}
+
+		.sd-title-box
+		{
+			.sd-year,
+			.sd-company
+			{
+				position: absolute;
+				margin: 0;
+				line-height: 1;
+				text-transform: uppercase;
+			}
+
+			.sd-year
+			{
+				margin-top: -90px;
+				margin-left: -340px;
+				font-size: 48px;
+				font-weight: 500;
+				letter-spacing: 10px;
+			}
+
+			.sd-company
+			{
+				font-size: 96px;
+				font-weight: 600;
+				letter-spacing: 5px;
+			}
+		}
+
+		@keyframes sd-detail-box-animation
+		{
+			0%		{ opacity: 0; }
+			25%		{ opacity: 0; }
+			27.5%	{ opacity: 1; }
+			100%	{ opacity: 1; }
+		}
+
+		.sd-detail-bg-box
+		{
+			background-color: #fff;
+			top: 10%;
+			right: 10%;
+			bottom: 10%;
+			left: 10%;
+		}
+		.sd-detail-fg-box
+		{
+			color: #000;
+			top: 10%;
+			right: 10%;
+			bottom: 10%;
+			left: 10%;
+			padding: 50px;
+
+			.sd-text
+			{
+				.sd-video
+				{
+					height: 100%;
+				}
+			}
 		}
 	}
 
@@ -383,6 +469,14 @@ a
 		.sd-box
 		{
 			background-color: #999;
+		}
+	}
+
+	&.sd-page-5
+	{
+		.sd-box
+		{
+			background-color: #666;
 		}
 	}
 }
