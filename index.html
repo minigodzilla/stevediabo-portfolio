@@ -18,7 +18,7 @@
 	</head>
 	<body>
 
-		<section class="sd-page sd-page-1" id="sd-page-1">
+		<section class="sd-page sd-page-1 sd-lock-height" id="sd-page-1">
 			<div class="sd-stripe-area">
 				<div class="sd-stripe sd-stripe-1 sd-t-50 sd-s-50 sd-animated-item"></div>
 				<div class="sd-stripe sd-stripe-2 sd-t-10 sd-s-20 sd-animated-item"></div>
@@ -33,9 +33,9 @@
 					<div class="row">
 						<div class="col-12">
 							<h1 class="sd-name sd-animated-item">Steve Diabo</h1>
-							<h2 class="sd-role sd-animated-item">Creative Developer</h2>
-							<h3 class="sd-location sd-animated-item">Toronto, CA</h3>
-							<a href="#sd-page-2">Click</a>
+							<div class="sd-role sd-animated-item">Creative Developer</div>
+							<div class="sd-location sd-animated-item">Toronto, CA</div>
+							<!-- <a href="#sd-page-2">Click</a> -->
 						</div>
 					</div>
 				</div>
@@ -43,16 +43,16 @@
 			</div>
 		</section>
 
-		<section class="sd-page sd-page-2" id="sd-page-2">
+		<section class="sd-page sd-page-2 sd-lock-height" id="sd-page-2">
 			<div class="sd-box d-flex flex-column justify-content-center">
 
 				<div class="container">
 					<div class="row">
 						<div class="col-8 mx-auto sd-text sd-animated-item">
-							<p>Building interfaces is a passion of mine.</p>
-							<p>Here is a selection of some of my work from the past few years.</p>
-							<p>I hope you enjoy the presentation!</p>
-							<p>- SD</p>
+							<p class="sd-p">Building interfaces is a passion of mine.</p>
+							<p class="sd-p">Here is a selection of some of my work from the past few years.</p>
+							<p class="sd-p">I hope you enjoy the presentation!</p>
+							<p class="sd-p">- SD</p>
 						</div>
 					</div>
 				</div>
@@ -60,27 +60,45 @@
 			</div>
 		</section>
 
-		<section class="sd-page sd-page-3" id="sd-page-3">
-			<div class="sd-box sd-title-box d-flex flex-column align-items-center justify-content-center">
+		<section class="sd-page sd-page-3 sd-lock-height" id="sd-page-3">
+			<div class="sd-box sd-detail-title-box d-flex flex-column align-items-center justify-content-center">
 
-				<h5 class="sd-year">2019</h5>
-				<h4 class="sd-company">StackAdapt</h4>
+				<div class="sd-year">2019</div>
+				<div class="sd-company">StackAdapt</div>
 
 			</div>
 			<div class="sd-box sd-detail-bg-box"></div>
 			<div class="sd-box sd-detail-fg-box">
 
 				<div class="sd-text container-fluid">
-					<div class="row">
+					<div class="row align-items-center">
 						<div class="col-6">
-							<div>2019</div>
-							<div>StackAdapt</div>
-							<div>Homepage, WordPress theme, HTML5 emails + creatives</div>
-							<div>During my time at StackAdapt, I helped build their marketing team and set them up with the tools to succeed, grow and appeal to their customers.</div>
-							<div>2019</div>
+							<div class="sd-year">2019</div>
+							<h2 class="sd-company">StackAdapt</h2>
+							<h3 class="sd-duties">Homepage, WordPress theme, HTML5 emails + creatives</h3>
+							<p class="sd-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p> 
+							<p class="sd-p">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus.</p>
 						</div>
 						<div class="col-6">
-							<video class="sd-video d-block mx-auto" autoplay="" loop="" muted="" playsinline="" preload="metadata" src="video/sa-mobile.mp4"></video>
+							<div class="sd-bezel sd-bezel-phone">
+								<svg class="sd-svg" viewBox="0 0 730 730" xmlns="http://www.w3.org/2000/svg">
+									<!-- <path d="m225 728.5c-21.23 0-38.5-17.27-38.5-38.5v-650c0-21.23 17.27-38.5 38.5-38.5h280c21.23 0 38.5 17.27 38.5 38.5v650c0 21.23-17.27 38.5-38.5 38.5z" fill="#eee"/> -->
+									<path class="sd-bezel-phone-body" d="m505 3c20.4 0 37 16.6 37 37v650c0 20.4-16.6 37-37 37h-280c-20.4 0-37-16.6-37-37v-650c0-20.4 16.6-37 37-37zm0-3h-280c-22.09 0-40 17.91-40 40v650c0 22.09 17.91 40 40 40h280c22.09 0 40-17.91 40-40v-650c0-22.09-17.91-40-40-40z" fill="#808080"/>
+									<path class="sd-bezel-phone-earpiece" d="m385 48c1.1 0 2 .9 2 2s-.9 2-2 2h-40c-1.1 0-2-.9-2-2s.9-2 2-2zm0-3h-40c-2.76 0-5 2.24-5 5s2.24 5 5 5h40c2.76 0 5-2.24 5-5s-2.24-5-5-5z" fill="#808080"/>
+									<!-- <path class="sd-bezel-phone-screen" d="m522 79v562h-314v-562zm3-3h-320v568h320z" fill="#808080"/> -->
+									<path class="sd-bezel-phone-home-btn" d="m365 663c12.13 0 22 9.87 22 22s-9.87 22-22 22-22-9.87-22-22 9.87-22 22-22m0-3c-13.81 0-25 11.19-25 25s11.19 25 25 25 25-11.19 25-25-11.19-25-25-25z" fill="#808080"/>
+								</svg>
+								<video class="sd-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" src="video/sa-mobile.mp4"></video>
+							</div>
+							<div class="sd-bezel sd-bezel-laptop">
+								<svg class="sd-svg" viewBox="0 0 730 730" xmlns="http://www.w3.org/2000/svg">
+									<path d="m655 161c3.86 0 7 3.14 7 7v377h-594v-377c0-3.86 3.14-7 7-7zm0-3h-580c-5.52 0-10 4.48-10 10v380h600v-380c0-5.52-4.48-10-10-10z" fill="#808080"/>
+									<path d="m712 548v14c0 3.86-3.14 7-7 7h-680c-3.86 0-7-3.14-7-7v-14zm3-3h-700v17c0 5.52 4.48 10 10 10h680c5.52 0 10-4.48 10-10z" fill="#808080"/>
+									<path d="m412 548.5v2c0 3.86-3.14 7-7 7h-80c-3.86 0-7-3.14-7-7v-2zm3-3h-100v5c0 5.52 4.48 10 10 10h80c5.52 0 10-4.48 10-10z" fill="#808080"/>
+									<!-- <path d="m86.5 179.5h557v347h-557z" fill="#fff"/><path d="m642 181v344h-554v-344zm3-3h-560v350h560z" fill="#808080"/> -->
+								</svg>
+								<video class="sd-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" src="video/sa-desktop.mp4"></video>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -88,15 +106,15 @@
 			</div>
 		</section>
 
-		<section class="sd-page sd-page-4" id="sd-page-4">
+		<section class="sd-page sd-page-4 sd-lock-height" id="sd-page-4">
 			<div class="sd-box d-flex flex-column justify-content-center">
 
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-12">
-							<p>Over the 2 years at StackAdapt, Steve has brought to life many complex projects. His is a talented developer who doesn't settle for "average" and always pushes the envelope to create impactful beautiful products. His team-first, positive attitude made it very easy to work with him to execute on deliverables even with tight deadlines!</p>
-							<p>Vitaly Pecherskiy</p>
-							<p>COO, StackAdapt</p>
+						<div class="col-8 mx-auto sd-text sd-animated-item">
+							<p class="sd-p">Over the 2 years at StackAdapt, Steve has brought to life many complex projects. His is a talented developer who doesn't settle for &ldquo;average&rdquo; and always pushes the envelope to create impactful beautiful products. His team-first, positive attitude made it very easy to work with him to execute on deliverables even with tight deadlines!</p>
+							<p class="sd-p">Vitaly Pecherskiy</p>
+							<p class="sd-p">COO, StackAdapt</p>
 						</div>
 					</div>
 				</div>
@@ -104,20 +122,8 @@
 			</div>
 		</section>
 
-		<section class="sd-page sd-page-5" id="sd-page-5">
+		<section class="sd-page sd-page-5 sd-lock-height" id="sd-page-5">
 			<div class="sd-box d-flex flex-column justify-content-center">
-
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-6">
-							<p>Test</p>
-						</div>
-						<div class="col-6">
-							<p>Test</p>
-						</div>
-					</div>
-				</div>
-
 			</div>
 		</section>
 

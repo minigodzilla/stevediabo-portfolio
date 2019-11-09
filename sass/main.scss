@@ -14,9 +14,10 @@
 body
 { 
 	font-family: 'work sans',sans-serif; 
-	font-weight: 400; 
-	font-size: 18px; 
+	font-weight: 300; 
+	font-size: 16px; 
 	line-height: 1.5; 
+	letter-spacing: 0.25px;
 	-webkit-font-smoothing: antialiased; 
 	text-rendering: optimizeLegibility; 
 	min-height: 100vh;
@@ -284,7 +285,6 @@ a
 		background-image: url('../img/bg_p01.jpg');
 		background-size: cover;
 		color: #fff;
-		margin-bottom: 100vh;
 
 		.sd-box
 		{
@@ -356,22 +356,7 @@ a
 		height: 100%;
 		background-color: #888;
 		color: #fff;
-		font-size: 36px;
-		line-height: 48px;
-		letter-spacing: -2px;
-		font-weight: 300;
-
-		// &::before
-		// {
-		// 	content: '';
-		// 	width: 100%;
-		// 	height: 20px;
-		// 	background-color: #000;
-		// 	position: absolute;
-		// 	top: -20px;
-		// 	left: 0;
-		// 	mask-image: linear-gradient(0deg, rgba(0,0,0,0.1), transparent);
-		// }
+		margin-top: 100vh;
 
 		.sd-box
 		{
@@ -382,6 +367,14 @@ a
 				&.sd-animated
 				{
 					transform: translateY(-30px);
+				}
+
+				.sd-p
+				{
+					margin-bottom: 16px;
+					font-size: 36px;
+					font-weight: 300;
+					letter-spacing: -2px;
 				}
 			}
 		}
@@ -401,7 +394,7 @@ a
 			background-position: 50% 100%;
 		}
 
-		.sd-title-box
+		.sd-detail-title-box
 		{
 			.sd-year,
 			.sd-company
@@ -456,9 +449,77 @@ a
 
 			.sd-text
 			{
-				.sd-video
+				height: 100%;
+
+				> .row
 				{
 					height: 100%;
+				}
+
+				.sd-year
+				{
+					font-size: 18px;
+					font-weight: 500;
+					letter-spacing: 3px;
+					margin-bottom: 6px;
+				}
+
+				.sd-company
+				{
+					font-size: 36px;
+					font-weight: 600;
+					line-height: 1.25;
+					text-transform: uppercase;
+					letter-spacing: 2px;
+				}
+
+				.sd-duties
+				{
+					font-size: 18px;
+					font-weight: 300;
+					text-transform: uppercase;
+					letter-spacing: 2px;
+					margin-bottom: 32px;
+					padding-right: 6rem;
+				}
+
+				.sd-p
+				{
+					margin-bottom: 16px;
+				}
+
+				.sd-bezel
+				{
+					position: absolute;
+					right: 0;
+					left: 0;
+					margin-top: -50%;
+
+					.sd-svg
+					{
+					}
+
+					.sd-video
+					{
+						position: absolute;
+					}
+				}
+
+				.sd-bezel-laptop .sd-video
+				{
+					width: (100 / 730 * 560%);
+					// height: (100 / 730 * 350%);
+					top: (100 / 730 * 176%);
+					right: (100 / 730 * 85%);
+					left: (100 / 730 * 85%);
+				}
+
+				.sd-bezel-phone .sd-video
+				{
+					width: (100 / 730 * 320%);
+					top: (100 / 730 * 76%);
+					right: (100 / 730 * 205%);
+					left: (100 / 730 * 205%);
 				}
 			}
 		}
@@ -466,14 +527,38 @@ a
 
 	&.sd-page-4
 	{
+		width: 100%;
+		height: 100%;
+		background-color: #888;
+		color: #fff;
+		margin-top: 400vh;
+
 		.sd-box
 		{
-			background-color: #999;
+			.sd-text
+			{
+				transform: translateY(30px);
+
+				&.sd-animated
+				{
+					transform: translateY(-30px);
+				}
+
+				.sd-p
+				{
+					margin-bottom: 16px;
+					font-size: 36px;
+					font-weight: 300;
+					letter-spacing: -2px;
+				}
+			}
 		}
 	}
 
 	&.sd-page-5
 	{
+		margin-top: 100vh;
+
 		.sd-box
 		{
 			background-color: #666;
