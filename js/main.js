@@ -15,7 +15,7 @@ $(function () {
 
 		// pg 1
 
-		const page1tween = TweenMax.to('.sd-page-1 .sd-animated-item', 1, { className: '+=sd-animated', ease: Power0.easeNone });
+		const page1tween = TweenMax.to('.sd-page-1 .sd-animated-item', 1, { className: '+=sd-animated', ease: Linear.easeNone });
 
 		const page1scene = new ScrollMagic.Scene
 		({
@@ -27,7 +27,7 @@ $(function () {
 
 		// pg 2
 
-		const page2tween = TweenMax.to('.sd-page-2 .sd-animated-item', 1, { className: '+=sd-animated', ease: Power0.easeNone });
+		const page2tween = TweenMax.to('.sd-page-2 .sd-animated-item', 1, { className: '+=sd-animated', ease: Linear.easeNone });
 
 		const page2scene = new ScrollMagic.Scene
 		({
@@ -39,7 +39,7 @@ $(function () {
 
 		// pg 3
 
-		const page3tween1 = TweenMax.to('.sd-page-3', 1, { className: '+=sd-animated', ease: Power0.easeNone });
+		const page3tween1 = TweenMax.to('.sd-page-3', 1, { className: '+=sd-animated', ease: Linear.easeNone });
 
 		const page3scene1 = new ScrollMagic.Scene
 		({
@@ -52,7 +52,8 @@ $(function () {
 		const page3scene2timeline = new TimelineLite();
 			page3scene2timeline
 				.fromTo('.sd-page-3 .sd-detail-bg-box', 0.2, { scaleX: 0, ease: Power2.easeInOut }, { scaleX: 1, ease: Power2.easeInOut })
-				.fromTo('.sd-page-3 .sd-detail-fg-box', 0.2, { opacity: 0, ease: Power2.easeInOut }, { opacity: 1, ease: Power2.easeInOut });
+				.fromTo('.sd-page-3 .sd-detail-fg-box', 0.2, { opacity: 0, ease: Power2.easeInOut }, { opacity: 1, ease: Power2.easeInOut })
+				.set('.sd-page-3 .sd-detail-title-box', { opacity: 0 });
 
 		const page3scene2 = new ScrollMagic.Scene
 		({
@@ -75,7 +76,6 @@ $(function () {
 
 		const page3scene4timeline = new TimelineLite();
 			page3scene4timeline
-				.fromTo('.sd-page-3 .sd-detail-title-box', 0.2, { opacity: 1 }, { opacity: 0 })
 				.to('.sd-page-3 .sd-detail-fg-box', 0.2, { opacity: 0, ease: Power2.easeInOut })
 				.to('.sd-page-3 .sd-detail-bg-box', 0.2, { scaleX: 0, ease: Power2.easeInOut });
 
@@ -88,7 +88,7 @@ $(function () {
 
 		// pg 4
 
-		const page4tween = TweenMax.to('.sd-page-4 .sd-animated-item', 1, { className: '+=sd-animated', ease: Power0.easeNone });
+		const page4tween = TweenMax.to('.sd-page-4 .sd-animated-item', 1, { className: '+=sd-animated', ease: Linear.easeNone });
 
 		const page4scene = new ScrollMagic.Scene
 		({
