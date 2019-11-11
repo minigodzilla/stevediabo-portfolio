@@ -144,8 +144,6 @@ a {
   height: 100vh !important;
   position: relative;
   margin-left: 0 !important; }
-  .sd-page .sd-stripe-area {
-    bottom: 50%; }
   .sd-page .sd-box {
     position: absolute;
     top: 0;
@@ -227,8 +225,7 @@ a {
           font-weight: 300;
           text-transform: uppercase;
           letter-spacing: 2px;
-          margin-bottom: 32px;
-          padding-right: 6rem; }
+          margin-bottom: 32px; }
         .sd-page.sd-page-work-detail .sd-fg-box .sd-text .sd-text-col .sd-p {
           margin-bottom: 16px; }
         .sd-page.sd-page-work-detail .sd-fg-box .sd-text .sd-bezel {
@@ -270,6 +267,8 @@ a {
     background-image: url("../img/bg_p01.jpg");
     background-size: cover;
     color: #fff; }
+    .sd-page.sd-page-1 .sd-stripe-area {
+      bottom: 50%; }
     .sd-page.sd-page-1 .sd-box {
       background-color: #fff;
       color: #000;

@@ -291,11 +291,6 @@ a
 	position: relative;
 	margin-left: 0 !important;
 
-	.sd-stripe-area
-	{
-		bottom: 50%;
-	}
-
 	.sd-box
 	{
 		position: absolute;
@@ -305,7 +300,7 @@ a
 		left: 0;
 	}
 
-	// templatez
+	// page templates
 
 	&.sd-page-simple-title
 	{
@@ -440,7 +435,6 @@ a
 						text-transform: uppercase;
 						letter-spacing: 2px;
 						margin-bottom: 32px;
-						padding-right: 6rem;
 					}
 
 					.sd-p
@@ -503,6 +497,11 @@ a
 		background-image: url('../img/bg_p01.jpg');
 		background-size: cover;
 		color: #fff;
+
+		.sd-stripe-area
+		{
+			bottom: 50%;
+		}
 
 		.sd-box
 		{
