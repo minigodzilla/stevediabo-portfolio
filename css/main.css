@@ -142,7 +142,8 @@ a {
 .sd-page {
   width: 100vw !important;
   height: 100vh !important;
-  position: relative; }
+  position: relative;
+  margin-left: 0 !important; }
   .sd-page .sd-stripe-area {
     bottom: 50%; }
   .sd-page .sd-box {
@@ -320,6 +321,7 @@ a {
   .sd-page.sd-page-4 {
     margin-top: 400vh; }
   .sd-page.sd-page-5 {
+    position: absolute;
     margin-top: 100vh; }
     .sd-page.sd-page-5 .sd-box {
       background-color: #666; }

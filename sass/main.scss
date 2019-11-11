@@ -289,6 +289,7 @@ a
 	width: 100vw !important;
 	height: 100vh !important;
 	position: relative;
+	margin-left: 0 !important;
 
 	.sd-stripe-area
 	{
@@ -583,6 +584,7 @@ a
 
 	&.sd-page-5
 	{
+		position: absolute;
 		margin-top: 100vh;
 
 		.sd-box
