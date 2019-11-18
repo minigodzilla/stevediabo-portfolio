@@ -130,11 +130,11 @@ a {
 .sd-trigger {
   position: absolute; }
   .sd-trigger-page-3-scene-2 {
-    top: 25%; }
+    top: 0%; }
   .sd-trigger-page-3-scene-3 {
     top: 50%; }
   .sd-trigger-page-3-scene-4 {
-    top: 75%; }
+    top: 100%; }
 
 .sd-page {
   width: 100vw !important;
@@ -151,120 +151,104 @@ a {
     width: 100%;
     height: 100%;
     background-color: #888;
-    color: #fff;
-    font-size: 16px; }
-    .sd-page.sd-page-simple-title .sd-box .sd-text {
+    color: #fff; }
+    .sd-page.sd-page-simple-title .sd-box {
       -webkit-transform: translateY(30px);
-              transform: translateY(30px); }
-      .sd-page.sd-page-simple-title .sd-box .sd-text.sd-animated {
+              transform: translateY(30px);
+      padding: 35px 25px;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-pack: center;
+              justify-content: center;
+      max-width: 480px;
+      margin: 0 auto; }
+      .sd-page.sd-page-simple-title .sd-box.sd-animated {
         -webkit-transform: translateY(-30px);
                 transform: translateY(-30px); }
-      .sd-page.sd-page-simple-title .sd-box .sd-text .sd-p {
+      .sd-page.sd-page-simple-title .sd-box .sd-p {
         margin-bottom: 16px;
         font-weight: 300; }
-      .sd-page.sd-page-simple-title .sd-box .sd-text .sd-svg {
-        width: 200px; }
-        .sd-page.sd-page-simple-title .sd-box .sd-text .sd-svg .sd-s,
-        .sd-page.sd-page-simple-title .sd-box .sd-text .sd-svg .sd-teve {
-          -webkit-animation-name: dash;
-                  animation-name: dash;
-          -webkit-animation-timing-function: ease;
-                  animation-timing-function: ease;
-          -webkit-animation-fill-mode: forwards;
-                  animation-fill-mode: forwards; }
-        .sd-page.sd-page-simple-title .sd-box .sd-text .sd-svg .sd-s {
-          -webkit-animation-delay: 2000ms;
-                  animation-delay: 2000ms;
-          -webkit-animation-duration: 250ms;
-                  animation-duration: 250ms;
-          stroke-dasharray: 180;
-          stroke-dashoffset: 180; }
-        .sd-page.sd-page-simple-title .sd-box .sd-text .sd-svg .sd-teve {
-          -webkit-animation-delay: 2250ms;
-                  animation-delay: 2250ms;
-          -webkit-animation-duration: 1000ms;
-                  animation-duration: 1000ms;
-          stroke-dasharray: 550;
-          stroke-dashoffset: 550; }
-
-@-webkit-keyframes dash {
-  to {
-    stroke-dashoffset: 0; } }
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0; } }
   .sd-page.sd-page-work-detail {
-    position: relative;
-    height: auto !important; }
+    height: auto !important;
+    background-color: #fff;
+    color: #000; }
     .sd-page.sd-page-work-detail .sd-stripe-area {
-      position: fixed;
-      left: 50%;
-      right: 0;
-      background-size: auto 125%;
-      background-position: 50% 0; }
-      .sd-page.sd-page-work-detail .sd-stripe-area.sd-animated {
-        background-position: 50% 100%; }
+      display: none; }
     .sd-page.sd-page-work-detail .sd-box {
       position: static;
       top: auto;
       right: auto;
       bottom: auto;
       left: auto;
-      background-color: #fff;
-      color: #000;
-      width: 50%; }
-      .sd-page.sd-page-work-detail .sd-box .sd-text {
-        padding: 20% 20% 20% 10%; }
-        .sd-page.sd-page-work-detail .sd-box .sd-text .sd-year {
-          font-size: 1em;
-          font-weight: 500;
-          letter-spacing: 3px;
-          margin-bottom: 6px; }
-        .sd-page.sd-page-work-detail .sd-box .sd-text .sd-company {
-          font-size: 2.25em;
-          font-weight: 600;
-          line-height: 1.25;
-          text-transform: uppercase;
-          letter-spacing: 2px; }
-        .sd-page.sd-page-work-detail .sd-box .sd-text .sd-duties {
-          font-size: 1em;
-          font-weight: 300;
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          margin-bottom: 36px; }
-        .sd-page.sd-page-work-detail .sd-box .sd-text .sd-p {
-          line-height: 1.75;
-          margin-bottom: 16px; }
-      .sd-page.sd-page-work-detail .sd-box .sd-bezel {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: auto;
-        width: 50%;
-        height: 100%;
-        -webkit-transform: scale(0.75);
-                transform: scale(0.75);
-        opacity: 0; }
-        .sd-page.sd-page-work-detail .sd-box .sd-bezel .sd-svg {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 35px 25px; }
+      .sd-page.sd-page-work-detail .sd-box .sd-year {
+        font-size: 1em;
+        font-weight: 500;
+        letter-spacing: 3px;
+        margin-bottom: 8px; }
+      .sd-page.sd-page-work-detail .sd-box .sd-company {
+        font-size: 2.25em;
+        font-weight: 600;
+        line-height: 1.25;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 8px; }
+      .sd-page.sd-page-work-detail .sd-box .sd-duties {
+        font-size: 1em;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 36px; }
+        .sd-page.sd-page-work-detail .sd-box .sd-duties br {
+          display: none; }
+      .sd-page.sd-page-work-detail .sd-box .sd-p {
+        font-size: 0.875em;
+        line-height: 1.75;
+        margin-bottom: 16px; }
+    .sd-page.sd-page-work-detail .sd-bezel-container {
+      background-color: #888;
+      background-image: url("../img/bg_p03.jpg");
+      background-position: 50% 100%;
+      background-size: auto 150%;
+      margin: 25px 0;
+      padding: 35px 0; }
+      .sd-page.sd-page-work-detail .sd-bezel-container.sd-animated {
+        background-position: 50% 0%; }
+      .sd-page.sd-page-work-detail .sd-bezel-container.sd-xs-bezel-container .sd-bezel {
+        opacity: 0;
+        -webkit-transition: opacity 800ms ease;
+        transition: opacity 800ms ease; }
+        .sd-page.sd-page-work-detail .sd-bezel-container.sd-xs-bezel-container .sd-bezel.sd-animated {
+          opacity: 1; }
+      .sd-page.sd-page-work-detail .sd-bezel-container.sd-lg-bezel-container {
+        display: none; }
+      .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel {
+        position: relative;
+        max-width: 85%;
+        margin: 0 auto; }
+        .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel .sd-svg {
           width: 100%;
-          height: 100%; }
-        .sd-page.sd-page-work-detail .sd-box .sd-bezel .sd-video {
+          height: 100%;
+          display: block; }
+        .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel .sd-screen-content {
           position: absolute; }
-        .sd-page.sd-page-work-detail .sd-box .sd-bezel-laptop {
-          max-width: 85%; }
-          .sd-page.sd-page-work-detail .sd-box .sd-bezel-laptop .sd-video {
-            width: 80%;
-            height: 84.54106%;
-            top: 50%;
-            left: 50%;
-            margin-top: -1.64384%;
-            -webkit-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%); }
-        .sd-page.sd-page-work-detail .sd-box .sd-bezel-phone {
+        .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel-laptop .sd-screen-content {
+          width: 80%;
+          height: 84.54106%;
+          top: 50%;
+          left: 50%;
+          margin-top: -1.64384%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); }
+        .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel-phone {
           max-width: 50%; }
-          .sd-page.sd-page-work-detail .sd-box .sd-bezel-phone .sd-video {
+          .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel-phone .sd-screen-content {
             width: 88.88889%;
             height: 77.80822%;
             top: 50%;
@@ -289,11 +273,18 @@ a {
       right: 0;
       bottom: 0;
       left: auto;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+              justify-content: center; }
       .sd-page.sd-page-1 .sd-box .sd-name {
         position: absolute;
-        margin-top: -70px;
-        margin-left: 10px;
         line-height: 1;
         font-weight: 900;
         font-size: 3em;
@@ -303,8 +294,7 @@ a {
                   transform: translateY(-50px); }
       .sd-page.sd-page-1 .sd-box .sd-role {
         position: absolute;
-        margin-top: -15px;
-        margin-left: 130px;
+        margin-top: 55px;
         line-height: 1;
         font-weight: 300;
         letter-spacing: 1.75px; }
@@ -313,8 +303,7 @@ a {
                   transform: translateY(-60px); }
       .sd-page.sd-page-1 .sd-box .sd-location {
         position: absolute;
-        margin-top: 10px;
-        margin-left: 130px;
+        margin-top: 80px;
         line-height: 1;
         font-weight: 700;
         letter-spacing: 3.75px; }
@@ -324,7 +313,45 @@ a {
   .sd-page.sd-page-2 {
     position: absolute;
     z-index: 1;
-    margin-top: 100vh; }
+    margin-top: 100vh;
+    font-size: 1.25em;
+    letter-spacing: -0.75px; }
+    .sd-page.sd-page-2 .sd-box .sd-signature {
+      margin-top: 32px; }
+      .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg {
+        width: 150px; }
+        .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg .sd-s,
+        .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg .sd-teve {
+          -webkit-animation-timing-function: ease;
+                  animation-timing-function: ease;
+          -webkit-animation-fill-mode: forwards;
+                  animation-fill-mode: forwards; }
+        .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg .sd-s {
+          -webkit-animation-delay: 500ms;
+                  animation-delay: 500ms;
+          -webkit-animation-duration: 250ms;
+                  animation-duration: 250ms;
+          stroke-dasharray: 180;
+          stroke-dashoffset: 180; }
+        .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg .sd-teve {
+          -webkit-animation-delay: 750ms;
+                  animation-delay: 750ms;
+          -webkit-animation-duration: 1000ms;
+                  animation-duration: 1000ms;
+          stroke-dasharray: 550;
+          stroke-dashoffset: 550; }
+      .sd-page.sd-page-2 .sd-box .sd-signature.sd-animated .sd-svg .sd-s,
+      .sd-page.sd-page-2 .sd-box .sd-signature.sd-animated .sd-svg .sd-teve {
+        -webkit-animation-name: sd-signature-anim;
+                animation-name: sd-signature-anim; }
+
+@-webkit-keyframes sd-signature-anim {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes sd-signature-anim {
+  to {
+    stroke-dashoffset: 0; } }
   .sd-page.sd-page-3 {
     margin-top: 300vh; }
     .sd-page.sd-page-3 .sd-stripe-area {
@@ -335,9 +362,67 @@ a {
     .sd-page.sd-page-5 .sd-box {
       background-color: #666; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 321px) {
+  .sd-page.sd-page-work-detail .sd-box .sd-duties br {
+    display: block; } }
+
+@media screen and (min-width: 577px) {
+  .sd-page.sd-page-work-detail .sd-box .sd-p {
+    font-size: 1em; } }
+
+@media screen and (min-width: 769px) {
   .sd-page.sd-page-simple-title {
     font-size: 2.25em; }
+    .sd-page.sd-page-simple-title .sd-box {
+      max-width: none;
+      margin: 0; }
+  .sd-page.sd-page-work-detail {
+    min-height: 150vh; }
+    .sd-page.sd-page-work-detail .sd-stripe-area {
+      display: block;
+      left: 50%;
+      right: 0;
+      background-size: auto 125%;
+      background-position: 50% 0; }
+      .sd-page.sd-page-work-detail .sd-stripe-area.sd-animated {
+        background-position: 50% 100%; }
+    .sd-page.sd-page-work-detail.sd-in-view .sd-stripe-area {
+      position: fixed; }
+    .sd-page.sd-page-work-detail.sd-in-view .sd-bezel-container .sd-bezel {
+      position: absolute;
+      top: 0;
+      bottom: auto; }
+    .sd-page.sd-page-work-detail.sd-past-top .sd-bezel-container .sd-bezel {
+      position: fixed; }
+    .sd-page.sd-page-work-detail.sd-past-bottom .sd-bezel-container .sd-bezel {
+      position: absolute;
+      top: auto;
+      bottom: 0; }
+    .sd-page.sd-page-work-detail .sd-box {
+      width: 50%;
+      max-width: none;
+      margin: 0;
+      padding: 10vh 10vw 10vh 5vw; }
+      .sd-page.sd-page-work-detail .sd-box .sd-p {
+        font-size: 1em; }
+    .sd-page.sd-page-work-detail .sd-bezel-container {
+      background-color: transparent;
+      background-image: none;
+      margin: 0;
+      padding: 0; }
+      .sd-page.sd-page-work-detail .sd-bezel-container.sd-xs-bezel-container {
+        display: none; }
+      .sd-page.sd-page-work-detail .sd-bezel-container.sd-lg-bezel-container {
+        display: block; }
+      .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel {
+        right: 0;
+        left: auto;
+        width: 50%;
+        height: 100vh;
+        -webkit-transform: scale(0.75);
+                transform: scale(0.75); }
+  .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg {
+    width: 200px; }
   .sd-screen {
     pointer-events: none;
     position: fixed;

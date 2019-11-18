@@ -265,7 +265,7 @@ a
 	
 	&-page-3-scene-2
 	{
-		top: 25%;
+		top: 0%;
 	}
 	
 	&-page-3-scene-3
@@ -275,7 +275,7 @@ a
 	
 	&-page-3-scene-4
 	{
-		top: 75%;
+		top: 100%;
 	}
 }
 
@@ -306,85 +306,39 @@ a
 		height: 100%;
 		background-color: #888;
 		color: #fff;
-		font-size: 16px;
 
 		.sd-box
 		{
-			.sd-text
+			transform: translateY(30px);
+			padding: 35px 25px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 480px;
+			margin: 0 auto;
+
+			&.sd-animated
 			{
-				transform: translateY(30px);
+				transform: translateY(-30px);
+			}
 
-				&.sd-animated
-				{
-					transform: translateY(-30px);
-				}
-
-				.sd-p
-				{
-					margin-bottom: 16px;
-					//font-size: 2.25em;
-					font-weight: 300;
-					//letter-spacing: -2px;
-				}
-
-				.sd-svg
-				{
-					width: 200px;
-
-					.sd-s,
-					.sd-teve
-					{
-						animation-name: dash;
-						animation-timing-function: ease;
-						animation-fill-mode: forwards;
-					}
-					
-					.sd-s
-					{
-						animation-delay: 2000ms;
-						animation-duration: 250ms;
-						stroke-dasharray: 180;
-						stroke-dashoffset: 180;
-					}
-					
-					.sd-teve
-					{
-						animation-delay: 2250ms;
-						animation-duration: 1000ms;
-						stroke-dasharray: 550;
-						stroke-dashoffset: 550;
-					}
-				}
-
-				@keyframes dash
-				{
-					to
-					{
-						stroke-dashoffset: 0;
-					}
-				}
+			.sd-p
+			{
+				margin-bottom: 16px;
+				font-weight: 300;
 			}
 		}
 	}
 
 	&.sd-page-work-detail
 	{
-		position: relative;
 		height: auto !important;
+		background-color: #fff;
+		color: #000;
 
 		.sd-stripe-area
 		{
-			position: fixed;
-			left: 50%;
-			right: 0;
-			background-size: auto 125%;
-			background-position: 50% 0;
-			//opacity: 0;
-
-			&.sd-animated
-			{
-				background-position: 50% 100%;
-			}
+			display: none;
 		}
 
 		.sd-box
@@ -394,74 +348,106 @@ a
 			right: auto;
 			bottom: auto;
 			left: auto;
-			background-color: #fff;
-			color: #000;
-			width: 50%;
+			width: 100%;
+			max-width: 480px;
+			margin: 0 auto;
+			padding: 35px 25px;
 
-			.sd-text
+			.sd-year
 			{
-				padding: 20% 20% 20% 10%;
+				font-size: 1em;
+				font-weight: 500;
+				letter-spacing: 3px;
+				margin-bottom: 8px;
+			}
 
-				.sd-year
-				{
-					font-size: 1em;
-					font-weight: 500;
-					letter-spacing: 3px;
-					margin-bottom: 6px;
-				}
+			.sd-company
+			{
+				font-size: 2.25em;
+				font-weight: 600;
+				line-height: 1.25;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				margin-bottom: 8px;
+			}
 
-				.sd-company
-				{
-					font-size: 2.25em;
-					font-weight: 600;
-					line-height: 1.25;
-					text-transform: uppercase;
-					letter-spacing: 2px;
-				}
+			.sd-duties
+			{
+				font-size: 1em;
+				font-weight: 300;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				margin-bottom: 36px;
 
-				.sd-duties
+				br
 				{
-					font-size: 1em;
-					font-weight: 300;
-					text-transform: uppercase;
-					letter-spacing: 1.5px;
-					margin-bottom: 36px;
-				}
-
-				.sd-p
-				{
-					line-height: 1.75;
-					margin-bottom: 16px;
+					display: none;
 				}
 			}
+
+			.sd-p
+			{
+				font-size: 0.875em;
+				line-height: 1.75;
+				margin-bottom: 16px;
+			}
+		}
+
+		.sd-bezel-container
+		{
+			background-color: #888;
+			background-image: url('../img/bg_p03.jpg');
+			background-position: 50% 100%;
+			background-size: auto 150%;
+			margin: 25px 0;
+			padding: 35px 0;
+
+			&.sd-animated
+			{
+				background-position: 50% 0%;
+			}
+
+			&.sd-xs-bezel-container
+			{
+				.sd-bezel
+				{
+					opacity: 0;
+					transition: opacity 800ms ease;
+
+					&.sd-animated
+					{
+						opacity: 1;
+					}
+				}
+			}
+
+			&.sd-lg-bezel-container
+			{
+				display: none;
+			}
+
 			.sd-bezel
 			{
-				position: fixed;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: auto;
-				width: 50%;
-				height: 100%;
-				transform: scale(0.75);
-				opacity: 0;
+				position: relative;
+				max-width: 85%;
+				margin: 0 auto;
 
 				.sd-svg
 				{
 					width: 100%;
 					height: 100%;
+					display: block;
 				}
 
-				.sd-video
+				.sd-screen-content
 				{
 					position: absolute;
 				}
 
 				&-laptop
 				{
-					max-width: 85%;
 
-					.sd-video
+					.sd-screen-content
 					{
 						width: (100 / 700 * 560%);
 						height: (100 / 414 * 350%);
@@ -476,7 +462,7 @@ a
 				{
 					max-width: 50%;
 
-					.sd-video
+					.sd-screen-content
 					{
 						width: (100 / 360 * 320%);
 						height: (100 / 730 * 568%);
@@ -514,13 +500,17 @@ a
 			bottom: 0;
 			left: auto;
 			text-transform: uppercase;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 
 
 			.sd-name
 			{
 				position: absolute;
-				margin-top: -70px;
-				margin-left: 10px;
+				// margin-top: -70px;
+				// margin-left: 10px;
 				line-height: 1;
 				font-weight: 900;
 				font-size: 3em;
@@ -535,8 +525,8 @@ a
 			.sd-role
 			{
 				position: absolute;
-				margin-top: -15px;
-				margin-left: 130px;
+				margin-top: 55px;
+				// margin-left: 130px;
 				line-height: 1;
 				font-weight: 300;
 				letter-spacing: 1.75px;
@@ -550,8 +540,8 @@ a
 			.sd-location
 			{
 				position: absolute;
-				margin-top: 10px;
-				margin-left: 130px;
+				margin-top: 80px;
+				// margin-left: 130px;
 				line-height: 1;
 				font-weight: 700;
 				letter-spacing: 3.75px;
@@ -569,6 +559,58 @@ a
 		position: absolute;
 		z-index: 1;
 		margin-top: 100vh;
+		font-size: 1.25em;
+		letter-spacing: -0.75px;
+
+		.sd-box
+		{
+			.sd-signature
+			{
+				margin-top: 32px;
+
+				.sd-svg
+				{
+					width: 150px;
+
+					.sd-s,
+					.sd-teve
+					{
+						animation-timing-function: ease;
+						animation-fill-mode: forwards;
+					}
+
+					.sd-s
+					{
+						animation-delay: 500ms;
+						animation-duration: 250ms;
+						stroke-dasharray: 180;
+						stroke-dashoffset: 180;
+					}
+
+					.sd-teve
+					{
+						animation-delay: 750ms;
+						animation-duration: 1000ms;
+						stroke-dasharray: 550;
+						stroke-dashoffset: 550;
+					}
+				}
+
+				&.sd-animated .sd-svg .sd-s,
+				&.sd-animated .sd-svg .sd-teve
+				{
+					animation-name: sd-signature-anim;
+				}
+			}
+
+			@keyframes sd-signature-anim
+			{
+				to
+				{
+					stroke-dashoffset: 0;
+				}
+			}
+		}
 	}
 
 	&.sd-page-3
@@ -579,6 +621,7 @@ a
 		{
 			background-image: url('../img/bg_p03.jpg');
 		}
+
 	}
 
 	&.sd-page-4
@@ -598,21 +641,131 @@ a
 	}
 }
 
+// for iphone SE!
+
+@media screen and (min-width: 321px)
+{
+	.sd-page.sd-page-work-detail .sd-box .sd-duties br
+	{
+		display: block;
+	}
+}
+
+// vertical ipad
+
+@media screen and (min-width: 577px)
+{
+	.sd-page.sd-page-work-detail .sd-box .sd-p
+	{
+		font-size: 1em;
+	}
+}
+
 // desktop stuff
-@media screen and (min-width: 768px)
+
+@media screen and (min-width: 769px)
 {
 	.sd-page
 	{
-		&.sd-page-work-detail
-		{
-		}
-
-		&.sd-page-1
-		{
-		}
 		&.sd-page-simple-title
 		{
 			font-size: 2.25em;
+
+			.sd-box
+			{
+				max-width: none;
+				margin: 0;
+			}
+		}
+
+		&.sd-page-work-detail
+		{
+			min-height: 150vh; 
+
+			.sd-stripe-area
+			{
+				display: block;
+				left: 50%;
+				right: 0;
+				background-size: auto 125%;
+				background-position: 50% 0;
+
+				&.sd-animated
+				{
+					background-position: 50% 100%;
+				}
+			}
+
+			&.sd-in-view .sd-stripe-area
+			{
+				position: fixed;
+			}
+
+			&.sd-in-view .sd-bezel-container .sd-bezel
+			{
+				position: absolute;
+				top: 0;
+				bottom: auto;
+			}
+
+			&.sd-past-top .sd-bezel-container .sd-bezel
+			{
+				position: fixed;
+			}
+
+			&.sd-past-bottom .sd-bezel-container .sd-bezel
+			{
+				position: absolute;
+				top: auto;
+				bottom: 0;
+			}
+
+			.sd-box
+			{
+				width: 50%;
+				max-width: none;
+				margin: 0;
+				padding: 10vh 10vw 10vh 5vw;
+
+				.sd-p
+				{
+					font-size: 1em;
+				}
+			}
+
+			.sd-bezel-container
+			{
+				background-color: transparent;
+				background-image: none;
+				margin: 0;
+				padding: 0;
+
+				&.sd-xs-bezel-container	{ display: none;  }
+				&.sd-lg-bezel-container	{ display: block; }
+
+				.sd-bezel
+				{
+					right: 0;
+					left: auto;
+					width: 50%;
+					height: 100vh;
+					transform: scale(0.75);
+				}
+			}
+		}
+
+		&.sd-page-2
+		{
+			.sd-box
+			{
+				.sd-signature
+				{
+					.sd-svg
+					{
+						width: 200px;
+					}
+				}
+			}
 		}
 	}
 	.sd-screen
