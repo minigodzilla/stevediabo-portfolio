@@ -285,7 +285,7 @@ a
 {
 	// fixes the width issue on scrollmagic pinned pages
 	width: 100vw !important;
-	height: 100vh !important;
+	height: 100vh;
 	position: relative;
 	margin-left: 0 !important;
 
@@ -302,8 +302,7 @@ a
 
 	&.sd-page-simple-title
 	{
-		width: 100%;
-		height: 100%;
+		z-index: 1;
 		background-color: #888;
 		color: #fff;
 
@@ -358,7 +357,7 @@ a
 				font-size: 1em;
 				font-weight: 500;
 				letter-spacing: 3px;
-				margin-bottom: 8px;
+				margin-bottom: 0.5em;
 			}
 
 			.sd-company
@@ -368,7 +367,7 @@ a
 				line-height: 1.25;
 				text-transform: uppercase;
 				letter-spacing: 2px;
-				margin-bottom: 8px;
+				margin-bottom: 0.225em;
 			}
 
 			.sd-duties
@@ -377,7 +376,7 @@ a
 				font-weight: 300;
 				text-transform: uppercase;
 				letter-spacing: 1.5px;
-				margin-bottom: 36px;
+				margin-bottom: 2.25em;
 
 				br
 				{
@@ -397,14 +396,15 @@ a
 		{
 			background-color: #888;
 			background-image: url('../img/bg_p03.jpg');
-			background-position: 50% 100%;
-			background-size: auto 150%;
+			// background-attachment: fixed;
+			background-position: 50% -200px;
+			background-size: auto 700px;
 			margin: 25px 0;
 			padding: 35px 0;
 
 			&.sd-animated
 			{
-				background-position: 50% 0%;
+				background-position: 50% 0px;
 			}
 
 			&.sd-xs-bezel-container
@@ -556,11 +556,7 @@ a
 
 	&.sd-page-2
 	{
-		position: absolute;
-		z-index: 1;
 		margin-top: 100vh;
-		font-size: 1.25em;
-		letter-spacing: -0.75px;
 
 		.sd-box
 		{
@@ -581,7 +577,6 @@ a
 
 					.sd-s
 					{
-						animation-delay: 500ms;
 						animation-duration: 250ms;
 						stroke-dasharray: 180;
 						stroke-dashoffset: 180;
@@ -589,7 +584,7 @@ a
 
 					.sd-teve
 					{
-						animation-delay: 750ms;
+						animation-delay: 250ms;
 						animation-duration: 1000ms;
 						stroke-dasharray: 550;
 						stroke-dashoffset: 550;
@@ -615,18 +610,15 @@ a
 
 	&.sd-page-3
 	{
-		margin-top: 300vh;
 
 		.sd-stripe-area
 		{
 			background-image: url('../img/bg_p03.jpg');
 		}
-
 	}
 
 	&.sd-page-4
 	{
-		// margin-top: 400vh;
 	}
 
 	&.sd-page-5
@@ -641,27 +633,44 @@ a
 	}
 }
 
-// for iphone SE!
+// for phones wider than iPhone 5/5S/SE
 
 @media screen and (min-width: 321px)
 {
-	.sd-page.sd-page-work-detail .sd-box .sd-duties br
+	.sd-page
 	{
-		display: block;
+		&.sd-page-simple-title
+		{
+			font-size: 1.25em;
+			letter-spacing: -0.75px;
+		}
+
+		&.sd-page-work-detail .sd-box .sd-duties br
+		{
+			display: block;
+		}
 	}
 }
 
-// vertical ipad
+// vertical iPad
 
 @media screen and (min-width: 577px)
 {
-	.sd-page.sd-page-work-detail .sd-box .sd-p
+	.sd-page
 	{
-		font-size: 1em;
+		&.sd-page-simple-title
+		{
+			font-size: 1.5rem;
+		}
+
+		&.sd-page-work-detail .sd-box .sd-p
+		{
+			font-size: 1em;
+		}
 	}
 }
 
-// desktop stuff
+// landscape iPad
 
 @media screen and (min-width: 769px)
 {
@@ -669,12 +678,14 @@ a
 	{
 		&.sd-page-simple-title
 		{
-			font-size: 2.25em;
+			font-size: 1.75em;
+			letter-spacing: -1px;
 
 			.sd-box
 			{
 				max-width: none;
 				margin: 0;
+				padding: 15%;
 			}
 		}
 
@@ -687,7 +698,7 @@ a
 				display: block;
 				left: 50%;
 				right: 0;
-				background-size: auto 125%;
+				background-size: auto 125vh;
 				background-position: 50% 0;
 
 				&.sd-animated
@@ -726,11 +737,6 @@ a
 				max-width: none;
 				margin: 0;
 				padding: 10vh 10vw 10vh 5vw;
-
-				.sd-p
-				{
-					font-size: 1em;
-				}
 			}
 
 			.sd-bezel-container
@@ -777,5 +783,21 @@ a
 		bottom: 0;
 		left: 0;
 		opacity: 0.0;
+	}
+}
+
+@media screen and (min-width: 1201px)
+{
+	.sd-page
+	{
+		&.sd-page-simple-title
+		{
+			font-size: 2rem;
+		}
+
+		&.sd-page-work-detail
+		{
+			font-size: 1.25rem;
+		}
 	}
 }

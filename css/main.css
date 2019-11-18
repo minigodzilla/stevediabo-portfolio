@@ -138,7 +138,7 @@ a {
 
 .sd-page {
   width: 100vw !important;
-  height: 100vh !important;
+  height: 100vh;
   position: relative;
   margin-left: 0 !important; }
   .sd-page .sd-box {
@@ -148,8 +148,7 @@ a {
     bottom: 0;
     left: 0; }
   .sd-page.sd-page-simple-title {
-    width: 100%;
-    height: 100%;
+    z-index: 1;
     background-color: #888;
     color: #fff; }
     .sd-page.sd-page-simple-title .sd-box {
@@ -191,20 +190,20 @@ a {
         font-size: 1em;
         font-weight: 500;
         letter-spacing: 3px;
-        margin-bottom: 8px; }
+        margin-bottom: 0.5em; }
       .sd-page.sd-page-work-detail .sd-box .sd-company {
         font-size: 2.25em;
         font-weight: 600;
         line-height: 1.25;
         text-transform: uppercase;
         letter-spacing: 2px;
-        margin-bottom: 8px; }
+        margin-bottom: 0.225em; }
       .sd-page.sd-page-work-detail .sd-box .sd-duties {
         font-size: 1em;
         font-weight: 300;
         text-transform: uppercase;
         letter-spacing: 1.5px;
-        margin-bottom: 36px; }
+        margin-bottom: 2.25em; }
         .sd-page.sd-page-work-detail .sd-box .sd-duties br {
           display: none; }
       .sd-page.sd-page-work-detail .sd-box .sd-p {
@@ -214,12 +213,12 @@ a {
     .sd-page.sd-page-work-detail .sd-bezel-container {
       background-color: #888;
       background-image: url("../img/bg_p03.jpg");
-      background-position: 50% 100%;
-      background-size: auto 150%;
+      background-position: 50% -200px;
+      background-size: auto 700px;
       margin: 25px 0;
       padding: 35px 0; }
       .sd-page.sd-page-work-detail .sd-bezel-container.sd-animated {
-        background-position: 50% 0%; }
+        background-position: 50% 0px; }
       .sd-page.sd-page-work-detail .sd-bezel-container.sd-xs-bezel-container .sd-bezel {
         opacity: 0;
         -webkit-transition: opacity 800ms ease;
@@ -311,11 +310,7 @@ a {
           -webkit-transform: translateY(-60px);
                   transform: translateY(-60px); }
   .sd-page.sd-page-2 {
-    position: absolute;
-    z-index: 1;
-    margin-top: 100vh;
-    font-size: 1.25em;
-    letter-spacing: -0.75px; }
+    margin-top: 100vh; }
     .sd-page.sd-page-2 .sd-box .sd-signature {
       margin-top: 32px; }
       .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg {
@@ -327,15 +322,13 @@ a {
           -webkit-animation-fill-mode: forwards;
                   animation-fill-mode: forwards; }
         .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg .sd-s {
-          -webkit-animation-delay: 500ms;
-                  animation-delay: 500ms;
           -webkit-animation-duration: 250ms;
                   animation-duration: 250ms;
           stroke-dasharray: 180;
           stroke-dashoffset: 180; }
         .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg .sd-teve {
-          -webkit-animation-delay: 750ms;
-                  animation-delay: 750ms;
+          -webkit-animation-delay: 250ms;
+                  animation-delay: 250ms;
           -webkit-animation-duration: 1000ms;
                   animation-duration: 1000ms;
           stroke-dasharray: 550;
@@ -352,10 +345,8 @@ a {
 @keyframes sd-signature-anim {
   to {
     stroke-dashoffset: 0; } }
-  .sd-page.sd-page-3 {
-    margin-top: 300vh; }
-    .sd-page.sd-page-3 .sd-stripe-area {
-      background-image: url("../img/bg_p03.jpg"); }
+  .sd-page.sd-page-3 .sd-stripe-area {
+    background-image: url("../img/bg_p03.jpg"); }
   .sd-page.sd-page-5 {
     position: absolute;
     margin-top: 100vh; }
@@ -363,26 +354,33 @@ a {
       background-color: #666; }
 
 @media screen and (min-width: 321px) {
+  .sd-page.sd-page-simple-title {
+    font-size: 1.25em;
+    letter-spacing: -0.75px; }
   .sd-page.sd-page-work-detail .sd-box .sd-duties br {
     display: block; } }
 
 @media screen and (min-width: 577px) {
+  .sd-page.sd-page-simple-title {
+    font-size: 1.5rem; }
   .sd-page.sd-page-work-detail .sd-box .sd-p {
     font-size: 1em; } }
 
 @media screen and (min-width: 769px) {
   .sd-page.sd-page-simple-title {
-    font-size: 2.25em; }
+    font-size: 1.75em;
+    letter-spacing: -1px; }
     .sd-page.sd-page-simple-title .sd-box {
       max-width: none;
-      margin: 0; }
+      margin: 0;
+      padding: 15%; }
   .sd-page.sd-page-work-detail {
     min-height: 150vh; }
     .sd-page.sd-page-work-detail .sd-stripe-area {
       display: block;
       left: 50%;
       right: 0;
-      background-size: auto 125%;
+      background-size: auto 125vh;
       background-position: 50% 0; }
       .sd-page.sd-page-work-detail .sd-stripe-area.sd-animated {
         background-position: 50% 100%; }
@@ -403,8 +401,6 @@ a {
       max-width: none;
       margin: 0;
       padding: 10vh 10vw 10vh 5vw; }
-      .sd-page.sd-page-work-detail .sd-box .sd-p {
-        font-size: 1em; }
     .sd-page.sd-page-work-detail .sd-bezel-container {
       background-color: transparent;
       background-image: none;
@@ -431,3 +427,9 @@ a {
     bottom: 0;
     left: 0;
     opacity: 0.0; } }
+
+@media screen and (min-width: 1201px) {
+  .sd-page.sd-page-simple-title {
+    font-size: 2rem; }
+  .sd-page.sd-page-work-detail {
+    font-size: 1.25rem; } }

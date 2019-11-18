@@ -3,15 +3,24 @@ var controller = new ScrollMagic.Controller();
 
 $(function () {
 
+	let lockHeight = function() {
+		// locking down height of elements with class .sd-lock-height based on window.innerHeight
+		var n = $(".sd-lock-height");
+		n.length > 0 && n.css("height", n.height() + "px");
+
+		var page2 = $(".sd-page-2");
+		page2.length > 0 && page2.css("margin-top", (window.innerHeight * 1) + "px");
+
+		// var page3 = $(".sd-page-3");
+		// page3.length > 0 && page3.css("margin-top", (window.innerHeight * 3) + "px");
+	}
+
 	// Create an instance of the Scroll Magic Controller
 	let scrollController = new ScrollMagic.Controller();
 
 	(() => {
 
-		// locking down page heights based on initial 100vh
-
-		// var n = $(".sd-lock-height");
-		// n.length > 0 && n.css("height", n.height() + "px");
+		// lockHeight();
 
 		// TODO: remove duplication in scenes
 
@@ -29,14 +38,14 @@ $(function () {
 
 		// pg 2
 
-		const page2scene1tween = TweenMax.to('.sd-page-2 .sd-box', 1, { className: '+=sd-animated', ease: Linear.easeNone });
+		// const page2scene1tween = TweenMax.to('.sd-page-2 .sd-box', 1, { className: '+=sd-animated', ease: Linear.easeNone });
 
-		const page2scene1 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-2', triggerHook: 0, duration: '100%'
-		})
-		.setPin('.sd-page-2', { pushFollowers: false })
-		.setTween(page2scene1tween)
+		// const page2scene1 = new ScrollMagic.Scene
+		// ({
+		// 	triggerElement: '.sd-page-2', triggerHook: 0, duration: '100%'
+		// })
+		// .setPin('.sd-page-2', { pushFollowers: false })
+		// .setTween(page2scene1tween)
 		// .addIndicators({name: 'pg2 sc1'})
 
 		const page2scene2tween = TweenMax.to('.sd-page-2 .sd-signature', 1, { className: '+=sd-animated' });
@@ -133,7 +142,7 @@ $(function () {
 
 		// Add scenes to the controller
 		page1scene.addTo (scrollController);
-		page2scene1.addTo (scrollController);
+		// page2scene1.addTo (scrollController);
 		page2scene2.addTo (scrollController);
 		page3scene1.addTo (scrollController);
 		page3scene1a.addTo (scrollController);
@@ -150,4 +159,9 @@ $(function () {
 		// });
 
 	})();
+
+	window.addEventListener('resize', () => {
+		// lockHeight();
+	});
+
 });
