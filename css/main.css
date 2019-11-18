@@ -127,25 +127,18 @@ a {
         -webkit-clip-path: polygon(0% -150%, 100% -150%, 100% -100%, 0% -100%);
                 clip-path: polygon(0% -150%, 100% -150%, 100% -100%, 0% -100%); }
 
-.sd-trigger {
-  position: absolute; }
-  .sd-trigger-page-2-scene-1 {
-    top: 0%; }
-  .sd-trigger-page-2-scene-2 {
-    top: 50%; }
-  .sd-trigger-page-2-scene-3 {
-    top: 100%; }
-  .sd-trigger-page-3-scene-2 {
-    top: 0%; }
-  .sd-trigger-page-3-scene-3 {
-    top: 50%; }
-  .sd-trigger-page-3-scene-4 {
-    top: 100%; }
-
 .sd-page {
   width: 100vw;
   height: 100vh;
   position: relative; }
+  .sd-page .sd-trigger {
+    position: absolute; }
+    .sd-page .sd-trigger-scene-1 {
+      top: 0%; }
+    .sd-page .sd-trigger-scene-2 {
+      top: 50%; }
+    .sd-page .sd-trigger-scene-3 {
+      top: 100%; }
   .sd-page .sd-box {
     position: absolute;
     top: 0;
@@ -363,11 +356,8 @@ a {
     stroke-dashoffset: 0; } }
   .sd-page.sd-page-3 .sd-stripe-area {
     background-image: url("../img/bg_p03.jpg"); }
-  .sd-page.sd-page-5 {
-    position: absolute;
-    margin-top: 100vh; }
-    .sd-page.sd-page-5 .sd-box {
-      background-color: #666; }
+  .sd-page.sd-page-5 .sd-stripe-area {
+    background-image: url("../img/bg_p03.jpg"); }
 
 @media screen and (min-width: 321px) {
   .sd-page.sd-page-simple-title {
@@ -433,6 +423,14 @@ a {
         height: 100vh;
         -webkit-transform: scale(0.75);
                 transform: scale(0.75); }
+    .sd-page.sd-page-work-detail.sd-page-work-detail-r .sd-stripe-area {
+      left: 0;
+      right: 50%; }
+    .sd-page.sd-page-work-detail.sd-page-work-detail-r .sd-box {
+      margin-left: 50%; }
+    .sd-page.sd-page-work-detail.sd-page-work-detail-r .sd-bezel-container .sd-bezel {
+      right: auto;
+      left: 0; }
   .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg {
     width: 200px; }
   .sd-screen {

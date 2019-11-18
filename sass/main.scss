@@ -259,49 +259,32 @@ a
 
 // page rules
 
-.sd-trigger
-{
-	position: absolute;
-	
-	&-page-2-scene-1
-	{
-		top: 0%;
-	}
-	
-	&-page-2-scene-2
-	{
-		top: 50%;
-	}
-	
-	&-page-2-scene-3
-	{
-		top: 100%;
-	}
-	
-	&-page-3-scene-2
-	{
-		top: 0%;
-	}
-	
-	&-page-3-scene-3
-	{
-		top: 50%;
-	}
-	
-	&-page-3-scene-4
-	{
-		top: 100%;
-	}
-}
-
-
-
 .sd-page
 {
 	// fixes the width issue on scrollmagic pinned pages
 	width: 100vw;
 	height: 100vh;
 	position: relative;
+
+	.sd-trigger
+	{
+		position: absolute;
+
+		&-scene-1
+		{
+			top: 0%;
+		}
+
+		&-scene-2
+		{
+			top: 50%;
+		}
+
+		&-scene-3
+		{
+			top: 100%;
+		}
+	}
 
 	.sd-box
 	{
@@ -641,25 +624,17 @@ a
 
 	&.sd-page-3
 	{
-
 		.sd-stripe-area
 		{
 			background-image: url('../img/bg_p03.jpg');
 		}
 	}
 
-	&.sd-page-4
-	{
-	}
-
 	&.sd-page-5
 	{
-		position: absolute;
-		margin-top: 100vh;
-
-		.sd-box
+		.sd-stripe-area
 		{
-			background-color: #666;
+			background-image: url('../img/bg_p03.jpg');
 		}
 	}
 }
@@ -787,6 +762,26 @@ a
 					width: 50%;
 					height: 100vh;
 					transform: scale(0.75);
+				}
+			}
+
+			&.sd-page-work-detail-r
+			{
+				.sd-stripe-area
+				{
+					left: 0;
+					right: 50%;
+				}
+
+				.sd-box
+				{
+					margin-left: 50%;
+				}
+
+				.sd-bezel-container .sd-bezel
+				{
+					right: auto;
+					left: 0;
 				}
 			}
 		}
