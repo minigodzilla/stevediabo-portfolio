@@ -129,6 +129,12 @@ a {
 
 .sd-trigger {
   position: absolute; }
+  .sd-trigger-page-2-scene-1 {
+    top: 0%; }
+  .sd-trigger-page-2-scene-2 {
+    top: 50%; }
+  .sd-trigger-page-2-scene-3 {
+    top: 100%; }
   .sd-trigger-page-3-scene-2 {
     top: 0%; }
   .sd-trigger-page-3-scene-3 {
@@ -137,10 +143,9 @@ a {
     top: 100%; }
 
 .sd-page {
-  width: 100vw !important;
+  width: 100vw;
   height: 100vh;
-  position: relative;
-  margin-left: 0 !important; }
+  position: relative; }
   .sd-page .sd-box {
     position: absolute;
     top: 0;
@@ -148,10 +153,15 @@ a {
     bottom: 0;
     left: 0; }
   .sd-page.sd-page-simple-title {
+    height: 200vh;
     z-index: 1;
     background-color: #888;
     color: #fff; }
     .sd-page.sd-page-simple-title .sd-box {
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
       -webkit-transform: translateY(30px);
               transform: translateY(30px);
       padding: 35px 25px;
@@ -170,6 +180,12 @@ a {
       .sd-page.sd-page-simple-title .sd-box .sd-p {
         margin-bottom: 16px;
         font-weight: 300; }
+    .sd-page.sd-page-simple-title.sd-past-top .sd-box {
+      position: fixed; }
+    .sd-page.sd-page-simple-title.sd-past-bottom .sd-box {
+      position: absolute;
+      top: auto;
+      bottom: 0; }
   .sd-page.sd-page-work-detail {
     height: auto !important;
     background-color: #fff;

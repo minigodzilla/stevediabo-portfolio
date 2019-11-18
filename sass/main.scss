@@ -263,6 +263,21 @@ a
 {
 	position: absolute;
 	
+	&-page-2-scene-1
+	{
+		top: 0%;
+	}
+	
+	&-page-2-scene-2
+	{
+		top: 50%;
+	}
+	
+	&-page-2-scene-3
+	{
+		top: 100%;
+	}
+	
 	&-page-3-scene-2
 	{
 		top: 0%;
@@ -284,10 +299,9 @@ a
 .sd-page
 {
 	// fixes the width issue on scrollmagic pinned pages
-	width: 100vw !important;
+	width: 100vw;
 	height: 100vh;
 	position: relative;
-	margin-left: 0 !important;
 
 	.sd-box
 	{
@@ -302,12 +316,17 @@ a
 
 	&.sd-page-simple-title
 	{
+		height: 200vh;
 		z-index: 1;
 		background-color: #888;
 		color: #fff;
 
 		.sd-box
 		{
+			position: absolute;
+			top: 0;
+			width: 100vw;
+			height: 100vh;
 			transform: translateY(30px);
 			padding: 35px 25px;
 			display: flex;
@@ -326,6 +345,18 @@ a
 				margin-bottom: 16px;
 				font-weight: 300;
 			}
+		}
+
+		&.sd-past-top .sd-box
+		{
+			position: fixed;
+		}
+
+		&.sd-past-bottom .sd-box
+		{
+			position: absolute;
+			top: auto;
+			bottom: 0;
 		}
 	}
 
