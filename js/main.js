@@ -34,7 +34,7 @@ $(function () {
 		})
 		.setPin('.sd-page-1', { pushFollowers: false })
 		.setTween(page1tween)
-		// .addIndicators({name: 'pg1'})
+		.addIndicators({name: 'pg1'})
 
 		// pg 2
 
@@ -45,14 +45,14 @@ $(function () {
 			triggerElement: '.sd-trigger-page-2-scene-1', triggerHook: 0, duration: '100%'
 		})
 		.setTween(page2scene1tween)
-		// .addIndicators({name: 'pg2 sc1'})
+		.addIndicators({name: 'pg2 sc1'})
 
 		const page2scene1a = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-trigger-page-2-scene-1', triggerHook: 0
 		})
 		.setClassToggle('.sd-page-2', 'sd-past-top')
-		// .addIndicators({name: 'pg2 sc1a'})
+		.addIndicators({name: 'pg2 sc1a'})
 
 		const page2scene2tween = TweenMax.to('.sd-page-2 .sd-signature', 1, { className: '+=sd-animated' });
 
@@ -61,14 +61,14 @@ $(function () {
 			triggerElement: '.sd-trigger-page-2-scene-2', triggerHook: 0.5, reverse: false
 		})
 		.setTween(page2scene2tween)
-		// .addIndicators({name: 'pg2 sc2'})
+		.addIndicators({name: 'pg2 sc2'})
 
 		const page2scene3 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-trigger-page-2-scene-3', triggerHook: 1
 		})
 		.setClassToggle('.sd-page-2', 'sd-past-bottom')
-		// .addIndicators({name: 'pg2 sc1a'})
+		.addIndicators({name: 'pg2 sc1a'})
 
 		// pg 3
 
@@ -79,21 +79,21 @@ $(function () {
 			triggerElement: '.sd-page-3', triggerHook: 1, duration: '350%'
 		})
 		.setTween(page3scene1tween)
-		// .addIndicators({name: 'pg3 sc1'})
+		.addIndicators({name: 'pg3 sc1'})
 
 		const page3scene1a = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-3', triggerHook: 1
 		})
 		.setClassToggle('.sd-page-3', 'sd-in-view')
-		// .addIndicators({name: 'pg3 sc1a'})
+		.addIndicators({name: 'pg3 sc1a'})
 
 		const page3scene2 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-trigger-page-3-scene-2', triggerHook: 0
 		})
 		.setClassToggle('.sd-page-3', 'sd-past-top')
-		// .addIndicators({name: 'pg3 sc2'})
+		.addIndicators({name: 'pg3 sc2'})
 
 		const page3scene3timeline = new TimelineLite();
 			page3scene3timeline
@@ -117,28 +117,28 @@ $(function () {
 			triggerElement: '.sd-trigger-page-3-scene-3', triggerHook: 0.5
 		})
 		.setTween(page3scene3timeline)
-		// .addIndicators({name: 'pg3 sc3'})
+		.addIndicators({name: 'pg3 sc3'})
 
 		const page3scene4 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-trigger-page-3-scene-4', triggerHook: 1
 		})
 		.setClassToggle('.sd-page-3', 'sd-past-bottom')		
-		// .addIndicators({name: 'pg3 sc4'})
+		.addIndicators({name: 'pg3 sc4'})
 
 		const page3scene5 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop', triggerHook: 0.5, reverse: false
 		})
 		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop', 'sd-animated')		
-		// .addIndicators({name: 'pg3 sc5'})
+		.addIndicators({name: 'pg3 sc5'})
 
 		const page3scene6 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone', triggerHook: 0.5, reverse: false
 		})
 		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone', 'sd-animated')		
-		// .addIndicators({name: 'pg3 sc6'})
+		.addIndicators({name: 'pg3 sc6'})
 
 		// pg 4
 
@@ -150,7 +150,7 @@ $(function () {
 		})
 		.setPin('.sd-page-4', { pushFollowers: false })
 		.setTween(page4tween)
-		// .addIndicators({name: 'pg4'})
+		.addIndicators({name: 'pg4'})
 
 
 		// Add scenes to the controller
