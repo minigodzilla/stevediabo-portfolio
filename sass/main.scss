@@ -491,9 +491,15 @@ a
 		height: 100vh;
 		background-color: #888;
 		background-image: url('../img/bg_p01_xs.jpg');
-		background-size: 125vw auto;
-		background-position: 50% 50%;
+		background-size: 120vw auto;
+		background-position: 50% 40%;
 		color: #fff;
+		user-select: none;
+
+		&.sd-animated
+		{
+			background-position: 50% 60%;
+		}
 
 		.sd-stripe-area
 		{
@@ -532,6 +538,12 @@ a
 				padding: 0 8px;
 				background-color: #fff;
 				line-height: 1.5;
+				clip-path: polygon(100% 0%, 200% 0%, 200% 100%, 100% 100%);
+
+				&.sd-animated
+				{
+					clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+				}
 			}
 
 			.sd-name-container
@@ -613,17 +625,20 @@ a
 
 	&.sd-page-3
 	{
-		.sd-stripe-area
+		.sd-stripe-area,
+		.sd-bezel-container
 		{
 			background-image: url('../img/bg_p03.jpg');
 		}
+
 	}
 
 	&.sd-page-5
 	{
-		.sd-stripe-area
+		.sd-stripe-area,
+		.sd-bezel-container
 		{
-			background-image: url('../img/bg_p03.jpg');
+			background-image: url('../img/bg_p05.jpg');
 		}
 	}
 }
@@ -661,6 +676,17 @@ a
 		&.sd-page-work-detail .sd-box .sd-p
 		{
 			font-size: 1em;
+		}
+
+		&.sd-page-1
+		{
+			background-image: url('../img/bg_p01.jpg');
+			background-position: 50% 40%;
+
+			&.sd-animated
+			{
+				background-position: 50% 60%;
+			}
 		}
 	}
 }

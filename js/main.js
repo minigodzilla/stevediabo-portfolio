@@ -26,14 +26,36 @@ $(function () {
 
 		// pg 1
 
-		const page1tween = TweenMax.to('.sd-page-1 .sd-animated-item', 1, { className: '+=sd-animated', ease: Linear.easeNone });
+		const page1scene1tween = TweenMax.to('.sd-page-1, .sd-page-1 .sd-animated-item', 1, { className: '+=sd-animated', ease: Linear.easeNone });
 
-		const page1scene = new ScrollMagic.Scene
+		const page1scene1 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-1', triggerHook: 0, duration: '200%'
 		})
 		.setPin('.sd-page-1', { pushFollowers: false })
-		.setTween(page1tween)
+		.setTween(page1scene1tween)
+		// .addIndicators({name: 'pg1'})
+
+		const page1scene2timeline = new TimelineLite();
+			page1scene2timeline
+				.to('.sd-page-1 .sd-box .sd-name-container', 0.2, { 
+					className: '+=sd-animated',
+					delay: 0.4
+				})
+				.to('.sd-page-1 .sd-box .sd-role-container', 0.2, { 
+					className: '+=sd-animated',
+					delay: 0.2
+				})
+				.to('.sd-page-1 .sd-box .sd-location-container', 0.2, { 
+					className: '+=sd-animated'
+				})
+			;
+
+		const page1scene2 = new ScrollMagic.Scene
+		({
+			triggerElement: '.sd-page-1', triggerHook: 0
+		})
+		.setTween(page1scene2timeline)
 		// .addIndicators({name: 'pg1'})
 
 		// pg 2
@@ -213,7 +235,8 @@ $(function () {
 		// .addIndicators({name: 'pg5 sc6'})
 
 		// Add scenes to the controller
-		page1scene.addTo (scrollController);
+		page1scene1.addTo (scrollController);
+		page1scene2.addTo (scrollController);
 		page2scene1.addTo (scrollController);
 		page3scene1.addTo (scrollController);
 		page3scene1a.addTo (scrollController);
