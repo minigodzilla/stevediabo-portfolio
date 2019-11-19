@@ -38,37 +38,14 @@ $(function () {
 
 		// pg 2
 
-		const page2scene1tween = TweenMax.to('.sd-page-2 .sd-box', 1, { className: '+=sd-animated', ease: Linear.easeNone });
+		const page2scene1tween = TweenMax.to('.sd-page-2 .sd-signature', 1, { className: '+=sd-animated' });
 
 		const page2scene1 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-2 .sd-trigger-scene-1', triggerHook: 0, duration: '100%'
+			triggerElement: '.sd-page-2 .sd-trigger-scene-2', triggerHook: 0.5, reverse: false
 		})
 		.setTween(page2scene1tween)
 		.addIndicators({name: 'pg2 sc1'})
-
-		const page2scene1a = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-2 .sd-trigger-scene-1', triggerHook: 0
-		})
-		.setClassToggle('.sd-page-2', 'sd-past-top')
-		.addIndicators({name: 'pg2 sc1a'})
-
-		const page2scene2tween = TweenMax.to('.sd-page-2 .sd-signature', 1, { className: '+=sd-animated' });
-
-		const page2scene2 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-2 .sd-trigger-scene-2', triggerHook: 0.5, reverse: false
-		})
-		.setTween(page2scene2tween)
-		.addIndicators({name: 'pg2 sc2'})
-
-		const page2scene3 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-2 .sd-trigger-scene-3', triggerHook: 1
-		})
-		.setClassToggle('.sd-page-2', 'sd-past-bottom')
-		.addIndicators({name: 'pg2 sc1a'})
 
 		// pg 3
 
@@ -238,9 +215,6 @@ $(function () {
 		// Add scenes to the controller
 		page1scene.addTo (scrollController);
 		page2scene1.addTo (scrollController);
-		page2scene1a.addTo (scrollController);
-		page2scene2.addTo (scrollController);
-		page2scene3.addTo (scrollController);
 		page3scene1.addTo (scrollController);
 		page3scene1a.addTo (scrollController);
 		page3scene1b.addTo (scrollController);

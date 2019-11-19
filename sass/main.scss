@@ -263,7 +263,6 @@ a
 {
 	// fixes the width issue on scrollmagic pinned pages
 	width: 100vw;
-	height: 100vh;
 	position: relative;
 
 	.sd-trigger
@@ -305,12 +304,10 @@ a
 
 		.sd-box
 		{
-			position: absolute;
-			top: 0;
+			position: static;
 			width: 100vw;
 			min-height: 100vh;
-			// transform: translateY(30px);
-			padding: 35px 25px;
+			padding: 36px 24px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -363,7 +360,7 @@ a
 			width: 100%;
 			max-width: 480px;
 			margin: 0 auto;
-			padding: 35px 25px;
+			padding: 36px 24px;
 
 			.sd-year
 			{
@@ -412,8 +409,8 @@ a
 			// background-attachment: fixed;
 			background-position: 50% -200px;
 			background-size: auto 700px;
-			margin: 25px 0;
-			padding: 35px 0;
+			margin: 24px 0;
+			padding: 36px 0;
 
 			&.sd-animated
 			{
@@ -491,23 +488,24 @@ a
 
 	&.sd-page-1
 	{
+		height: 100vh;
 		background-color: #888;
-		background-image: url('../img/bg_p01.jpg');
-		background-size: cover;
+		background-image: url('../img/bg_p01_xs.jpg');
+		background-size: auto 125%;
+		background-position: 50% 50%;
 		color: #fff;
 
 		.sd-stripe-area
 		{
 			left: 0;
-			right: 50%;
+			right: 0;
 		}
 
 		.sd-box
 		{
-			background-color: #fff;
 			color: #000;
-			width: 50%;
-			height: 100%;
+			width: 100vw;
+			height: 100vh;
 			top: 0;
 			right: 0;
 			bottom: 0;
@@ -515,54 +513,46 @@ a
 			text-transform: uppercase;
 			display: flex;
 			flex-direction: column;
-			align-items: center;
+			align-items: flex-end;
 			justify-content: center;
+			transform: translateY(20px);
 
 
-			.sd-name
+			&.sd-animated
 			{
-				position: absolute;
-				// margin-top: -70px;
-				// margin-left: 10px;
-				line-height: 1;
-				font-weight: 900;
-				font-size: 3em;
-				letter-spacing: -0.25px;
-
-				&.sd-animated
-				{
-					transform: translateY(-50px);
-				}
+				transform: translateY(-20px);
 			}
 
-			.sd-role
+			.sd-name-container,
+			.sd-role-container,
+			.sd-location-container
 			{
 				position: absolute;
-				margin-top: 55px;
-				// margin-left: 130px;
-				line-height: 1;
+				right: 16px;
+				padding: 0 8px;
+				background-color: #fff;
+				line-height: 1.5;
+			}
+
+			.sd-name-container
+			{
+				font-weight: 900;
+				font-size: 2.25em;
+				// letter-spacing: -0.25px;
+			}
+
+			.sd-role-container
+			{
+				margin-top: 56px;
 				font-weight: 300;
 				letter-spacing: 1.75px;
-
-				&.sd-animated
-				{
-					transform: translateY(-60px);
-				}
 			}
 
-			.sd-location
+			.sd-location-container
 			{
-				position: absolute;
 				margin-top: 80px;
-				// margin-left: 130px;
-				line-height: 1;
 				font-weight: 700;
 				letter-spacing: 3.75px;
-
-				&.sd-animated
-				{
-					transform: translateY(-60px);
-				}
 			}
 		}
 	}
@@ -690,7 +680,7 @@ a
 			{
 				max-width: none;
 				margin: 0;
-				padding: 15%;
+				padding: 15vh 15%;
 			}
 		}
 

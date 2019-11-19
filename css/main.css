@@ -129,7 +129,6 @@ a {
 
 .sd-page {
   width: 100vw;
-  height: 100vh;
   position: relative; }
   .sd-page .sd-trigger {
     position: absolute; }
@@ -150,11 +149,10 @@ a {
     background-color: #888;
     color: #fff; }
     .sd-page.sd-page-simple-title .sd-box {
-      position: absolute;
-      top: 0;
+      position: static;
       width: 100vw;
       min-height: 100vh;
-      padding: 35px 25px;
+      padding: 36px 24px;
       display: -webkit-box;
       display: flex;
       -webkit-box-orient: vertical;
@@ -182,7 +180,7 @@ a {
       width: 100%;
       max-width: 480px;
       margin: 0 auto;
-      padding: 35px 25px; }
+      padding: 36px 24px; }
       .sd-page.sd-page-work-detail .sd-box .sd-year {
         font-size: 1em;
         font-weight: 500;
@@ -212,8 +210,8 @@ a {
       background-image: url("../img/bg_p03.jpg");
       background-position: 50% -200px;
       background-size: auto 700px;
-      margin: 25px 0;
-      padding: 35px 0; }
+      margin: 24px 0;
+      padding: 36px 0; }
       .sd-page.sd-page-work-detail .sd-bezel-container.sd-animated {
         background-position: 50% 0px; }
       .sd-page.sd-page-work-detail .sd-bezel-container.sd-xs-bezel-container .sd-bezel {
@@ -253,18 +251,19 @@ a {
             -webkit-transform: translate(-50%, -50%);
                     transform: translate(-50%, -50%); }
   .sd-page.sd-page-1 {
+    height: 100vh;
     background-color: #888;
-    background-image: url("../img/bg_p01.jpg");
-    background-size: cover;
+    background-image: url("../img/bg_p01_xs.jpg");
+    background-size: auto 125%;
+    background-position: 50% 50%;
     color: #fff; }
     .sd-page.sd-page-1 .sd-stripe-area {
       left: 0;
-      right: 50%; }
+      right: 0; }
     .sd-page.sd-page-1 .sd-box {
-      background-color: #fff;
       color: #000;
-      width: 50%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       top: 0;
       right: 0;
       bottom: 0;
@@ -275,37 +274,34 @@ a {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
               flex-direction: column;
-      -webkit-box-align: center;
-              align-items: center;
+      -webkit-box-align: end;
+              align-items: flex-end;
       -webkit-box-pack: center;
-              justify-content: center; }
-      .sd-page.sd-page-1 .sd-box .sd-name {
+              justify-content: center;
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px); }
+      .sd-page.sd-page-1 .sd-box.sd-animated {
+        -webkit-transform: translateY(-20px);
+                transform: translateY(-20px); }
+      .sd-page.sd-page-1 .sd-box .sd-name-container,
+      .sd-page.sd-page-1 .sd-box .sd-role-container,
+      .sd-page.sd-page-1 .sd-box .sd-location-container {
         position: absolute;
-        line-height: 1;
+        right: 16px;
+        padding: 0 8px;
+        background-color: #fff;
+        line-height: 1.5; }
+      .sd-page.sd-page-1 .sd-box .sd-name-container {
         font-weight: 900;
-        font-size: 3em;
-        letter-spacing: -0.25px; }
-        .sd-page.sd-page-1 .sd-box .sd-name.sd-animated {
-          -webkit-transform: translateY(-50px);
-                  transform: translateY(-50px); }
-      .sd-page.sd-page-1 .sd-box .sd-role {
-        position: absolute;
-        margin-top: 55px;
-        line-height: 1;
+        font-size: 2.25em; }
+      .sd-page.sd-page-1 .sd-box .sd-role-container {
+        margin-top: 56px;
         font-weight: 300;
         letter-spacing: 1.75px; }
-        .sd-page.sd-page-1 .sd-box .sd-role.sd-animated {
-          -webkit-transform: translateY(-60px);
-                  transform: translateY(-60px); }
-      .sd-page.sd-page-1 .sd-box .sd-location {
-        position: absolute;
+      .sd-page.sd-page-1 .sd-box .sd-location-container {
         margin-top: 80px;
-        line-height: 1;
         font-weight: 700;
         letter-spacing: 3.75px; }
-        .sd-page.sd-page-1 .sd-box .sd-location.sd-animated {
-          -webkit-transform: translateY(-60px);
-                  transform: translateY(-60px); }
   .sd-page.sd-page-2 {
     margin-top: 100vh; }
     .sd-page.sd-page-2 .sd-box .sd-signature {
@@ -367,7 +363,7 @@ a {
     .sd-page.sd-page-simple-title .sd-box {
       max-width: none;
       margin: 0;
-      padding: 15%; }
+      padding: 15vh 15%; }
   .sd-page.sd-page-work-detail {
     min-height: 150vh; }
     .sd-page.sd-page-work-detail .sd-stripe-area {
