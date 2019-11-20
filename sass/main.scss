@@ -46,6 +46,7 @@ a
 	position: absolute;
 	top: 0;
 	bottom: 0;
+	user-select: none;
 
 	.sd-stripe
 	{
@@ -398,6 +399,7 @@ a
 			background-size: auto 700px;
 			margin: 24px 0;
 			padding: 36px 0;
+			user-select: none;
 
 			&.sd-animated
 			{
@@ -408,20 +410,25 @@ a
 			{
 				.sd-bezel
 				{
-					.sd-play-btn
+					.sd-overlay
 					{
 						opacity: 0;
 						transition: opacity 200ms ease;
 					}
 
-					&.sd-show-play-btn 
+					&.sd-bezel-phone .sd-overlay .sd-svg
+					{
+						width: 25%;
+					}
+
+					&.sd-show-overlay 
 					{
 						.sd-screen-content-image
 						{
 							filter: brightness(75%) contrast(75%);
 						}
 
-						.sd-play-btn
+						.sd-overlay
 						{
 							opacity: 1;
 						}
@@ -458,17 +465,12 @@ a
 
 					&.sd-screen-content-image
 					{
-						transition: all 200ms ease;
+						cursor: pointer;
+						transition: filter 200ms ease;
 					}
 				}
 
-				.sd-play-btn
-				{
-					opacity: 1;
-					transition: opacity 200ms ease;
-				}
-
-				&-laptop
+				&.sd-bezel-laptop
 				{
 
 					.sd-screen-content
@@ -483,7 +485,7 @@ a
 					}
 				}
 
-				&-phone
+				&.sd-bezel-phone
 				{
 					max-width: 50%;
 
@@ -499,7 +501,7 @@ a
 					}
 				}
 
-				.sd-play-btn
+				.sd-overlay
 				{
 					position: absolute;
 					top: 0;
@@ -508,11 +510,45 @@ a
 					left: 0;
 					display: flex;
 					justify-content: center;
+					transition: opacity 200ms ease;
+					cursor: pointer;
+					pointer-events: none;
+
+					@keyframes sd-svg-loading-anim
+					{
+						to
+						{
+							transform: rotate(360deg);
+						}
+					}
+
+					.sd-svg-loading
+					{
+						animation-name: sd-svg-loading-anim;
+						animation-duration: 1.5s;
+						animation-timing-function: steps(12);
+						animation-iteration-count: infinite;
+						opacity: 0;
+					}
 
 					.sd-svg
 					{
+						position: absolute;
 						fill: #fff;
 						width: 15%;
+					}
+				}
+
+				&.sd-loading .sd-overlay
+				{
+					.sd-svg-play-btn
+					{
+						opacity: 0;
+					}
+
+					.sd-svg-loading
+					{
+						opacity: 1;
 					}
 				}
 			}
@@ -584,7 +620,6 @@ a
 			{
 				font-weight: 900;
 				font-size: 2.25em;
-				// letter-spacing: -0.25px;
 			}
 
 			.sd-role-container
@@ -787,7 +822,7 @@ a
 				}
 			}
 
-			&.sd-past-top .sd-bezel-container .sd-bezel .sd-play-btn
+			&.sd-past-top .sd-bezel-container .sd-bezel .sd-overlay
 			{
 				opacity: 1;
 			}
@@ -807,12 +842,12 @@ a
 				}
 			}
 
-			&.sd-past-bottom .sd-bezel-container .sd-bezel .sd-play-btn
+			&.sd-past-bottom .sd-bezel-container .sd-bezel .sd-overlay
 			{
 				opacity: 0;
 			}
 
-			.sd-play-btn
+			.sd-overlay
 			{
 				opacity: 0;
 			}
@@ -843,7 +878,7 @@ a
 					height: 100vh;
 					transform: scale(0.75);
 
-					.sd-play-btn
+					.sd-overlay
 					{
 						opacity: 0;
 					}
