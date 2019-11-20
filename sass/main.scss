@@ -421,12 +421,28 @@ a
 			{
 				.sd-bezel
 				{
-					opacity: 0;
-					transition: opacity 800ms ease;
-
-					&.sd-animated
+					.sd-screen-content-play-btn
 					{
-						opacity: 1;
+						opacity: 0;
+						transition: opacity 200ms ease;
+					}
+
+					.sd-screen-content-image
+					{
+						transition: filter 200ms ease;
+					}
+
+					&.sd-animated 
+					{
+						.sd-screen-content-image
+						{
+							filter: brightness(75%) contrast(75%);
+						}
+
+						.sd-screen-content-play-btn
+						{
+							opacity: 1;
+						}
 					}
 				}
 			}
@@ -452,6 +468,23 @@ a
 				.sd-screen-content
 				{
 					position: absolute;
+
+					&.sd-screen-content-video
+					{
+						display: none;
+					}
+
+					&.sd-screen-content-image
+					{
+						filter: contrast(100%) brightness(100%);
+						transition: filter 200ms ease;
+					}
+				}
+
+				.sd-screen-content-play-btn
+				{
+					opacity: 1;
+					transition: opacity 200ms ease;
 				}
 
 				&-laptop
@@ -460,7 +493,8 @@ a
 					.sd-screen-content
 					{
 						width: (100 / 700 * 560%);
-						height: (100 / 414 * 350%);
+						// height: (100 / 414 * 350%);
+						height: auto;
 						top: 50%;
 						left: 50%;
 						margin-top: (-100 / 730 * 12%);
@@ -474,12 +508,30 @@ a
 
 					.sd-screen-content
 					{
-						width: (100 / 360 * 320%);
+						// width: (100 / 360 * 320%);
+						width: auto;
 						height: (100 / 730 * 568%);
 						top: 50%;
 						left: 50%;
 						margin-top: (-100 / 730 * 5%);
 						transform: translate(-50%,-50%);
+					}
+				}
+
+				.sd-screen-content-play-btn
+				{
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					display: flex;
+					justify-content: center;
+
+					.sd-svg
+					{
+						fill: #fff;
+						width: 15%;
 					}
 				}
 			}
@@ -746,11 +798,42 @@ a
 				position: fixed;
 			}
 
+			&.sd-past-top .sd-bezel-container .sd-bezel .sd-screen-content
+			{
+				&.sd-screen-content-image
+				{
+					filter: contrast(75%) brightness(75%);
+				}
+			}
+
+			&.sd-past-top .sd-bezel-container .sd-bezel .sd-screen-content-play-btn
+			{
+				opacity: 1;
+			}
+
 			&.sd-past-bottom .sd-bezel-container .sd-bezel
 			{
 				position: absolute;
 				top: auto;
 				bottom: 0;
+			}
+
+			&.sd-past-bottom .sd-bezel-container .sd-bezel .sd-screen-content
+			{
+				&.sd-screen-content-image
+				{
+					filter: contrast(100%) brightness(100%);
+				}
+			}
+
+			&.sd-past-bottom .sd-bezel-container .sd-bezel .sd-screen-content-play-btn
+			{
+				opacity: 0;
+			}
+
+			.sd-screen-content-play-btn
+			{
+				opacity: 0;
 			}
 
 			.sd-box
@@ -778,6 +861,11 @@ a
 					width: 50%;
 					height: 100vh;
 					transform: scale(0.75);
+
+					.sd-screen-content-play-btn
+					{
+						opacity: 0;
+					}
 				}
 			}
 

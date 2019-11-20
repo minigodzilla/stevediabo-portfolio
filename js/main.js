@@ -40,7 +40,7 @@ $(function () {
 			page1scene2timeline
 				.to('.sd-page-1 .sd-box .sd-name-container', 0.2, { 
 					className: '+=sd-animated',
-					delay: 0.4
+					delay: 1
 				})
 				.to('.sd-page-1 .sd-box .sd-role-container', 0.2, { 
 					className: '+=sd-animated',
@@ -64,7 +64,7 @@ $(function () {
 
 		const page2scene1 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-2 .sd-trigger-scene-2', triggerHook: 0.5, reverse: false
+			triggerElement: '.sd-page-2 .sd-trigger-scene-2', triggerHook: 0.5, reverse: true
 		})
 		.setTween(page2scene1tween)
 		// .addIndicators({name: 'pg2 sc1'})
@@ -127,14 +127,14 @@ $(function () {
 
 		const page3scene4 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop', triggerHook: 0.5, reverse: false
+			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop', triggerHook: 0.4, reverse: true
 		})
 		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop', 'sd-animated')		
 		// .addIndicators({name: 'pg3 sc5'})
 
 		const page3scene5 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone', triggerHook: 0.5, reverse: false
+			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone', triggerHook: 0.4, reverse: true
 		})
 		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone', 'sd-animated')		
 		// .addIndicators({name: 'pg3 sc6'})
@@ -222,14 +222,14 @@ $(function () {
 
 		const page5scene4 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-5 .sd-xs-bezel-container .sd-bezel-laptop', triggerHook: 0.5, reverse: false
+			triggerElement: '.sd-page-5 .sd-xs-bezel-container .sd-bezel-laptop', triggerHook: 0.5, reverse: true
 		})
 		.setClassToggle('.sd-page-5 .sd-xs-bezel-container .sd-bezel-laptop', 'sd-animated')		
 		// .addIndicators({name: 'pg5 sc5'})
 
 		const page5scene5 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-5 .sd-xs-bezel-container .sd-bezel-phone', triggerHook: 0.5, reverse: false
+			triggerElement: '.sd-page-5 .sd-xs-bezel-container .sd-bezel-phone', triggerHook: 0.5, reverse: true
 		})
 		.setClassToggle('.sd-page-5 .sd-xs-bezel-container .sd-bezel-phone', 'sd-animated')		
 		// .addIndicators({name: 'pg5 sc6'})
@@ -261,10 +261,10 @@ $(function () {
 		// 	speed: 750
 		// });
 
+		$('.sd-page-3 .sd-bezel-phone .sd-screen-content-image').click(function(){
+			console.log('hi');
+			$('.sd-page-3 .sd-bezel-phone .sd-screen-content-video').show();
+		});
+
 	})();
-
-	window.addEventListener('resize', () => {
-		// lockHeight();
-	});
-
 });
