@@ -127,14 +127,14 @@ $(function () {
 
 		const page3scene4 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop .sd-overlay .sd-svg path', triggerHook: 0.5, reverse: true
+			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop .sd-overlay .sd-svg path', triggerHook: 0.6, reverse: true
 		})
 		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop', 'sd-show-overlay')		
 		// .addIndicators({name: 'pg3 sc5'})
 
 		const page3scene5 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone .sd-overlay .sd-svg path', triggerHook: 0.5, reverse: true
+			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone .sd-overlay .sd-svg path', triggerHook: 0.6, reverse: true
 		})
 		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone', 'sd-show-overlay')		
 		// .addIndicators({name: 'pg3 sc6'})
