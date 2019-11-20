@@ -127,16 +127,16 @@ $(function () {
 
 		const page3scene4 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop', triggerHook: 0.4, reverse: true
+			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop .sd-play-btn .sd-svg path', triggerHook: 0.5, reverse: true
 		})
-		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop', 'sd-animated')		
+		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop', 'sd-show-play-btn')		
 		// .addIndicators({name: 'pg3 sc5'})
 
 		const page3scene5 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone', triggerHook: 0.4, reverse: true
+			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone .sd-play-btn .sd-svg path', triggerHook: 0.5, reverse: true
 		})
-		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone', 'sd-animated')		
+		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone', 'sd-show-play-btn')		
 		// .addIndicators({name: 'pg3 sc6'})
 
 		// pg 4

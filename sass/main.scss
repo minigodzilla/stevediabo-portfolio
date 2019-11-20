@@ -325,18 +325,6 @@ a
 				font-weight: 300;
 			}
 		}
-
-		&.sd-past-top .sd-box
-		{
-			// position: fixed;
-		}
-
-		&.sd-past-bottom .sd-box
-		{
-			// position: absolute;
-			// top: auto;
-			// bottom: 0;
-		}
 	}
 
 	&.sd-page-work-detail
@@ -406,7 +394,6 @@ a
 		{
 			background-color: #888;
 			background-image: url('../img/bg_p03.jpg');
-			// background-attachment: fixed;
 			background-position: 50% -200px;
 			background-size: auto 700px;
 			margin: 24px 0;
@@ -421,25 +408,20 @@ a
 			{
 				.sd-bezel
 				{
-					.sd-screen-content-play-btn
+					.sd-play-btn
 					{
 						opacity: 0;
 						transition: opacity 200ms ease;
 					}
 
-					.sd-screen-content-image
-					{
-						transition: filter 200ms ease;
-					}
-
-					&.sd-animated 
+					&.sd-show-play-btn 
 					{
 						.sd-screen-content-image
 						{
 							filter: brightness(75%) contrast(75%);
 						}
 
-						.sd-screen-content-play-btn
+						.sd-play-btn
 						{
 							opacity: 1;
 						}
@@ -476,12 +458,11 @@ a
 
 					&.sd-screen-content-image
 					{
-						filter: contrast(100%) brightness(100%);
-						transition: filter 200ms ease;
+						transition: all 200ms ease;
 					}
 				}
 
-				.sd-screen-content-play-btn
+				.sd-play-btn
 				{
 					opacity: 1;
 					transition: opacity 200ms ease;
@@ -518,7 +499,7 @@ a
 					}
 				}
 
-				.sd-screen-content-play-btn
+				.sd-play-btn
 				{
 					position: absolute;
 					top: 0;
@@ -806,7 +787,7 @@ a
 				}
 			}
 
-			&.sd-past-top .sd-bezel-container .sd-bezel .sd-screen-content-play-btn
+			&.sd-past-top .sd-bezel-container .sd-bezel .sd-play-btn
 			{
 				opacity: 1;
 			}
@@ -826,12 +807,12 @@ a
 				}
 			}
 
-			&.sd-past-bottom .sd-bezel-container .sd-bezel .sd-screen-content-play-btn
+			&.sd-past-bottom .sd-bezel-container .sd-bezel .sd-play-btn
 			{
 				opacity: 0;
 			}
 
-			.sd-screen-content-play-btn
+			.sd-play-btn
 			{
 				opacity: 0;
 			}
@@ -862,7 +843,7 @@ a
 					height: 100vh;
 					transform: scale(0.75);
 
-					.sd-screen-content-play-btn
+					.sd-play-btn
 					{
 						opacity: 0;
 					}
