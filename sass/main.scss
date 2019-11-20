@@ -538,6 +538,7 @@ a
 				padding: 0 8px;
 				background-color: #fff;
 				line-height: 1.5;
+				white-space: nowrap;
 				clip-path: polygon(100% 0%, 200% 0%, 200% 100%, 100% 100%);
 
 				&.sd-animated
@@ -556,7 +557,7 @@ a
 			.sd-role-container
 			{
 				margin-top: 56px;
-				font-weight: 300;
+				font-weight: 400;
 				letter-spacing: 1.75px;
 			}
 
@@ -797,6 +798,49 @@ a
 				{
 					right: auto;
 					left: 0;
+				}
+			}
+		}
+
+		&.sd-page-1
+		{
+			.sd-box
+			{
+				width: 50%;
+				align-items: center;
+
+				.sd-name-container,
+				.sd-role-container,
+				.sd-location-container
+				{
+					right: 50%;
+					padding: 0 16px;
+				}
+
+				.sd-name-container
+				{
+					margin-top: -36px;
+					font-size: 72px;
+					line-height: 1.25;
+					transform: translateX(32%);
+				}
+
+				.sd-role-container
+				{
+					margin-top: 64px;
+					font-size: 30px;
+					line-height: 1.5;
+					letter-spacing: 3px;
+					transform: translateX(48%);
+				}
+
+				.sd-location-container
+				{
+					margin-top: 108px;
+					font-size: 30px;
+					line-height: 1.5;
+					letter-spacing: 6px;
+					transform: translateX(66%);
 				}
 			}
 		}

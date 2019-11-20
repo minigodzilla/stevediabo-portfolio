@@ -297,6 +297,7 @@ a {
         padding: 0 8px;
         background-color: #fff;
         line-height: 1.5;
+        white-space: nowrap;
         -webkit-clip-path: polygon(100% 0%, 200% 0%, 200% 100%, 100% 100%);
                 clip-path: polygon(100% 0%, 200% 0%, 200% 100%, 100% 100%); }
         .sd-page.sd-page-1 .sd-box .sd-name-container.sd-animated,
@@ -309,7 +310,7 @@ a {
         font-size: 2.25em; }
       .sd-page.sd-page-1 .sd-box .sd-role-container {
         margin-top: 56px;
-        font-weight: 300;
+        font-weight: 400;
         letter-spacing: 1.75px; }
       .sd-page.sd-page-1 .sd-box .sd-location-container {
         margin-top: 80px;
@@ -435,6 +436,35 @@ a {
     .sd-page.sd-page-work-detail.sd-page-work-detail-r .sd-bezel-container .sd-bezel {
       right: auto;
       left: 0; }
+  .sd-page.sd-page-1 .sd-box {
+    width: 50%;
+    -webkit-box-align: center;
+            align-items: center; }
+    .sd-page.sd-page-1 .sd-box .sd-name-container,
+    .sd-page.sd-page-1 .sd-box .sd-role-container,
+    .sd-page.sd-page-1 .sd-box .sd-location-container {
+      right: 50%;
+      padding: 0 16px; }
+    .sd-page.sd-page-1 .sd-box .sd-name-container {
+      margin-top: -36px;
+      font-size: 72px;
+      line-height: 1.25;
+      -webkit-transform: translateX(32%);
+              transform: translateX(32%); }
+    .sd-page.sd-page-1 .sd-box .sd-role-container {
+      margin-top: 64px;
+      font-size: 30px;
+      line-height: 1.5;
+      letter-spacing: 3px;
+      -webkit-transform: translateX(48%);
+              transform: translateX(48%); }
+    .sd-page.sd-page-1 .sd-box .sd-location-container {
+      margin-top: 108px;
+      font-size: 30px;
+      line-height: 1.5;
+      letter-spacing: 6px;
+      -webkit-transform: translateX(66%);
+              transform: translateX(66%); }
   .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg {
     width: 200px; }
   .sd-screen {
