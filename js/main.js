@@ -224,14 +224,14 @@ $(function () {
 		({
 			triggerElement: '.sd-page-5 .sd-xs-bezel-container .sd-bezel-laptop', triggerHook: 0.5, reverse: true
 		})
-		.setClassToggle('.sd-page-5 .sd-xs-bezel-container .sd-bezel-laptop', 'sd-animated')		
+		.setClassToggle('.sd-page-5 .sd-xs-bezel-container .sd-bezel-laptop', 'sd-show-overlay')		
 		// .addIndicators({name: 'pg5 sc5'})
 
 		const page5scene5 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-5 .sd-xs-bezel-container .sd-bezel-phone', triggerHook: 0.5, reverse: true
 		})
-		.setClassToggle('.sd-page-5 .sd-xs-bezel-container .sd-bezel-phone', 'sd-animated')		
+		.setClassToggle('.sd-page-5 .sd-xs-bezel-container .sd-bezel-phone', 'sd-show-overlay')		
 		// .addIndicators({name: 'pg5 sc6'})
 
 		// Add scenes to the controller
@@ -261,12 +261,10 @@ $(function () {
 		// 	speed: 750
 		// });
 
-		$('.sd-page-3 .sd-bezel .sd-screen-content-video').one('click', function() {
-			console.log('loady loady');
+		$('.sd-screen-content-video').one('click', function() {
 			$(this).parent().addClass('sd-loading');
 			$(this)[0].load();
 			$(this).on('canplaythrough', function() {
-				console.log('can playyy');
 				$(this).parent().addClass('sd-playing');
 				$(this)[0].play();
 			});
