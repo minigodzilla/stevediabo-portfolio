@@ -98,16 +98,20 @@ $(function () {
 			page3scene2timeline
 				.fromTo('.sd-page-3 .sd-lg-bezel-container .sd-bezel-laptop', 0.2, { 
 					opacity: 1,
+					pointerEvents: 'auto',
 					immediateRender: false
 				},
 				{ 
-					opacity: 0
+					opacity: 0,
+					pointerEvents: 'none'
 				})
 				.fromTo('.sd-page-3 .sd-lg-bezel-container .sd-bezel-phone', 0.2, { 
-					opacity: 0
+					opacity: 0,
+					pointerEvents: 'none'
 				},
 				{ 
-					opacity: 1
+					opacity: 1,
+					pointerEvents: 'auto'
 				})
 			;
 
@@ -193,16 +197,20 @@ $(function () {
 			page5scene2timeline
 				.fromTo('.sd-page-5 .sd-lg-bezel-container .sd-bezel-laptop', 0.2, { 
 					opacity: 1,
+					pointerEvents: 'none',
 					immediateRender: false
 				},
 				{ 
-					opacity: 0
+					opacity: 0,
+					pointerEvents: 'auto'
 				})
 				.fromTo('.sd-page-5 .sd-lg-bezel-container .sd-bezel-phone', 0.2, { 
-					opacity: 0
+					opacity: 0,
+					pointerEvents: 'none'
 				},
 				{ 
-					opacity: 1
+					opacity: 1,
+					pointerEvents: 'auto'
 				})
 			;
 
