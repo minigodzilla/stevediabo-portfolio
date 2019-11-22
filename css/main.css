@@ -155,7 +155,7 @@ a {
     .sd-page.sd-page-simple-title .sd-box {
       position: static;
       width: 100vw;
-      min-height: 100vh;
+      min-height: 125vh;
       padding: 36px 24px;
       display: -webkit-box;
       display: flex;
@@ -247,12 +247,12 @@ a {
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel .sd-screen-content {
           position: absolute; }
           .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel .sd-screen-content.sd-screen-content-video {
+            cursor: pointer;
             -webkit-transition: -webkit-filter 200ms ease;
             transition: -webkit-filter 200ms ease;
             transition: filter 200ms ease;
             transition: filter 200ms ease, -webkit-filter 200ms ease; }
           .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel .sd-screen-content.sd-screen-content-image {
-            cursor: pointer;
             -webkit-transition: -webkit-filter 200ms ease;
             transition: -webkit-filter 200ms ease;
             transition: filter 200ms ease;
@@ -320,7 +320,8 @@ a {
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-playing .sd-screen-content-image,
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-playing .sd-screen-content-video {
           -webkit-filter: brightness(100%) contrast(100%) !important;
-                  filter: brightness(100%) contrast(100%) !important; }
+                  filter: brightness(100%) contrast(100%) !important;
+          cursor: default; }
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-playing .sd-overlay .sd-svg-play-btn {
           opacity: 0; }
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-playing .sd-overlay .sd-svg-loading {

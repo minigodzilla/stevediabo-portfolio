@@ -307,7 +307,7 @@ a
 		{
 			position: static;
 			width: 100vw;
-			min-height: 100vh;
+			min-height: 125vh;
 			padding: 36px 24px;
 			display: flex;
 			flex-direction: column;
@@ -461,12 +461,12 @@ a
 
 					&.sd-screen-content-video
 					{
+						cursor: pointer;
 						transition: filter 200ms ease;
 					}
 
 					&.sd-screen-content-image
 					{
-						cursor: pointer;
 						transition: filter 200ms ease;
 					}
 				}
@@ -561,6 +561,7 @@ a
 					.sd-screen-content-video
 					{
 						filter: brightness(100%) contrast(100%) !important;
+						cursor: default;
 					}
 
 					.sd-overlay .sd-svg-play-btn
