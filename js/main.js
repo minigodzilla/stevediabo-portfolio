@@ -261,10 +261,17 @@ $(function () {
 		// 	speed: 750
 		// });
 
-		$('.sd-page-3 .sd-bezel-phone .sd-screen-content-image').click(function(){
-			console.log('hi');
-			$('.sd-page-3 .sd-bezel-phone').toggleClass('sd-loading');
+		$('.sd-page-3 .sd-bezel .sd-screen-content-video').one('click', function() {
+			console.log('loady loady');
+			$(this).parent().addClass('sd-loading');
+			$(this)[0].load();
+			$(this).on('canplaythrough', function() {
+				console.log('can playyy');
+				$(this).parent().addClass('sd-playing');
+				$(this)[0].play();
+			});
 		});
+
 
 	})();
 });
