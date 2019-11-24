@@ -107,7 +107,7 @@ a {
         -webkit-clip-path: polygon(0% -25%, 100% -25%, 100% 25%, 0% 25%);
                 clip-path: polygon(0% -25%, 100% -25%, 100% 25%, 0% 25%); }
     .sd-stripe-area .sd-stripe.sd-stripe-3 {
-      left: 22%;
+      left: 20%;
       width: 4.5%;
       -webkit-clip-path: polygon(0% 150%, 100% 150%, 100% 225%, 0% 225%);
               clip-path: polygon(0% 150%, 100% 150%, 100% 225%, 0% 225%); }
