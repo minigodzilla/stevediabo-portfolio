@@ -458,16 +458,11 @@ a
 				.sd-screen-content
 				{
 					position: absolute;
+					transition: filter 200ms ease;
 
 					&.sd-screen-content-video
 					{
 						cursor: pointer;
-						transition: filter 200ms ease;
-					}
-
-					&.sd-screen-content-image
-					{
-						transition: filter 200ms ease;
 					}
 				}
 
@@ -512,7 +507,6 @@ a
 					display: flex;
 					justify-content: center;
 					transition: opacity 200ms ease;
-					cursor: pointer;
 					pointer-events: none;
 
 					@keyframes sd-svg-loading-anim
@@ -523,6 +517,23 @@ a
 						}
 					}
 
+					.sd-svg
+					{
+						position: absolute;
+						fill: #fff;
+						width: 15%;
+					}
+
+					.sd-svg-play-icon
+					{
+						opacity: 1;
+					}
+
+					.sd-svg-pause-icon
+					{
+						opacity: 0;
+					}
+
 					.sd-svg-loading
 					{
 						animation-name: sd-svg-loading-anim;
@@ -531,19 +542,17 @@ a
 						animation-iteration-count: infinite;
 						opacity: 0;
 					}
-
-					.sd-svg
-					{
-						position: absolute;
-						fill: #fff;
-						width: 15%;
-					}
 				}
 
 				// TODO: fix specificity issues here
 				&.sd-loading 
 				{
-					.sd-overlay .sd-svg-play-btn
+					.sd-overlay .sd-svg-play-icon
+					{
+						opacity: 0;
+					}
+
+					.sd-overlay .sd-svg-pause-icon
 					{
 						opacity: 0;
 					}
@@ -554,19 +563,40 @@ a
 					}
 				}
 
-				// TODO: fix specificity issues here
 				&.sd-playing 
 				{
 					.sd-screen-content-image,
 					.sd-screen-content-video
 					{
-						filter: brightness(100%) contrast(100%) !important;
-						cursor: default;
+						filter: brightness(98%) contrast(98%) !important;
 					}
 
-					.sd-overlay .sd-svg-play-btn
+					.sd-overlay .sd-svg-play-icon
 					{
 						opacity: 0;
+					}
+
+					.sd-overlay .sd-svg-pause-icon
+					{
+						opacity: 0;
+					}
+
+					.sd-overlay .sd-svg-loading
+					{
+						opacity: 0;
+					}
+				}
+
+				&.sd-paused 
+				{
+					.sd-overlay .sd-svg-play-icon
+					{
+						opacity: 0;
+					}
+
+					.sd-overlay .sd-svg-pause-icon
+					{
+						opacity: 1;
 					}
 
 					.sd-overlay .sd-svg-loading
@@ -906,6 +936,11 @@ a
 					.sd-overlay
 					{
 						opacity: 0;
+
+						.sd-svg-loading
+						{
+							width: 8%;
+						}
 					}
 				}
 			}

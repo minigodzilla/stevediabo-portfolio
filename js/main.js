@@ -3,24 +3,10 @@ var controller = new ScrollMagic.Controller();
 
 $(function () {
 
-	let lockHeight = function() {
-		// locking down height of elements with class .sd-lock-height based on window.innerHeight
-		var n = $(".sd-lock-height");
-		n.length > 0 && n.css("height", n.height() + "px");
-
-		var page2 = $(".sd-page-2");
-		page2.length > 0 && page2.css("margin-top", (window.innerHeight * 1) + "px");
-
-		// var page3 = $(".sd-page-3");
-		// page3.length > 0 && page3.css("margin-top", (window.innerHeight * 3) + "px");
-	}
-
 	// Create an instance of the Scroll Magic Controller
 	let scrollController = new ScrollMagic.Controller();
 
 	(() => {
-
-		// lockHeight();
 
 		// TODO: remove duplication in scenes
 
@@ -34,7 +20,6 @@ $(function () {
 		})
 		.setPin('.sd-page-1', { pushFollowers: false })
 		.setTween(page1scene1tween)
-		// .addIndicators({name: 'pg1'})
 
 		const page1scene2timeline = new TimelineLite();
 			page1scene2timeline
@@ -56,7 +41,6 @@ $(function () {
 			triggerElement: '.sd-page-1', triggerHook: 0
 		})
 		.setTween(page1scene2timeline)
-		// .addIndicators({name: 'pg1'})
 
 		// pg 2
 
@@ -64,10 +48,9 @@ $(function () {
 
 		const page2scene1 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-2 .sd-trigger-scene-2', triggerHook: 0.5, reverse: true
+			triggerElement: '.sd-page-2 .sd-trigger-scene-1', triggerHook: 0, reverse: true
 		})
 		.setTween(page2scene1tween)
-		// .addIndicators({name: 'pg2 sc1'})
 
 		// pg 3
 
@@ -78,21 +61,18 @@ $(function () {
 			triggerElement: '.sd-page-3 .sd-trigger-scene-1', triggerHook: 1, duration: '350%'
 		})
 		.setTween(page3scene1tween)
-		// .addIndicators({name: 'pg3 sc1'})
 
 		const page3scene1a = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-3 .sd-trigger-scene-1', triggerHook: 1
 		})
 		.setClassToggle('.sd-page-3', 'sd-in-view')
-		// .addIndicators({name: 'pg3 sc1a'})
 
 		const page3scene1b = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-3 .sd-trigger-scene-1', triggerHook: 0
 		})
 		.setClassToggle('.sd-page-3', 'sd-past-top')
-		// .addIndicators({name: 'pg3 sc1b'})
 
 		const page3scene2timeline = new TimelineLite();
 			page3scene2timeline
@@ -120,28 +100,24 @@ $(function () {
 			triggerElement: '.sd-page-3 .sd-trigger-scene-2', triggerHook: 0.5
 		})
 		.setTween(page3scene2timeline)
-		// .addIndicators({name: 'pg3 sc2'})
 
 		const page3scene3 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-3 .sd-trigger-scene-3', triggerHook: 1
 		})
 		.setClassToggle('.sd-page-3', 'sd-past-bottom')		
-		// .addIndicators({name: 'pg3 sc3'})
 
 		const page3scene4 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop .sd-overlay .sd-svg path', triggerHook: 0.6, reverse: true
+			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop .sd-overlay .sd-svg-play-icon path', triggerHook: 0.6, reverse: true
 		})
 		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop', 'sd-show-overlay')		
-		// .addIndicators({name: 'pg3 sc5'})
 
 		const page3scene5 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone .sd-overlay .sd-svg path', triggerHook: 0.6, reverse: true
+			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone .sd-overlay .sd-svg-play-icon path', triggerHook: 0.6, reverse: true
 		})
 		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone', 'sd-show-overlay')		
-		// .addIndicators({name: 'pg3 sc6'})
 
 		// pg 4
 
@@ -152,21 +128,18 @@ $(function () {
 			triggerElement: '.sd-page-4 .sd-trigger-scene-1', triggerHook: 0, duration: '100%'
 		})
 		.setTween(page4scene1tween)
-		// .addIndicators({name: 'pg4 sc1'})
 
 		const page4scene1a = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-4 .sd-trigger-scene-1', triggerHook: 0
 		})
 		.setClassToggle('.sd-page-4', 'sd-past-top')
-		// .addIndicators({name: 'pg4 sc1a'})
 
 		const page4scene3 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-4 .sd-trigger-scene-3', triggerHook: 1
 		})
 		.setClassToggle('.sd-page-4', 'sd-past-bottom')
-		// .addIndicators({name: 'pg4 sc1a'})
 
 		// pg 5
 
@@ -177,21 +150,18 @@ $(function () {
 			triggerElement: '.sd-page-5 .sd-trigger-scene-1', triggerHook: 1, duration: '350%'
 		})
 		.setTween(page5scene1tween)
-		// .addIndicators({name: 'pg5 sc1'})
 
 		const page5scene1a = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-5 .sd-trigger-scene-1', triggerHook: 1
 		})
 		.setClassToggle('.sd-page-5', 'sd-in-view')
-		// .addIndicators({name: 'pg5 sc1a'})
 
 		const page5scene1b = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-5 .sd-trigger-scene-1', triggerHook: 0
 		})
 		.setClassToggle('.sd-page-5', 'sd-past-top')
-		// .addIndicators({name: 'pg5 sc1b'})
 
 		const page5scene2timeline = new TimelineLite();
 			page5scene2timeline
@@ -219,28 +189,24 @@ $(function () {
 			triggerElement: '.sd-page-5 .sd-trigger-scene-2', triggerHook: 0.5
 		})
 		.setTween(page5scene2timeline)
-		// .addIndicators({name: 'pg5 sc2'})
 
 		const page5scene3 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-5 .sd-trigger-scene-3', triggerHook: 1
 		})
 		.setClassToggle('.sd-page-5', 'sd-past-bottom')		
-		// .addIndicators({name: 'pg5 sc3'})
 
 		const page5scene4 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-5 .sd-xs-bezel-container .sd-bezel-laptop', triggerHook: 0.5, reverse: true
+			triggerElement: '.sd-page-5 .sd-xs-bezel-container .sd-bezel-laptop .sd-overlay .sd-svg-play-icon path', triggerHook: 0.6, reverse: true
 		})
 		.setClassToggle('.sd-page-5 .sd-xs-bezel-container .sd-bezel-laptop', 'sd-show-overlay')		
-		// .addIndicators({name: 'pg5 sc5'})
 
 		const page5scene5 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-5 .sd-xs-bezel-container .sd-bezel-phone', triggerHook: 0.5, reverse: true
+			triggerElement: '.sd-page-5 .sd-xs-bezel-container .sd-bezel-phone .sd-overlay .sd-svg-play-icon path', triggerHook: 0.6, reverse: true
 		})
 		.setClassToggle('.sd-page-5 .sd-xs-bezel-container .sd-bezel-phone', 'sd-show-overlay')		
-		// .addIndicators({name: 'pg5 sc6'})
 
 		// Add scenes to the controller
 		page1scene1.addTo (scrollController);
@@ -270,14 +236,42 @@ $(function () {
 		// });
 
 		$('.sd-screen-content-video').one('click', function() {
-			$(this).parent().addClass('sd-loading');
-			$(this)[0].load();
-			$(this).on('canplaythrough', function() {
-				$(this).parent().addClass('sd-playing');
-				$(this)[0].play();
-			});
-		});
 
+			var v = $(this);
+
+			v[0].load();
+
+			v.on('canplaythrough', function() {
+				v[0].play();
+			});
+
+			v.on('click', function() {
+				if (v[0].paused)
+				{
+					v[0].play();
+				}
+				else
+				{
+					v[0].pause();
+				}
+			});
+
+			v.on('loadstart', function() {
+				v.parent().addClass('sd-loading');
+				v.addClass('sd-loading');
+			});
+
+			v.on('play', function() {
+				v.parent().removeClass('sd-paused sd-loading').addClass('sd-playing');
+				v.removeClass('sd-paused sd-loading').addClass('sd-playing');
+			});
+
+			v.on('pause', function() {
+				v.parent().removeClass('sd-playing').addClass('sd-paused');
+				v.removeClass('sd-playing').addClass('sd-paused');
+			});
+
+		});
 
 	})();
 });
