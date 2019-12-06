@@ -410,30 +410,20 @@ a
 			{
 				.sd-bezel
 				{
-					.sd-overlay
+					&.sd-bezel-wall
 					{
-						opacity: 0;
-						transition: opacity 200ms ease;
+						margin-bottom: -6%;
+					}
+
+					.sd-screen-content
+					{
+						filter: brightness(75%) contrast(75%);
 					}
 
 					&.sd-bezel-phone .sd-overlay .sd-svg,
 					&.sd-bezel-winphone .sd-overlay .sd-svg
 					{
 						width: 25%;
-					}
-
-					&.sd-show-overlay 
-					{
-						.sd-screen-content-image,
-						.sd-screen-content-video
-						{
-							filter: brightness(75%) contrast(75%);
-						}
-
-						.sd-overlay
-						{
-							opacity: 1;
-						}
 					}
 				}
 			}
@@ -467,12 +457,9 @@ a
 				.sd-screen-content
 				{
 					position: absolute;
+					cursor: pointer;
+					filter: brightness(75%) contrast(75%);
 					transition: filter 200ms ease;
-
-					&.sd-screen-content-video
-					{
-						cursor: pointer;
-					}
 				}
 
 				&.sd-bezel-laptop
@@ -491,7 +478,7 @@ a
 
 					.sd-overlay
 					{
-						transform: translateY(-1%);
+						transform: translateY(-0.5%);
 					}
 				}
 
@@ -532,7 +519,7 @@ a
 
 					.sd-overlay
 					{
-						transform: translateY(-5%);
+						transform: translateY(-6%);
 					}
 				}
 
@@ -586,7 +573,7 @@ a
 					left: 0;
 					display: flex;
 					justify-content: center;
-					transition: opacity 200ms ease;
+					
 					pointer-events: none;
 
 					@keyframes sd-svg-loading-anim
@@ -602,6 +589,7 @@ a
 						position: absolute;
 						fill: #fff;
 						width: 15%;
+						transition: opacity 200ms ease;
 					}
 
 					.sd-svg-play-icon
@@ -648,7 +636,7 @@ a
 					.sd-screen-content-image,
 					.sd-screen-content-video
 					{
-						filter: brightness(98%) contrast(98%) !important;
+						filter: brightness(98%) contrast(98%);
 					}
 
 					.sd-overlay .sd-svg-play-icon
@@ -966,44 +954,11 @@ a
 				position: fixed;
 			}
 
-			&.sd-past-top .sd-bezel-container .sd-bezel .sd-screen-content
-			{
-				&.sd-screen-content-image,
-				&.sd-screen-content-video
-				{
-					filter: contrast(75%) brightness(75%);
-				}
-			}
-
-			&.sd-past-top .sd-bezel-container .sd-bezel .sd-overlay
-			{
-				opacity: 1;
-			}
-
 			&.sd-past-bottom .sd-bezel-container .sd-bezel
 			{
 				position: absolute;
 				top: auto;
 				bottom: 0;
-			}
-
-			&.sd-past-bottom .sd-bezel-container .sd-bezel .sd-screen-content
-			{
-				&.sd-screen-content-image,
-				&.sd-screen-content-video
-				{
-					filter: contrast(100%) brightness(100%);
-				}
-			}
-
-			&.sd-past-bottom .sd-bezel-container .sd-bezel .sd-overlay
-			{
-				opacity: 0;
-			}
-
-			.sd-overlay
-			{
-				opacity: 0;
 			}
 
 			.sd-box
@@ -1032,14 +987,9 @@ a
 					height: 100vh;
 					transform: scale(0.75);
 
-					.sd-overlay
+					.sd-overlay.sd-svg-loading
 					{
-						opacity: 0;
-
-						.sd-svg-loading
-						{
-							width: 8%;
-						}
+						width: 8%;
 					}
 				}
 			}

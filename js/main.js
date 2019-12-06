@@ -92,7 +92,7 @@ $(function () {
 				{ 
 					opacity: 1,
 					pointerEvents: 'auto'
-				})
+				},"=-0.2")
 			;
 
 		const page3scene2 = new ScrollMagic.Scene
@@ -106,18 +106,6 @@ $(function () {
 			triggerElement: '.sd-page-3 .sd-trigger-scene-3', triggerHook: 1
 		})
 		.setClassToggle('.sd-page-3', 'sd-past-bottom')		
-
-		const page3scene4 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop .sd-overlay .sd-svg-play-icon path', triggerHook: 0.6, reverse: true
-		})
-		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop', 'sd-show-overlay')		
-
-		const page3scene5 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone .sd-overlay .sd-svg-play-icon path', triggerHook: 0.6, reverse: true
-		})
-		.setClassToggle('.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone', 'sd-show-overlay')		
 
 		// pg 5
 
@@ -159,7 +147,7 @@ $(function () {
 				{ 
 					opacity: 1,
 					pointerEvents: 'auto'
-				})
+				},"=-0.2")
 			;
 
 		const page5scene2 = new ScrollMagic.Scene
@@ -173,18 +161,6 @@ $(function () {
 			triggerElement: '.sd-page-5 .sd-trigger-scene-3', triggerHook: 1
 		})
 		.setClassToggle('.sd-page-5', 'sd-past-bottom')		
-
-		const page5scene4 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-5 .sd-xs-bezel-container .sd-bezel-laptop .sd-overlay .sd-svg-play-icon path', triggerHook: 0.6, reverse: true
-		})
-		.setClassToggle('.sd-page-5 .sd-xs-bezel-container .sd-bezel-laptop', 'sd-show-overlay')		
-
-		const page5scene5 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-5 .sd-xs-bezel-container .sd-bezel-phone .sd-overlay .sd-svg-play-icon path', triggerHook: 0.6, reverse: true
-		})
-		.setClassToggle('.sd-page-5 .sd-xs-bezel-container .sd-bezel-phone', 'sd-show-overlay')		
 
 		// pg 7
 
@@ -213,12 +189,6 @@ $(function () {
 			triggerElement: '.sd-page-7 .sd-trigger-scene-3', triggerHook: 1
 		})
 		.setClassToggle('.sd-page-7', 'sd-past-bottom')		
-
-		const page7scene4 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-7 .sd-xs-bezel-container .sd-bezel .sd-overlay .sd-svg-play-icon path', triggerHook: 0.6, reverse: true
-		})
-		.setClassToggle('.sd-page-7 .sd-xs-bezel-container .sd-bezel', 'sd-show-overlay')
 
 		// pg 9
 
@@ -260,7 +230,7 @@ $(function () {
 				{ 
 					opacity: 1,
 					pointerEvents: 'auto'
-				})
+				},"=-0.2")
 			;
 
 		const page9scene2 = new ScrollMagic.Scene
@@ -275,18 +245,6 @@ $(function () {
 		})
 		.setClassToggle('.sd-page-9', 'sd-past-bottom')		
 
-		const page9scene4 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-9 .sd-xs-bezel-container .sd-bezel-winphone .sd-overlay .sd-svg-play-icon path', triggerHook: 0.6, reverse: true
-		})
-		.setClassToggle('.sd-page-9 .sd-xs-bezel-container .sd-bezel-winphone', 'sd-show-overlay')		
-
-		const page9scene5 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-9 .sd-xs-bezel-container .sd-bezel-surface .sd-overlay .sd-svg-play-icon path', triggerHook: 0.6, reverse: true
-		})
-		.setClassToggle('.sd-page-9 .sd-xs-bezel-container .sd-bezel-surface', 'sd-show-overlay')		
-
 		// Add scenes to the controller
 		page1scene1.addTo (scrollController);
 		page1scene2.addTo (scrollController);
@@ -296,27 +254,20 @@ $(function () {
 		page3scene1b.addTo (scrollController);
 		page3scene2.addTo (scrollController);
 		page3scene3.addTo (scrollController);
-		page3scene4.addTo (scrollController);
-		page3scene5.addTo (scrollController);
 		page5scene1.addTo (scrollController);
 		page5scene1a.addTo (scrollController);
 		page5scene1b.addTo (scrollController);
 		page5scene2.addTo (scrollController);
 		page5scene3.addTo (scrollController);
-		page5scene4.addTo (scrollController);
-		page5scene5.addTo (scrollController);
 		page7scene1.addTo (scrollController);
 		page7scene1a.addTo (scrollController);
 		page7scene1b.addTo (scrollController);
 		page7scene3.addTo (scrollController);
-		page7scene4.addTo (scrollController);
 		page9scene1.addTo (scrollController);
 		page9scene1a.addTo (scrollController);
 		page9scene1b.addTo (scrollController);
 		page9scene2.addTo (scrollController);
 		page9scene3.addTo (scrollController);
-		page9scene4.addTo (scrollController);
-		page9scene5.addTo (scrollController);
 
 		// Smooth Scroll
 		// var scroll = new SmoothScroll('a[href*="#"]', {
