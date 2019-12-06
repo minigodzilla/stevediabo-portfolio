@@ -376,11 +376,6 @@ a
 				text-transform: uppercase;
 				letter-spacing: 1.5px;
 				margin-bottom: 2.25em;
-
-				br
-				{
-					display: none;
-				}
 			}
 
 			.sd-p
@@ -967,6 +962,11 @@ a
 				max-width: none;
 				margin: 0;
 				padding: 10vh 10vw 10vh 5vw;
+
+				.sd-duties
+				{
+					width: 75%;
+				}
 			}
 
 			.sd-bezel-container

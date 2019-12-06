@@ -203,8 +203,6 @@ a {
         text-transform: uppercase;
         letter-spacing: 1.5px;
         margin-bottom: 2.25em; }
-        .sd-page.sd-page-work-detail .sd-box .sd-duties br {
-          display: none; }
       .sd-page.sd-page-work-detail .sd-box .sd-p {
         font-size: 0.875em;
         line-height: 1.75;
@@ -544,6 +542,8 @@ a {
       max-width: none;
       margin: 0;
       padding: 10vh 10vw 10vh 5vw; }
+      .sd-page.sd-page-work-detail .sd-box .sd-duties {
+        width: 75%; }
     .sd-page.sd-page-work-detail .sd-bezel-container {
       background-color: transparent;
       background-image: none;
