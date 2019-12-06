@@ -416,7 +416,8 @@ a
 						transition: opacity 200ms ease;
 					}
 
-					&.sd-bezel-phone .sd-overlay .sd-svg
+					&.sd-bezel-phone .sd-overlay .sd-svg,
+					&.sd-bezel-winphone .sd-overlay .sd-svg
 					{
 						width: 25%;
 					}
@@ -455,6 +456,14 @@ a
 					display: block;
 				}
 
+				.sd-svg-top
+				{
+					position: absolute;
+					top: 0;
+					z-index: 1;
+					pointer-events: none;
+				}
+
 				.sd-screen-content
 				{
 					position: absolute;
@@ -479,6 +488,11 @@ a
 						margin-top: (-100 / 730 * 12%);
 						transform: translate(-50%,-50%);
 					}
+
+					.sd-overlay
+					{
+						transform: translateY(-1%);
+					}
 				}
 
 				&.sd-bezel-phone
@@ -494,6 +508,72 @@ a
 						left: 50%;
 						margin-top: (-100 / 730 * 5%);
 						transform: translate(-50%,-50%);
+					}
+
+					.sd-overlay
+					{
+						transform: translateY(-0.5%);
+					}
+				}
+
+				&.sd-bezel-wall
+				{
+
+					.sd-screen-content
+					{
+						width: (100 / 680 * 640%);
+						// height: (100 / 414 * 350%);
+						height: auto;
+						top: 50%;
+						left: 50%;
+						margin-top: (-100 / 730 * 46%);
+						transform: translate(-50%,-50%);
+					}
+
+					.sd-overlay
+					{
+						transform: translateY(-5%);
+					}
+				}
+
+				&.sd-bezel-winphone
+				{
+					max-width: 50%;
+
+					.sd-screen-content
+					{
+						// width: (100 / 360 * 320%);
+						width: auto;
+						height: (100 / 730 * 532%);
+						top: 50%;
+						left: 50%;
+						margin-top: (-100 / 730 * 40%);
+						transform: translate(-50%,-50%);
+					}
+
+					.sd-overlay
+					{
+						transform: translateY(-4.5%);
+					}
+				}
+
+				&.sd-bezel-surface
+				{
+
+					.sd-screen-content
+					{
+						width: (100 / 730 * 640%);
+						// height: (100 / 414 * 350%);
+						height: auto;
+						top: 50%;
+						left: 50%;
+						margin-top: (-100 / 730 * 6%);
+						transform: translate(-50%,-50%);
+					}
+
+					.sd-overlay
+					{
+						transform: translateY(-0.5%);
 					}
 				}
 
@@ -763,6 +843,25 @@ a
 			background-image: url('../img/bg_p05.jpg');
 		}
 	}
+
+	&.sd-page-7
+	{
+		.sd-stripe-area,
+		.sd-bezel-container
+		{
+			background-image: url('../img/bg_p03.jpg');
+		}
+
+	}
+
+	&.sd-page-9
+	{
+		.sd-stripe-area,
+		.sd-bezel-container
+		{
+			background-image: url('../img/bg_p05.jpg');
+		}
+	}
 }
 
 // for phones wider than iPhone 5/5S/SE
@@ -855,7 +954,7 @@ a
 				position: fixed;
 			}
 
-			&.sd-in-view .sd-bezel-container .sd-bezel
+			.sd-bezel-container .sd-bezel
 			{
 				position: absolute;
 				top: 0;
@@ -1023,17 +1122,9 @@ a
 			}
 		}
 	}
-	.sd-screen
-	{
-		pointer-events: none;
-		position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		opacity: 0.0;
-	}
 }
+
+// big ol screen
 
 @media screen and (min-width: 1201px)
 {

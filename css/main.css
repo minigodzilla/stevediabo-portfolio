@@ -226,7 +226,8 @@ a {
         opacity: 0;
         -webkit-transition: opacity 200ms ease;
         transition: opacity 200ms ease; }
-      .sd-page.sd-page-work-detail .sd-bezel-container.sd-xs-bezel-container .sd-bezel.sd-bezel-phone .sd-overlay .sd-svg {
+      .sd-page.sd-page-work-detail .sd-bezel-container.sd-xs-bezel-container .sd-bezel.sd-bezel-phone .sd-overlay .sd-svg,
+      .sd-page.sd-page-work-detail .sd-bezel-container.sd-xs-bezel-container .sd-bezel.sd-bezel-winphone .sd-overlay .sd-svg {
         width: 25%; }
       .sd-page.sd-page-work-detail .sd-bezel-container.sd-xs-bezel-container .sd-bezel.sd-show-overlay .sd-screen-content-image,
       .sd-page.sd-page-work-detail .sd-bezel-container.sd-xs-bezel-container .sd-bezel.sd-show-overlay .sd-screen-content-video {
@@ -244,6 +245,11 @@ a {
           width: 100%;
           height: 100%;
           display: block; }
+        .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel .sd-svg-top {
+          position: absolute;
+          top: 0;
+          z-index: 1;
+          pointer-events: none; }
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel .sd-screen-content {
           position: absolute;
           -webkit-transition: -webkit-filter 200ms ease;
@@ -260,6 +266,9 @@ a {
           margin-top: -1.64384%;
           -webkit-transform: translate(-50%, -50%);
                   transform: translate(-50%, -50%); }
+        .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-laptop .sd-overlay {
+          -webkit-transform: translateY(-1%);
+                  transform: translateY(-1%); }
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-phone {
           max-width: 50%; }
           .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-phone .sd-screen-content {
@@ -270,6 +279,44 @@ a {
             margin-top: -0.68493%;
             -webkit-transform: translate(-50%, -50%);
                     transform: translate(-50%, -50%); }
+          .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-phone .sd-overlay {
+            -webkit-transform: translateY(-0.5%);
+                    transform: translateY(-0.5%); }
+        .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-wall .sd-screen-content {
+          width: 94.11765%;
+          height: auto;
+          top: 50%;
+          left: 50%;
+          margin-top: -6.30137%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); }
+        .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-wall .sd-overlay {
+          -webkit-transform: translateY(-5%);
+                  transform: translateY(-5%); }
+        .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-winphone {
+          max-width: 50%; }
+          .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-winphone .sd-screen-content {
+            width: auto;
+            height: 72.87671%;
+            top: 50%;
+            left: 50%;
+            margin-top: -5.47945%;
+            -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%); }
+          .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-winphone .sd-overlay {
+            -webkit-transform: translateY(-4.5%);
+                    transform: translateY(-4.5%); }
+        .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-surface .sd-screen-content {
+          width: 87.67123%;
+          height: auto;
+          top: 50%;
+          left: 50%;
+          margin-top: -0.82192%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); }
+        .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-surface .sd-overlay {
+          -webkit-transform: translateY(-0.5%);
+                  transform: translateY(-0.5%); }
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel .sd-overlay {
           position: absolute;
           top: 0;
@@ -441,6 +488,12 @@ a {
   .sd-page.sd-page-5 .sd-stripe-area,
   .sd-page.sd-page-5 .sd-bezel-container {
     background-image: url("../img/bg_p05.jpg"); }
+  .sd-page.sd-page-7 .sd-stripe-area,
+  .sd-page.sd-page-7 .sd-bezel-container {
+    background-image: url("../img/bg_p03.jpg"); }
+  .sd-page.sd-page-9 .sd-stripe-area,
+  .sd-page.sd-page-9 .sd-bezel-container {
+    background-image: url("../img/bg_p05.jpg"); }
 
 @media screen and (min-width: 321px) {
   .sd-page.sd-page-simple-title {
@@ -480,7 +533,7 @@ a {
         background-position: 50% 100%; }
     .sd-page.sd-page-work-detail.sd-in-view .sd-stripe-area {
       position: fixed; }
-    .sd-page.sd-page-work-detail.sd-in-view .sd-bezel-container .sd-bezel {
+    .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel {
       position: absolute;
       top: 0;
       bottom: auto; }
@@ -565,15 +618,7 @@ a {
       -webkit-transform: translateX(66%);
               transform: translateX(66%); }
   .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg {
-    width: 200px; }
-  .sd-screen {
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.0; } }
+    width: 200px; } }
 
 @media screen and (min-width: 1201px) {
   .sd-page.sd-page-simple-title {
