@@ -188,16 +188,16 @@ a
 
 		&.sd-s
 		{
-			&-10	{ background-size: 10px  10px;  }
-			&-20	{ background-size: 20px  20px;  }
-			&-30	{ background-size: 30px  30px;  }
-			&-40	{ background-size: 40px  40px;  }
-			&-50	{ background-size: 50px  50px;  }
-			&-60	{ background-size: 60px  60px;  }
-			&-70	{ background-size: 70px  70px;  }
-			&-80	{ background-size: 80px  80px;  }
-			&-90	{ background-size: 90px  90px;  }
-			&-100	{ background-size: 100px 100px; }
+			&-10	{ background-size: 5px  5px;  }
+			&-20	{ background-size: 10px 10px; }
+			&-30	{ background-size: 15px 15px; }
+			&-40	{ background-size: 20px 20px; }
+			&-50	{ background-size: 25px 25px; }
+			&-60	{ background-size: 30px 30px; }
+			&-70	{ background-size: 35px 35px; }
+			&-80	{ background-size: 40px 40px; }
+			&-90	{ background-size: 45px 45px; }
+			&-100	{ background-size: 50px 50px; }
 		}
 
 		&.sd-stripe-1
@@ -727,7 +727,6 @@ a
 				right: 16px;
 				padding: 0 8px;
 				background-color: #fff;
-				line-height: 1.5;
 				white-space: nowrap;
 				clip-path: polygon(100% 0%, 200% 0%, 200% 100%, 100% 100%);
 
@@ -741,11 +740,13 @@ a
 			{
 				font-weight: 900;
 				font-size: 2.25em;
+				line-height: 1.25;
 			}
 
 			.sd-role-container
 			{
 				font-weight: 400;
+				line-height: 1.5;
 				letter-spacing: 1.75px;
 				transform: translate(0,56px);
 			}
@@ -753,8 +754,9 @@ a
 			.sd-location-container
 			{
 				font-weight: 700;
+				line-height: 1.5;
 				letter-spacing: 3.75px;
-				transform: translate(0,80px);
+				transform: translate(0,78px);
 			}
 		}
 	}
@@ -852,9 +854,9 @@ a
 	}
 }
 
-// for phones wider than iPhone 5/5S/SE
+// for phones of iPhone 6 width and higher
 
-@media screen and (min-width: 321px)
+@media screen and (min-width: 375px)
 {
 	.sd-page
 	{
@@ -868,6 +870,27 @@ a
 		{
 			display: block;
 		}
+
+		&.sd-page-1 .sd-box
+		{
+
+			.sd-name-container
+			{
+				font-size: 2.75em;
+			}
+
+			.sd-role-container
+			{
+				font-size: 1.25em;
+				transform: translate(0,62px);
+			}
+
+			.sd-location-container
+			{
+				font-size: 1.25em;
+				transform: translate(0,90px);
+			}
+		}
 	}
 }
 
@@ -875,6 +898,19 @@ a
 
 @media screen and (min-width: 577px)
 {
+	.sd-stripe-area .sd-stripe.sd-s {
+		&-10	{ background-size: 10px  10px;  }
+		&-20	{ background-size: 20px  20px;  }
+		&-30	{ background-size: 30px  30px;  }
+		&-40	{ background-size: 40px  40px;  }
+		&-50	{ background-size: 50px  50px;  }
+		&-60	{ background-size: 60px  60px;  }
+		&-70	{ background-size: 70px  70px;  }
+		&-80	{ background-size: 80px  80px;  }
+		&-90	{ background-size: 90px  90px;  }
+		&-100	{ background-size: 100px 100px; }
+	}
+
 	.sd-page
 	{
 		&.sd-page-simple-title
@@ -895,6 +931,40 @@ a
 			&.sd-animated
 			{
 				background-position: 50% 65%;
+			}
+
+			.sd-box
+			{
+				width: 50%;
+				align-items: center;
+
+				.sd-name-container,
+				.sd-role-container,
+				.sd-location-container
+				{
+					right: 50%;
+					padding: 0 16px;
+				}
+
+				.sd-name-container
+				{
+					font-size: 3em;
+					transform: translate(28%,0);
+				}
+
+				.sd-role-container
+				{
+					font-size: 1.25em;
+					letter-spacing: 3px;
+					transform: translate(40%,66px);
+				}
+
+				.sd-location-container
+				{
+					font-size: 1.25em;
+					letter-spacing: 6px;
+					transform: translate(52.5%,96px);
+				}
 			}
 		}
 	}
@@ -1036,24 +1106,19 @@ a
 
 				.sd-name-container
 				{
-					font-size: 72px;
-					line-height: 1.25;
+					font-size: 4.5em;
 					transform: translate(32%,-34px);
 				}
 
 				.sd-role-container
 				{
-					font-size: 30px;
-					line-height: 1.5;
-					letter-spacing: 3px;
+					font-size: 1.875em;
 					transform: translate(48%,66px);
 				}
 
 				.sd-location-container
 				{
-					font-size: 30px;
-					line-height: 1.5;
-					letter-spacing: 6px;
+					font-size: 1.875em;
 					transform: translate(66%,108px);
 				}
 			}

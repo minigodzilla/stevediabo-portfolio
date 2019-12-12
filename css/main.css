@@ -74,25 +74,25 @@ a {
     .sd-stripe-area .sd-stripe.sd-t-90 {
       background-image: linear-gradient(135deg, transparent 0%, transparent 5%, #ffffff 5%, #ffffff 50%, transparent 50%, transparent 55%, #ffffff 55%, #ffffff 100%); }
     .sd-stripe-area .sd-stripe.sd-s-10 {
-      background-size: 10px  10px; }
+      background-size: 5px  5px; }
     .sd-stripe-area .sd-stripe.sd-s-20 {
-      background-size: 20px  20px; }
+      background-size: 10px 10px; }
     .sd-stripe-area .sd-stripe.sd-s-30 {
-      background-size: 30px  30px; }
+      background-size: 15px 15px; }
     .sd-stripe-area .sd-stripe.sd-s-40 {
-      background-size: 40px  40px; }
+      background-size: 20px 20px; }
     .sd-stripe-area .sd-stripe.sd-s-50 {
-      background-size: 50px  50px; }
+      background-size: 25px 25px; }
     .sd-stripe-area .sd-stripe.sd-s-60 {
-      background-size: 60px  60px; }
+      background-size: 30px 30px; }
     .sd-stripe-area .sd-stripe.sd-s-70 {
-      background-size: 70px  70px; }
+      background-size: 35px 35px; }
     .sd-stripe-area .sd-stripe.sd-s-80 {
-      background-size: 80px  80px; }
+      background-size: 40px 40px; }
     .sd-stripe-area .sd-stripe.sd-s-90 {
-      background-size: 90px  90px; }
+      background-size: 45px 45px; }
     .sd-stripe-area .sd-stripe.sd-s-100 {
-      background-size: 100px 100px; }
+      background-size: 50px 50px; }
     .sd-stripe-area .sd-stripe.sd-stripe-1 {
       left: 0%;
       width: 10%;
@@ -423,7 +423,6 @@ a {
         right: 16px;
         padding: 0 8px;
         background-color: #fff;
-        line-height: 1.5;
         white-space: nowrap;
         -webkit-clip-path: polygon(100% 0%, 200% 0%, 200% 100%, 100% 100%);
                 clip-path: polygon(100% 0%, 200% 0%, 200% 100%, 100% 100%); }
@@ -434,17 +433,20 @@ a {
                   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
       .sd-page.sd-page-1 .sd-box .sd-name-container {
         font-weight: 900;
-        font-size: 2.25em; }
+        font-size: 2.25em;
+        line-height: 1.25; }
       .sd-page.sd-page-1 .sd-box .sd-role-container {
         font-weight: 400;
+        line-height: 1.5;
         letter-spacing: 1.75px;
         -webkit-transform: translate(0, 56px);
                 transform: translate(0, 56px); }
       .sd-page.sd-page-1 .sd-box .sd-location-container {
         font-weight: 700;
+        line-height: 1.5;
         letter-spacing: 3.75px;
-        -webkit-transform: translate(0, 80px);
-                transform: translate(0, 80px); }
+        -webkit-transform: translate(0, 78px);
+                transform: translate(0, 78px); }
   .sd-page.sd-page-2 {
     margin-top: 100vh; }
     .sd-page.sd-page-2 .sd-box .sd-signature {
@@ -494,14 +496,44 @@ a {
   .sd-page.sd-page-9 .sd-bezel-container {
     background-image: url("../img/bg_p05.jpg"); }
 
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 375px) {
   .sd-page.sd-page-simple-title {
     font-size: 1.25em;
     letter-spacing: -0.75px; }
   .sd-page.sd-page-work-detail .sd-box .sd-duties br {
-    display: block; } }
+    display: block; }
+  .sd-page.sd-page-1 .sd-box .sd-name-container {
+    font-size: 2.75em; }
+  .sd-page.sd-page-1 .sd-box .sd-role-container {
+    font-size: 1.25em;
+    -webkit-transform: translate(0, 62px);
+            transform: translate(0, 62px); }
+  .sd-page.sd-page-1 .sd-box .sd-location-container {
+    font-size: 1.25em;
+    -webkit-transform: translate(0, 90px);
+            transform: translate(0, 90px); } }
 
 @media screen and (min-width: 577px) {
+  .sd-stripe-area .sd-stripe.sd-s-10 {
+    background-size: 10px  10px; }
+  .sd-stripe-area .sd-stripe.sd-s-20 {
+    background-size: 20px  20px; }
+  .sd-stripe-area .sd-stripe.sd-s-30 {
+    background-size: 30px  30px; }
+  .sd-stripe-area .sd-stripe.sd-s-40 {
+    background-size: 40px  40px; }
+  .sd-stripe-area .sd-stripe.sd-s-50 {
+    background-size: 50px  50px; }
+  .sd-stripe-area .sd-stripe.sd-s-60 {
+    background-size: 60px  60px; }
+  .sd-stripe-area .sd-stripe.sd-s-70 {
+    background-size: 70px  70px; }
+  .sd-stripe-area .sd-stripe.sd-s-80 {
+    background-size: 80px  80px; }
+  .sd-stripe-area .sd-stripe.sd-s-90 {
+    background-size: 90px  90px; }
+  .sd-stripe-area .sd-stripe.sd-s-100 {
+    background-size: 100px 100px; }
   .sd-page.sd-page-simple-title {
     font-size: 1.5rem; }
   .sd-page.sd-page-work-detail .sd-box .sd-p {
@@ -510,7 +542,30 @@ a {
     background-image: url("../img/bg_p01.jpg");
     background-position: 50% 45%; }
     .sd-page.sd-page-1.sd-animated {
-      background-position: 50% 65%; } }
+      background-position: 50% 65%; }
+    .sd-page.sd-page-1 .sd-box {
+      width: 50%;
+      -webkit-box-align: center;
+              align-items: center; }
+      .sd-page.sd-page-1 .sd-box .sd-name-container,
+      .sd-page.sd-page-1 .sd-box .sd-role-container,
+      .sd-page.sd-page-1 .sd-box .sd-location-container {
+        right: 50%;
+        padding: 0 16px; }
+      .sd-page.sd-page-1 .sd-box .sd-name-container {
+        font-size: 3em;
+        -webkit-transform: translate(28%, 0);
+                transform: translate(28%, 0); }
+      .sd-page.sd-page-1 .sd-box .sd-role-container {
+        font-size: 1.25em;
+        letter-spacing: 3px;
+        -webkit-transform: translate(40%, 66px);
+                transform: translate(40%, 66px); }
+      .sd-page.sd-page-1 .sd-box .sd-location-container {
+        font-size: 1.25em;
+        letter-spacing: 6px;
+        -webkit-transform: translate(52.5%, 96px);
+                transform: translate(52.5%, 96px); } }
 
 @media screen and (min-width: 769px) {
   .sd-page.sd-page-simple-title {
@@ -584,20 +639,15 @@ a {
       right: 50%;
       padding: 0 16px; }
     .sd-page.sd-page-1 .sd-box .sd-name-container {
-      font-size: 72px;
-      line-height: 1.25;
+      font-size: 4.5em;
       -webkit-transform: translate(32%, -34px);
               transform: translate(32%, -34px); }
     .sd-page.sd-page-1 .sd-box .sd-role-container {
-      font-size: 30px;
-      line-height: 1.5;
-      letter-spacing: 3px;
+      font-size: 1.875em;
       -webkit-transform: translate(48%, 66px);
               transform: translate(48%, 66px); }
     .sd-page.sd-page-1 .sd-box .sd-location-container {
-      font-size: 30px;
-      line-height: 1.5;
-      letter-spacing: 6px;
+      font-size: 1.875em;
       -webkit-transform: translate(66%, 108px);
               transform: translate(66%, 108px); }
   .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg {
