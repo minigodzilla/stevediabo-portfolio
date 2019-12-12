@@ -1120,9 +1120,9 @@ a
 	}
 }
 
-// big ol screen
+// big ol screens
 
-@media screen and (min-width: 1201px)
+@media screen and (min-width: 1200px)
 {
 	.sd-page
 	{
@@ -1139,6 +1139,22 @@ a
 		&.sd-page-1
 		{
 			font-size: 1.5em;
+		}
+	}
+}
+
+@media screen and (min-width: 1600px)
+{
+	.sd-page
+	{
+		&.sd-page-simple-title
+		{
+			font-size: 2.5rem;
+		}
+
+		&.sd-page-1
+		{
+			font-size: 2em;
 		}
 	}
 }
