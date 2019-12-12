@@ -267,7 +267,7 @@ a {
           -webkit-transform: translateY(-0.5%);
                   transform: translateY(-0.5%); }
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-phone {
-          max-width: 50vw; }
+          max-width: 50%; }
           .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-phone .sd-screen-content {
             width: auto;
             height: 77.80822%;
@@ -291,7 +291,7 @@ a {
           -webkit-transform: translateY(-6%);
                   transform: translateY(-6%); }
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-winphone {
-          max-width: 50vw; }
+          max-width: 50%; }
           .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-winphone .sd-screen-content {
             width: auto;
             height: 72.87671%;
@@ -549,19 +549,25 @@ a {
       right: 0;
       padding: 0 16px; }
     .sd-page.sd-page-1 .sd-box .sd-name-container {
-      font-size: 3em;
-      -webkit-transform: translate(-10vw, 0);
-              transform: translate(-10vw, 0); }
+      font-size: 1em;
+      -webkit-transform: translate(-12vw, -1em);
+              transform: translate(-12vw, -1em); }
+      .sd-page.sd-page-1 .sd-box .sd-name-container .sd-name {
+        font-size: 3em; }
     .sd-page.sd-page-1 .sd-box .sd-role-container {
-      font-size: 1.25em;
+      font-size: 1em;
       letter-spacing: 3px;
-      -webkit-transform: translate(-5vw, 3.3125em);
-              transform: translate(-5vw, 3.3125em); }
+      -webkit-transform: translate(-10vw, 3em);
+              transform: translate(-10vw, 3em); }
+      .sd-page.sd-page-1 .sd-box .sd-role-container .sd-role {
+        font-size: 1.25em; }
     .sd-page.sd-page-1 .sd-box .sd-location-container {
-      font-size: 1.25em;
+      font-size: 1em;
       letter-spacing: 6px;
-      -webkit-transform: translate(-5vw, 4.75em);
-              transform: translate(-5vw, 4.75em); } }
+      -webkit-transform: translate(-10vw, 4.75em);
+              transform: translate(-10vw, 4.75em); }
+      .sd-page.sd-page-1 .sd-box .sd-location-container .sd-location {
+        font-size: 1.25em; } }
 
 @media screen and (min-width: 769px) {
   .sd-page.sd-page-simple-title {
@@ -615,6 +621,8 @@ a {
         height: 100vh;
         -webkit-transform: scale(0.75);
                 transform: scale(0.75); }
+        .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-phone, .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-winphone {
+          max-width: 50vw; }
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel .sd-overlay.sd-svg-loading {
           width: 8%; }
     .sd-page.sd-page-work-detail.sd-page-work-detail-r .sd-stripe-area {
