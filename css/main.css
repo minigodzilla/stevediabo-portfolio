@@ -264,7 +264,7 @@ a {
           -webkit-transform: translateY(-0.5%);
                   transform: translateY(-0.5%); }
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-phone {
-          max-width: 50%; }
+          max-width: 50vw; }
           .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-phone .sd-screen-content {
             width: auto;
             height: 77.80822%;
@@ -288,7 +288,7 @@ a {
           -webkit-transform: translateY(-6%);
                   transform: translateY(-6%); }
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-winphone {
-          max-width: 50%; }
+          max-width: 50vw; }
           .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-bezel-winphone .sd-screen-content {
             width: auto;
             height: 72.87671%;
@@ -433,13 +433,15 @@ a {
         font-weight: 900;
         font-size: 2.25em; }
       .sd-page.sd-page-1 .sd-box .sd-role-container {
-        margin-top: 56px;
         font-weight: 400;
-        letter-spacing: 1.75px; }
+        letter-spacing: 1.75px;
+        -webkit-transform: translate(0, 56px);
+                transform: translate(0, 56px); }
       .sd-page.sd-page-1 .sd-box .sd-location-container {
-        margin-top: 80px;
         font-weight: 700;
-        letter-spacing: 3.75px; }
+        letter-spacing: 3.75px;
+        -webkit-transform: translate(0, 80px);
+                transform: translate(0, 80px); }
   .sd-page.sd-page-2 {
     margin-top: 100vh; }
     .sd-page.sd-page-2 .sd-box .sd-signature {
@@ -554,9 +556,8 @@ a {
       .sd-page.sd-page-work-detail .sd-bezel-container.sd-lg-bezel-container {
         display: block; }
       .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel {
-        right: 0;
-        left: auto;
-        width: 50%;
+        left: 50vw;
+        width: 50vw;
         height: 100vh;
         -webkit-transform: scale(0.75);
                 transform: scale(0.75); }
@@ -580,25 +581,22 @@ a {
       right: 50%;
       padding: 0 16px; }
     .sd-page.sd-page-1 .sd-box .sd-name-container {
-      margin-top: -36px;
       font-size: 72px;
       line-height: 1.25;
-      -webkit-transform: translateX(32%);
-              transform: translateX(32%); }
+      -webkit-transform: translate(32%, -34px);
+              transform: translate(32%, -34px); }
     .sd-page.sd-page-1 .sd-box .sd-role-container {
-      margin-top: 64px;
       font-size: 30px;
       line-height: 1.5;
       letter-spacing: 3px;
-      -webkit-transform: translateX(48%);
-              transform: translateX(48%); }
+      -webkit-transform: translate(48%, 66px);
+              transform: translate(48%, 66px); }
     .sd-page.sd-page-1 .sd-box .sd-location-container {
-      margin-top: 108px;
       font-size: 30px;
       line-height: 1.5;
       letter-spacing: 6px;
-      -webkit-transform: translateX(66%);
-              transform: translateX(66%); }
+      -webkit-transform: translate(66%, 108px);
+              transform: translate(66%, 108px); }
   .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg {
     width: 200px; } }
 

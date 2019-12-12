@@ -479,7 +479,7 @@ a
 
 				&.sd-bezel-phone
 				{
-					max-width: 50%;
+					max-width: 50vw;
 
 					.sd-screen-content
 					{
@@ -520,7 +520,7 @@ a
 
 				&.sd-bezel-winphone
 				{
-					max-width: 50%;
+					max-width: 50vw;
 
 					.sd-screen-content
 					{
@@ -740,16 +740,16 @@ a
 
 			.sd-role-container
 			{
-				margin-top: 56px;
 				font-weight: 400;
 				letter-spacing: 1.75px;
+				transform: translate(0,56px);
 			}
 
 			.sd-location-container
 			{
-				margin-top: 80px;
 				font-weight: 700;
 				letter-spacing: 3.75px;
+				transform: translate(0,80px);
 			}
 		}
 	}
@@ -981,9 +981,8 @@ a
 
 				.sd-bezel
 				{
-					right: 0;
-					left: auto;
-					width: 50%;
+					left: 50vw;
+					width: 50vw;
 					height: 100vh;
 					transform: scale(0.75);
 
@@ -1032,28 +1031,25 @@ a
 
 				.sd-name-container
 				{
-					margin-top: -36px;
 					font-size: 72px;
 					line-height: 1.25;
-					transform: translateX(32%);
+					transform: translate(32%,-34px);
 				}
 
 				.sd-role-container
 				{
-					margin-top: 64px;
 					font-size: 30px;
 					line-height: 1.5;
 					letter-spacing: 3px;
-					transform: translateX(48%);
+					transform: translate(48%,66px);
 				}
 
 				.sd-location-container
 				{
-					margin-top: 108px;
 					font-size: 30px;
 					line-height: 1.5;
 					letter-spacing: 6px;
-					transform: translateX(66%);
+					transform: translate(66%,108px);
 				}
 			}
 		}
