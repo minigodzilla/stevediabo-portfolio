@@ -935,35 +935,33 @@ a
 
 			.sd-box
 			{
-				width: 50%;
-				align-items: center;
 
 				.sd-name-container,
 				.sd-role-container,
 				.sd-location-container
 				{
-					right: 50%;
+					right: 0;
 					padding: 0 16px;
 				}
 
 				.sd-name-container
 				{
 					font-size: 3em;
-					transform: translate(28%,0);
+					transform: translate(-10vw,0);
 				}
 
 				.sd-role-container
 				{
 					font-size: 1.25em;
 					letter-spacing: 3px;
-					transform: translate(40%,66px);
+					transform: translate(-5vw,3.3125em);
 				}
 
 				.sd-location-container
 				{
 					font-size: 1.25em;
 					letter-spacing: 6px;
-					transform: translate(52.5%,96px);
+					transform: translate(-5vw,4.75em);
 				}
 			}
 		}
@@ -1091,37 +1089,7 @@ a
 
 		&.sd-page-1
 		{
-			.sd-box
-			{
-				width: 50%;
-				align-items: center;
-
-				.sd-name-container,
-				.sd-role-container,
-				.sd-location-container
-				{
-					right: 50%;
-					padding: 0 16px;
-				}
-
-				.sd-name-container
-				{
-					font-size: 4.5em;
-					transform: translate(32%,-34px);
-				}
-
-				.sd-role-container
-				{
-					font-size: 1.875em;
-					transform: translate(48%,66px);
-				}
-
-				.sd-location-container
-				{
-					font-size: 1.875em;
-					transform: translate(66%,108px);
-				}
-			}
+			font-size: 1.25em;
 		}
 
 		&.sd-page-2
@@ -1154,6 +1122,11 @@ a
 		&.sd-page-work-detail
 		{
 			font-size: 1.25rem;
+		}
+
+		&.sd-page-1
+		{
+			font-size: 1.5em;
 		}
 	}
 }
