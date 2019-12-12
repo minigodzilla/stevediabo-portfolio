@@ -1113,18 +1113,9 @@ a
 			font-size: 1.25em;
 		}
 
-		&.sd-page-2
+		&.sd-page-2 .sd-box .sd-signature .sd-svg
 		{
-			.sd-box
-			{
-				.sd-signature
-				{
-					.sd-svg
-					{
-						width: 200px;
-					}
-				}
-			}
+			width: 200px;
 		}
 	}
 }
