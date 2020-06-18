@@ -153,7 +153,8 @@ a {
     left: 0; }
   .sd-page.sd-page-simple-title {
     z-index: 1;
-    background-color: #888;
+    background-attachment: fixed;
+    background-image: linear-gradient(45deg, #283c86, #45a247);
     color: #fff; }
     .sd-page.sd-page-simple-title .sd-box {
       position: static;
@@ -448,7 +449,8 @@ a {
         -webkit-transform: translate(0, 78px);
                 transform: translate(0, 78px); }
   .sd-page.sd-page-2 {
-    margin-top: 100vh; }
+    margin-top: 100vh;
+    background-image: linear-gradient(45deg, #8a2387, #e94057, #f27121); }
     .sd-page.sd-page-2 .sd-box .sd-signature {
       margin-top: 32px; }
       .sd-page.sd-page-2 .sd-box .sd-signature .sd-svg {
