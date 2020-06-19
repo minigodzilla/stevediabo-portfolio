@@ -640,6 +640,7 @@ a {
 
 @media screen and (min-width: 1200px) {
   .sd-page.sd-page-simple-title {
+    background-attachment: fixed;
     font-size: 2rem; }
   .sd-page.sd-page-work-detail {
     font-size: 1.25rem; }
