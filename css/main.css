@@ -377,6 +377,8 @@ a {
           opacity: 1; }
         .sd-page.sd-page-work-detail .sd-bezel-container .sd-bezel.sd-paused .sd-overlay .sd-svg-loading {
           opacity: 0; }
+  .sd-page.sd-page-4, .sd-page.sd-page-8, .sd-page.sd-page-12 {
+    background-image: linear-gradient(225deg, #283c86, #45a247); }
   .sd-page.sd-page-1 {
     height: 100vh;
     background-color: #888;
