@@ -44,6 +44,22 @@ $(function () {
 
 		// pg 2
 
+		const page2scene0tween = TweenMax.to('.sd-page-2 .sd-color', 1, { opacity: 1, ease: Linear.easeNone });
+
+		const page2scene0 = new ScrollMagic.Scene
+		({
+			triggerElement: '.sd-page-2 .sd-trigger-scene-1', triggerHook: 0.5, duration: '25%'
+		})
+		.setTween(page2scene0tween)
+
+		const page2scene00tween = TweenMax.to('.sd-page-2 .sd-color', 1, { opacity: 0, ease: Linear.easeNone });
+
+		const page2scene00 = new ScrollMagic.Scene
+		({
+			triggerElement: '.sd-page-2 .sd-trigger-scene-3', triggerHook: 0.5, duration: '25%'
+		})
+		.setTween(page2scene00tween)
+
 		const page2scene1tween = TweenMax.to('.sd-page-2 .sd-signature', 1, { className: '+=sd-animated' });
 
 		const page2scene1 = new ScrollMagic.Scene
@@ -105,7 +121,25 @@ $(function () {
 		({
 			triggerElement: '.sd-page-3 .sd-trigger-scene-3', triggerHook: 1
 		})
-		.setClassToggle('.sd-page-3', 'sd-past-bottom')		
+		.setClassToggle('.sd-page-3', 'sd-past-bottom')
+
+		// pg 4
+
+		const page4scene0tween = TweenMax.to('.sd-page-4 .sd-color', 1, { opacity: 1, ease: Linear.easeNone });
+
+		const page4scene0 = new ScrollMagic.Scene
+		({
+			triggerElement: '.sd-page-4 .sd-trigger-scene-1', triggerHook: 0.5, duration: '25%'
+		})
+		.setTween(page4scene0tween)
+
+		const page4scene00tween = TweenMax.to('.sd-page-4 .sd-color', 1, { opacity: 0, ease: Linear.easeNone });
+
+		const page4scene00 = new ScrollMagic.Scene
+		({
+			triggerElement: '.sd-page-4 .sd-trigger-scene-3', triggerHook: 0.5, duration: '25%'
+		})
+		.setTween(page4scene00tween)
 
 		// pg 5
 
@@ -162,6 +196,24 @@ $(function () {
 		})
 		.setClassToggle('.sd-page-5', 'sd-past-bottom')		
 
+		// pg 6
+
+		const page6scene0tween = TweenMax.to('.sd-page-6 .sd-color', 1, { opacity: 1, ease: Linear.easeNone });
+
+		const page6scene0 = new ScrollMagic.Scene
+		({
+			triggerElement: '.sd-page-6 .sd-trigger-scene-1', triggerHook: 0.5, duration: '25%'
+		})
+		.setTween(page6scene0tween)
+
+		const page6scene00tween = TweenMax.to('.sd-page-6 .sd-color', 1, { opacity: 0, ease: Linear.easeNone });
+
+		const page6scene00 = new ScrollMagic.Scene
+		({
+			triggerElement: '.sd-page-6 .sd-trigger-scene-3', triggerHook: 0.5, duration: '25%'
+		})
+		.setTween(page6scene00tween)
+
 		// pg 7
 
 		const page7scene1tween = TweenMax.to('.sd-page-7 .sd-animated-item', 1, { className: '+=sd-animated', ease: Linear.easeNone });
@@ -189,6 +241,24 @@ $(function () {
 			triggerElement: '.sd-page-7 .sd-trigger-scene-3', triggerHook: 1
 		})
 		.setClassToggle('.sd-page-7', 'sd-past-bottom')		
+
+		// pg 8
+
+		const page8scene0tween = TweenMax.to('.sd-page-8 .sd-color', 1, { opacity: 1, ease: Linear.easeNone });
+
+		const page8scene0 = new ScrollMagic.Scene
+		({
+			triggerElement: '.sd-page-8 .sd-trigger-scene-1', triggerHook: 0.5, duration: '25%'
+		})
+		.setTween(page8scene0tween)
+
+		const page8scene00tween = TweenMax.to('.sd-page-8 .sd-color', 1, { opacity: 0, ease: Linear.easeNone });
+
+		const page8scene00 = new ScrollMagic.Scene
+		({
+			triggerElement: '.sd-page-8 .sd-trigger-scene-3', triggerHook: 0.5, duration: '25%'
+		})
+		.setTween(page8scene00tween)
 
 		// pg 9
 
@@ -245,29 +315,57 @@ $(function () {
 		})
 		.setClassToggle('.sd-page-9', 'sd-past-bottom')		
 
+		// pg 10
+
+		const page10scene0tween = TweenMax.to('.sd-page-10 .sd-color', 1, { opacity: 1, ease: Linear.easeNone });
+
+		const page10scene0 = new ScrollMagic.Scene
+		({
+			triggerElement: '.sd-page-10 .sd-trigger-scene-1', triggerHook: 0.5, duration: '25%'
+		})
+		.setTween(page10scene0tween)
+
+		const page10scene00tween = TweenMax.to('.sd-page-10 .sd-color', 1, { opacity: 0, ease: Linear.easeNone });
+
+		const page10scene00 = new ScrollMagic.Scene
+		({
+			triggerElement: '.sd-page-10 .sd-trigger-scene-3', triggerHook: 0.5, duration: '25%'
+		})
+		.setTween(page10scene00tween)
+
 		// Add scenes to the controller
 		page1scene1.addTo (scrollController);
 		page1scene2.addTo (scrollController);
+		page2scene0.addTo (scrollController);
+		page2scene00.addTo (scrollController);
 		page2scene1.addTo (scrollController);
 		page3scene1.addTo (scrollController);
 		page3scene1a.addTo (scrollController);
 		page3scene1b.addTo (scrollController);
 		page3scene2.addTo (scrollController);
 		page3scene3.addTo (scrollController);
+		page4scene0.addTo (scrollController);
+		page4scene00.addTo (scrollController);
 		page5scene1.addTo (scrollController);
 		page5scene1a.addTo (scrollController);
 		page5scene1b.addTo (scrollController);
 		page5scene2.addTo (scrollController);
 		page5scene3.addTo (scrollController);
+		page6scene0.addTo (scrollController);
+		page6scene00.addTo (scrollController);
 		page7scene1.addTo (scrollController);
 		page7scene1a.addTo (scrollController);
 		page7scene1b.addTo (scrollController);
 		page7scene3.addTo (scrollController);
+		page8scene0.addTo (scrollController);
+		page8scene00.addTo (scrollController);
 		page9scene1.addTo (scrollController);
 		page9scene1a.addTo (scrollController);
 		page9scene1b.addTo (scrollController);
 		page9scene2.addTo (scrollController);
 		page9scene3.addTo (scrollController);
+		page10scene0.addTo (scrollController);
+		page10scene00.addTo (scrollController);
 
 		// Smooth Scroll
 		// var scroll = new SmoothScroll('a[href*="#"]', {
