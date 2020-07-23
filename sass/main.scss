@@ -323,6 +323,11 @@ a
 			mix-blend-mode: soft-light;
 		}
 
+		.sd-section-heading
+		{
+			display: none;
+		}
+
 		.sd-color
 		{
 			position: absolute;
@@ -336,7 +341,7 @@ a
 
 		&.sd-page-2 .sd-color
 		{
-			background-color: #1c3456;
+			background-color: #21385f;
 		}
 
 		&.sd-page-4 .sd-color
@@ -346,7 +351,7 @@ a
 
 		&.sd-page-6 .sd-color
 		{
-			background-color: #194643;
+			background-color: #223940;
 		}
 
 		&.sd-page-8 .sd-color
@@ -356,7 +361,7 @@ a
 
 		&.sd-page-10 .sd-color
 		{
-			background-color: #1c3456;
+			background-color: #21385f;
 		}
 
 		.sd-box
