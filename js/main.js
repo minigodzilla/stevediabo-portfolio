@@ -64,7 +64,7 @@ $(function () {
 
 		const page2scene1 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-2 .sd-trigger-scene-1', triggerHook: 0, reverse: false
+			triggerElement: '.sd-page-2 .sd-signature', triggerHook: 0.75, reverse: false
 		})
 		.setTween(page2scene1tween)
 
