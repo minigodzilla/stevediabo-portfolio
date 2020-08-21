@@ -2,6 +2,14 @@
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   line-height: 1.5; }
 
+section.sd-lazy,
+section.sd-lazy::before,
+section.sd-lazy::after,
+section.sd-lazy *,
+section.sd-lazy *::before,
+section.sd-lazy *::after {
+  background-image: none !important; }
+
 /* General
 -------------------------------------------------------------- */
 *,

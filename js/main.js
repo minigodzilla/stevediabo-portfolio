@@ -1,10 +1,48 @@
-// init controller
-var controller = new ScrollMagic.Controller();
-
 $(function () {
 
+	function lazyLoad() {
+
+        $('img.sd-lazy:visible, video.sd-lazy:visible').each(function () {
+
+            var $this = $(this);
+
+            new ScrollMagic.Scene
+                ({
+                    triggerElement: this,
+                    triggerHook: 1,
+                    offset: -100
+                })
+                .on("enter", function () {
+                    $this.removeClass('sd-lazy');
+                    $this.attr('src', $this.attr('data-src'));
+                    $this.removeAttr('data-src');
+                    $this.attr('poster', $this.attr('data-poster'));
+                    $this.removeAttr('data-poster');
+                })
+                .addTo(controller);
+        });
+
+        $('section.sd-lazy').each(function () {
+
+            var $this = $(this);
+
+            new ScrollMagic.Scene
+                ({
+                    triggerElement: this,
+                    triggerHook: 1,
+                    offset: -100
+                })
+                .on("enter", function () {
+                    $this.removeClass('sd-lazy');
+                })
+                .addTo(controller);
+        });
+	}
+
 	// Create an instance of the Scroll Magic Controller
-	let scrollController = new ScrollMagic.Controller();
+	let controller = new ScrollMagic.Controller();
+
+	lazyLoad();
 
 	(() => {
 
@@ -334,38 +372,38 @@ $(function () {
 		.setTween(page10scene00tween)
 
 		// Add scenes to the controller
-		page1scene1.addTo (scrollController);
-		page1scene2.addTo (scrollController);
-		page2scene0.addTo (scrollController);
-		page2scene00.addTo (scrollController);
-		page2scene1.addTo (scrollController);
-		page3scene1.addTo (scrollController);
-		page3scene1a.addTo (scrollController);
-		page3scene1b.addTo (scrollController);
-		page3scene2.addTo (scrollController);
-		page3scene3.addTo (scrollController);
-		page4scene0.addTo (scrollController);
-		page4scene00.addTo (scrollController);
-		page5scene1.addTo (scrollController);
-		page5scene1a.addTo (scrollController);
-		page5scene1b.addTo (scrollController);
-		page5scene2.addTo (scrollController);
-		page5scene3.addTo (scrollController);
-		page6scene0.addTo (scrollController);
-		page6scene00.addTo (scrollController);
-		page7scene1.addTo (scrollController);
-		page7scene1a.addTo (scrollController);
-		page7scene1b.addTo (scrollController);
-		page7scene3.addTo (scrollController);
-		page8scene0.addTo (scrollController);
-		page8scene00.addTo (scrollController);
-		page9scene1.addTo (scrollController);
-		page9scene1a.addTo (scrollController);
-		page9scene1b.addTo (scrollController);
-		page9scene2.addTo (scrollController);
-		page9scene3.addTo (scrollController);
-		page10scene0.addTo (scrollController);
-		page10scene00.addTo (scrollController);
+		page1scene1.addTo (controller);
+		page1scene2.addTo (controller);
+		page2scene0.addTo (controller);
+		page2scene00.addTo (controller);
+		page2scene1.addTo (controller);
+		page3scene1.addTo (controller);
+		page3scene1a.addTo (controller);
+		page3scene1b.addTo (controller);
+		page3scene2.addTo (controller);
+		page3scene3.addTo (controller);
+		page4scene0.addTo (controller);
+		page4scene00.addTo (controller);
+		page5scene1.addTo (controller);
+		page5scene1a.addTo (controller);
+		page5scene1b.addTo (controller);
+		page5scene2.addTo (controller);
+		page5scene3.addTo (controller);
+		page6scene0.addTo (controller);
+		page6scene00.addTo (controller);
+		page7scene1.addTo (controller);
+		page7scene1a.addTo (controller);
+		page7scene1b.addTo (controller);
+		page7scene3.addTo (controller);
+		page8scene0.addTo (controller);
+		page8scene00.addTo (controller);
+		page9scene1.addTo (controller);
+		page9scene1a.addTo (controller);
+		page9scene1b.addTo (controller);
+		page9scene2.addTo (controller);
+		page9scene3.addTo (controller);
+		page10scene0.addTo (controller);
+		page10scene00.addTo (controller);
 
 		// Smooth Scroll
 		// var scroll = new SmoothScroll('a[href*="#"]', {
