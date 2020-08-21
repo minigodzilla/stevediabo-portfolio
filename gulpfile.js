@@ -6,13 +6,17 @@ var rename = require('gulp-rename');
 var terser = require('gulp-terser');
 var browserSync = require('browser-sync').create();
 
+var sassOptions = {
+    outputStyle: 'compressed'
+};
+
 var prefixerOptions = {
 };
 
 
 gulp.task('sass', function() {
     return gulp.src('./sass/main.scss')
-        .pipe(sass())
+        .pipe(sass(sassOptions))
         .pipe(prefix(prefixerOptions))
         .pipe(gulp.dest('./css'))
         .pipe(browserSync.stream());
