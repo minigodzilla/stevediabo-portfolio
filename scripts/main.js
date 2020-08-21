@@ -37,10 +37,10 @@ $(function () {
                 })
                 .addTo(controller);
         });
-	}
+	};
 
 	// Create an instance of the Scroll Magic Controller
-	let controller = new ScrollMagic.Controller();
+	var controller = new ScrollMagic.Controller();
 
 	lazyLoad();
 
