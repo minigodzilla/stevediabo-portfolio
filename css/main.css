@@ -35,6 +35,9 @@ body {
   background-color: #fff;
   color: #000; }
 
+.sd-svg-defs {
+  display: none; }
+
 img {
   max-width: 100%;
   vertical-align: middle;

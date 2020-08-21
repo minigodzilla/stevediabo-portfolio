@@ -10,7 +10,7 @@ $(function () {
                 ({
                     triggerElement: this,
                     triggerHook: 1,
-                    offset: -100
+                    offset: -512
                 })
                 .on("enter", function () {
                     $this.removeClass('sd-lazy');
@@ -30,7 +30,7 @@ $(function () {
                 ({
                     triggerElement: this,
                     triggerHook: 1,
-                    offset: -100
+                    offset: -512
                 })
                 .on("enter", function () {
                     $this.removeClass('sd-lazy');
