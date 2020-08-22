@@ -11577,8 +11577,6 @@ $(function () {
 
 		// pg 4
 
-		const page4scene0tween = TweenMax.to('.sd-page-4 .sd-color', 1, { opacity: 1, ease: Linear.easeNone });
-
 		const page4scene0 = new ScrollMagic.Scene
 		({
 			triggerElement: '.sd-page-4 .sd-trigger-scene-1', triggerHook: 0.5, duration: '25%'
