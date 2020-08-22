@@ -314,9 +314,9 @@ a
 	&.sd-page-simple-title
 	{
 		z-index: 1;
-		//background-image: linear-gradient(45deg, #283c86, #45a247);
 		background-color: #333;
 		color: #fff;
+		letter-spacing: 0;
 
 		&::before
 		{
@@ -377,7 +377,7 @@ a
 		{
 			position: relative;
 			width: 100vw;
-			padding: 96px 48px;
+			padding: 96px 48px 80px 48px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -968,7 +968,6 @@ a
 		&.sd-page-simple-title 
 		{
 			font-size: 1.25em;
-			letter-spacing: -0.75px;
 		}
 
 		&.sd-page-work-detail .sd-box .sd-duties br
@@ -1097,14 +1096,13 @@ a
 		&.sd-page-simple-title
 		{
 			font-size: 1.75em;
-			letter-spacing: -1px;
 
 			.sd-box
 			{
 				max-width: none;
-				min-height: 125vh;
+				min-height: 110vh;
 				margin: 0;
-				padding: 140px 15vw;
+				padding: 140px 15vw 110px 15vw;
 
 				.sd-quote-marks .sd-quote-mark
 				{
