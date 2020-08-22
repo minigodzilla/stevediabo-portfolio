@@ -40,7 +40,7 @@ $(function () {
 	};
 
 	// Create an instance of the Scroll Magic Controller
-	var controller = new ScrollMagic.Controller();
+	let controller = new ScrollMagic.Controller();
 
 	lazyLoad();
 
@@ -162,6 +162,8 @@ $(function () {
 		.setClassToggle('.sd-page-3', 'sd-past-bottom')
 
 		// pg 4
+
+		const page4scene0tween = TweenMax.to('.sd-page-4 .sd-color', 1, { opacity: 1, ease: Linear.easeNone });
 
 		const page4scene0 = new ScrollMagic.Scene
 		({
