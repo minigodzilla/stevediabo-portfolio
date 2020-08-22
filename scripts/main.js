@@ -163,6 +163,14 @@ $(function () {
 
 		// pg 4
 
+		const page4sceneXtween = TweenMax.to('.sd-page-4 .sd-animated-item', 1, { className: '+=sd-animated', ease: Linear.easeNone });
+
+		const page4sceneX = new ScrollMagic.Scene
+		({
+			triggerElement: '.sd-page-4 .sd-trigger-scene-1', triggerHook: 1, duration: '350%'
+		})
+		.setTween(page4sceneXtween)
+
 		const page4scene0tween = TweenMax.to('.sd-page-4 .sd-color', 1, { opacity: 1, ease: Linear.easeNone });
 
 		const page4scene0 = new ScrollMagic.Scene
@@ -382,6 +390,7 @@ $(function () {
 		page3scene1b.addTo (controller);
 		page3scene2.addTo (controller);
 		page3scene3.addTo (controller);
+		page4sceneX.addTo (controller);
 		page4scene0.addTo (controller);
 		page4scene00.addTo (controller);
 		page5scene1.addTo (controller);

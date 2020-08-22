@@ -278,6 +278,7 @@ a
 	// fixes the width issue on scrollmagic pinned pages
 	width: 100vw;
 	position: relative;
+	overflow: hidden;
 
 	.sd-trigger
 	{
@@ -374,25 +375,65 @@ a
 
 		.sd-box
 		{
-			position: static;
+			position: relative;
 			width: 100vw;
-			min-height: 125vh;
-			padding: 36px 24px;
+			padding: 96px 48px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			max-width: 480px;
 			margin: 0 auto;
 
-			&.sd-animated
+			.sd-quote-marks
 			{
-				// transform: translateY(-30px);
+				opacity: 0.2;
+
+				.sd-quote-mark
+				{
+					position: absolute;
+					z-index: -1;
+					width: 100px;
+					color: #000;
+
+					&.sd-quote-mark-l
+					{
+						top: -10px;
+						margin-left: -24px;
+					}
+					&.sd-quote-mark-r
+					{
+						margin-left: -24px;
+						bottom: -10px;
+					}
+				}
 			}
 
 			.sd-p
 			{
-				margin-bottom: 16px;
+				margin-bottom: 1em;
 				font-weight: 300;
+			}
+			
+			.sd-quote
+			{
+				margin-bottom: 0.5em;
+			}
+
+			.sd-name
+			{
+				font-size: 1.25em;
+				font-weight: 700;
+				line-height: 1.25;
+				text-align: right;
+				text-transform: uppercase;
+			}
+
+			.sd-title
+			{
+				font-size: 0.75em;
+				font-weight: 400;
+				text-align: right;
+				//letter-spacing: 0.125px;
 			}
 		}
 	}
@@ -1061,8 +1102,25 @@ a
 			.sd-box
 			{
 				max-width: none;
+				min-height: 125vh;
 				margin: 0;
-				padding: 15vh 15%;
+				padding: 140px 15vw;
+
+				.sd-quote-marks .sd-quote-mark
+				{
+					width: 150px;
+
+					&.sd-quote-mark-l
+					{
+						top: -16px;
+						margin-left: -60px;
+					}
+					&.sd-quote-mark-r
+					{
+						margin-left: -60px;
+						bottom: -16px;
+					}
+				}
 			}
 		}
 
