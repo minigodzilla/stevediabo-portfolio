@@ -38,13 +38,6 @@ body
 	display: none;
 }
 
-img
-{
-	max-width: 100%; 
-	vertical-align: middle; 
-	-ms-interpolation-mode: bicubic;
-}
-
 a
 {
 	display: inline-block;
@@ -314,6 +307,9 @@ a
 	&.sd-page-simple-title
 	{
 		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		background-color: #222;
 		color: #fff;
 		letter-spacing: 0;
@@ -346,6 +342,12 @@ a
 			bottom: 0;
 			left: 0;
 			opacity: 0;
+			transition: opacity 200ms ease;
+
+			&.sd-animated
+			{
+				opacity: 1;
+			}
 		}
 
 		&.sd-page-2 .sd-color
@@ -386,11 +388,18 @@ a
 			position: relative;
 			width: 100vw;
 			padding: 96px 48px 80px 48px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
 			max-width: 480px;
 			margin: 0 auto;
+
+			.sd-photo
+			{
+				display: block;
+				width: 60%;
+				margin: -60px auto 1em auto;
+				border: solid #eaeaea;
+				border-width: 2vw 2vw 8vw 2vw;
+				box-shadow: 2px 2px 3px rgba(0,0,0,0.25);
+			}
 
 			.sd-quote-marks
 			{
@@ -882,11 +891,13 @@ a
 		{
 			.sd-signature
 			{
+				display: flex;
 				margin-top: 32px;
 
 				.sd-svg
 				{
 					width: 150px;
+					margin-left: auto;
 
 					.sd-s,
 					.sd-teve
@@ -1212,14 +1223,22 @@ a
 	{
 		&.sd-page-simple-title
 		{
+			min-height: 110vh;
 			font-size: 1.75em;
 
 			.sd-box
 			{
 				max-width: none;
-				min-height: 110vh;
 				margin: 0;
 				padding: 140px 15vw 110px 15vw;
+
+				.sd-photo
+				{
+					float: right;
+					width: 50%;
+					margin: -1em -1em 1em 1em;
+					border-width: 1.5vw 1.5vw 6vw 1.5vw;
+				}
 
 				.sd-quote-marks .sd-quote-mark
 				{
@@ -1381,6 +1400,11 @@ a
 		&.sd-page-1
 		{
 			font-size: 1.5em;
+		}
+
+		&.sd-page-2 .sd-box .sd-signature .sd-svg
+		{
+			width: 25%;
 		}
 	}
 }

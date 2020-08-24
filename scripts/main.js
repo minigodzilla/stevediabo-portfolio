@@ -46,6 +46,9 @@ $(function () {
 
 	(() => {
 
+		// throttle the frames-per-second to 30
+		TweenMax.ticker.fps(40);
+
 		// TODO: remove duplication in scenes
 
 		// pg 1
@@ -82,27 +85,33 @@ $(function () {
 
 		// pg 2
 
-		const page2scene0tween = TweenMax.to('.sd-page-2 .sd-color', 1, { opacity: 1, ease: Linear.easeNone });
+		const page2scene0timeline = new TimelineLite();
+			page2scene0timeline
+			.fromTo('.sd-page-2 .sd-color', 0.2, { 
+				opacity: '0'
+			},
+			{
+				opacity: '1'
+			})
+			.fromTo('.sd-page-2 .sd-photo', 0.6, { 
+				transform: 'translate3d(400%,5%,0) rotate(-260deg) scale(0.85)'
+			},
+			{
+				transform: 'translate3d(0%,0%,0) rotate(4deg) scale(0.85)'
+			})
+			;
 
 		const page2scene0 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-2 .sd-trigger-scene-1', triggerHook: 0.5, duration: '25%'
+			triggerElement: '.sd-page-2 .sd-trigger-scene-1', triggerHook: 0.5, reverse: false
 		})
-		.setTween(page2scene0tween)
-
-		const page2scene00tween = TweenMax.to('.sd-page-2 .sd-color', 1, { opacity: 0, ease: Linear.easeNone });
-
-		const page2scene00 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-2 .sd-trigger-scene-3', triggerHook: 0.5, duration: '25%'
-		})
-		.setTween(page2scene00tween)
+		.setTween(page2scene0timeline)
 
 		const page2scene1tween = TweenMax.to('.sd-page-2 .sd-signature', 1, { className: '+=sd-animated' });
 
 		const page2scene1 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-2 .sd-signature', triggerHook: 0.88, reverse: false
+			triggerElement: '.sd-page-2 .sd-signature', triggerHook: 0.75, reverse: false
 		})
 		.setTween(page2scene1tween)
 
@@ -399,7 +408,6 @@ $(function () {
 		page1scene1.addTo (controller);
 		page1scene2.addTo (controller);
 		page2scene0.addTo (controller);
-		page2scene00.addTo (controller);
 		page2scene1.addTo (controller);
 		page3scene1.addTo (controller);
 		page3scene1a.addTo (controller);
