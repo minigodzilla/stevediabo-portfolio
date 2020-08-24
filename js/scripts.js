@@ -11462,8 +11462,8 @@ $(function () {
 
 	(() => {
 
-		// throttle the frames-per-second to 30
-		TweenMax.ticker.fps(40);
+		// throttle the frames-per-second
+		//TweenMax.ticker.fps(40);
 
 		// TODO: remove duplication in scenes
 
