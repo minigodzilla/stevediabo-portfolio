@@ -371,6 +371,30 @@ $(function () {
 		})
 		.setTween(page10scene00tween)
 
+		// pg 11
+
+		const page11scene1tween = TweenMax.to('.sd-page-11, .sd-page-11 .sd-animated-item', 1, { className: '+=sd-animated', ease: Linear.easeNone });
+
+		// const page11scene1 = new ScrollMagic.Scene
+		// ({
+		// 	triggerElement: '.sd-page-11', triggerHook: 0, duration: '200%'
+		// })
+		// .setPin('.sd-page-11', { pushFollowers: true })
+		// .setTween(page11scene1tween)
+
+		const page11scene2timeline = new TimelineLite();
+			page11scene2timeline
+				.to('.sd-page-11 .sd-box .sd-name-container', 0.2, { 
+					className: '+=sd-animated'
+				})
+			;
+
+		// const page11scene2 = new ScrollMagic.Scene
+		// ({
+		// 	triggerElement: '.sd-page-11', triggerHook: 0
+		// })
+		// .setTween(page11scene2timeline)
+
 		// Add scenes to the controller
 		page1scene1.addTo (controller);
 		page1scene2.addTo (controller);
@@ -404,11 +428,8 @@ $(function () {
 		page9scene3.addTo (controller);
 		page10scene0.addTo (controller);
 		page10scene00.addTo (controller);
-
-		// Smooth Scroll
-		// var scroll = new SmoothScroll('a[href*="#"]', {
-		// 	speed: 750
-		// });
+		//page11scene1.addTo (controller);
+		//page11scene2.addTo (controller);
 
 		$('.sd-screen-content-video').one('click', function() {
 
