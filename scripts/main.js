@@ -16,6 +16,8 @@ $(function () {
                     $this.removeClass('sd-lazy');
                     $this.attr('src', $this.attr('data-src'));
                     $this.removeAttr('data-src');
+                    $this.attr('srcset', $this.attr('data-srcset'));
+                    $this.removeAttr('data-srcset');
                     $this.attr('poster', $this.attr('data-poster'));
                     $this.removeAttr('data-poster');
                 })
@@ -172,21 +174,13 @@ $(function () {
 
 		// pg 4
 
-		const page4scene0tween = TweenMax.to('.sd-page-4 .sd-color', 1, { opacity: 1, ease: Linear.easeNone });
+		const page4scene0tween = TweenMax.to('.sd-page-4 .sd-color', 1, { className: '+=sd-animated' });
 
 		const page4scene0 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-4 .sd-trigger-scene-1', triggerHook: 0.5, duration: '25%'
+			triggerElement: '.sd-page-4 .sd-trigger-scene-1', triggerHook: 0.5, reverse: false
 		})
 		.setTween(page4scene0tween)
-
-		const page4scene00tween = TweenMax.to('.sd-page-4 .sd-color', 1, { opacity: 0, ease: Linear.easeNone });
-
-		const page4scene00 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-4 .sd-trigger-scene-3', triggerHook: 0.5, duration: '25%'
-		})
-		.setTween(page4scene00tween)
 
 		// pg 5
 
@@ -245,21 +239,13 @@ $(function () {
 
 		// pg 6
 
-		const page6scene0tween = TweenMax.to('.sd-page-6 .sd-color', 1, { opacity: 1, ease: Linear.easeNone });
+		const page6scene0tween = TweenMax.to('.sd-page-6 .sd-color', 1, { className: '+=sd-animated' });
 
 		const page6scene0 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-6 .sd-trigger-scene-1', triggerHook: 0.5, duration: '25%'
+			triggerElement: '.sd-page-6 .sd-trigger-scene-1', triggerHook: 0.5, reverse: false
 		})
 		.setTween(page6scene0tween)
-
-		const page6scene00tween = TweenMax.to('.sd-page-6 .sd-color', 1, { opacity: 0, ease: Linear.easeNone });
-
-		const page6scene00 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-6 .sd-trigger-scene-3', triggerHook: 0.5, duration: '25%'
-		})
-		.setTween(page6scene00tween)
 
 		// pg 7
 
@@ -291,21 +277,13 @@ $(function () {
 
 		// pg 8
 
-		const page8scene0tween = TweenMax.to('.sd-page-8 .sd-color', 1, { opacity: 1, ease: Linear.easeNone });
+		const page8scene0tween = TweenMax.to('.sd-page-8 .sd-color', 1, { className: '+=sd-animated' });
 
 		const page8scene0 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-8 .sd-trigger-scene-1', triggerHook: 0.5, duration: '25%'
+			triggerElement: '.sd-page-8 .sd-trigger-scene-1', triggerHook: 0.5, reverse: false
 		})
 		.setTween(page8scene0tween)
-
-		const page8scene00tween = TweenMax.to('.sd-page-8 .sd-color', 1, { opacity: 0, ease: Linear.easeNone });
-
-		const page8scene00 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-8 .sd-trigger-scene-3', triggerHook: 0.5, duration: '25%'
-		})
-		.setTween(page8scene00tween)
 
 		// pg 9
 
@@ -364,21 +342,13 @@ $(function () {
 
 		// pg 10
 
-		const page10scene0tween = TweenMax.to('.sd-page-10 .sd-color', 1, { opacity: 1, ease: Linear.easeNone });
+		const page10scene0tween = TweenMax.to('.sd-page-10 .sd-color', 1, { className: '+=sd-animated' });
 
 		const page10scene0 = new ScrollMagic.Scene
 		({
-			triggerElement: '.sd-page-10 .sd-trigger-scene-1', triggerHook: 0.5, duration: '25%'
+			triggerElement: '.sd-page-10 .sd-trigger-scene-1', triggerHook: 0.5, reverse: false
 		})
 		.setTween(page10scene0tween)
-
-		const page10scene00tween = TweenMax.to('.sd-page-10 .sd-color', 1, { opacity: 0, ease: Linear.easeNone });
-
-		const page10scene00 = new ScrollMagic.Scene
-		({
-			triggerElement: '.sd-page-10 .sd-trigger-scene-3', triggerHook: 0.5, duration: '25%'
-		})
-		.setTween(page10scene00tween)
 
 		// pg 11
 
@@ -415,27 +385,23 @@ $(function () {
 		page3scene2.addTo (controller);
 		page3scene3.addTo (controller);
 		page4scene0.addTo (controller);
-		page4scene00.addTo (controller);
 		page5scene1.addTo (controller);
 		page5scene1a.addTo (controller);
 		page5scene1b.addTo (controller);
 		page5scene2.addTo (controller);
 		page5scene3.addTo (controller);
 		page6scene0.addTo (controller);
-		page6scene00.addTo (controller);
 		page7scene1.addTo (controller);
 		page7scene1a.addTo (controller);
 		page7scene1b.addTo (controller);
 		page7scene3.addTo (controller);
 		page8scene0.addTo (controller);
-		page8scene00.addTo (controller);
 		page9scene1.addTo (controller);
 		page9scene1a.addTo (controller);
 		page9scene1b.addTo (controller);
 		page9scene2.addTo (controller);
 		page9scene3.addTo (controller);
 		page10scene0.addTo (controller);
-		page10scene00.addTo (controller);
 		//page11scene1.addTo (controller);
 		//page11scene2.addTo (controller);
 
