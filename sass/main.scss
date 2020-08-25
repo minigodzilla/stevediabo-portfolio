@@ -1129,14 +1129,6 @@ a
 
 		&.sd-page-1
 		{
-			background-image: url('../img/bg_p01.jpg');
-			background-position: 50% 45%;
-
-			&.sd-animated
-			{
-				background-position: 50% 65%;
-			}
-
 			.sd-box
 			{
 
@@ -1363,7 +1355,14 @@ a
 
 		&.sd-page-1
 		{
+			background-image: url('../img/bg_p01.jpg');
+			background-position: 50% 45%;
 			font-size: 1.25em;
+
+			&.sd-animated
+			{
+				background-position: 50% 65%;
+			}
 		}
 
 		&.sd-page-2 .sd-box
