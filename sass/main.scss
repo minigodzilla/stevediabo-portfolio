@@ -415,16 +415,6 @@ a
 			max-width: 480px;
 			margin: 0 auto;
 
-			.sd-photo
-			{
-				display: block;
-				width: 60%;
-				margin: -60px auto 1em auto;
-				border: solid #eaeaea;
-				border-width: 2vw 2vw 8vw 2vw;
-				box-shadow: 2px 2px 3px rgba(0,0,0,0.25);
-			}
-
 			.sd-p
 			{
 				margin-bottom: 1em;
@@ -433,7 +423,7 @@ a
 			
 			.sd-quote
 			{
-				margin-bottom: 0.5em;
+				margin-bottom: 1.5em;
 			}
 
 			.sd-name
@@ -893,10 +883,21 @@ a
 		
 		.sd-box
 		{
+			padding: 32px 48px 48px 48px;
+
+			.sd-photo
+			{
+				display: block;
+				width: 50vw;
+				margin: 0 auto 1em auto;
+				border: solid #eaeaea;
+				border-width: 2vw 2vw 8vw 2vw;
+				box-shadow: 2px 2px 3px rgba(0,0,0,0.25);
+			}
+
 			.sd-signature
 			{
 				display: flex;
-				margin-top: 32px;
 
 				.sd-svg
 				{
@@ -1251,14 +1252,6 @@ a
 				max-width: none;
 				margin: 0;
 				padding: 140px 15vw 110px 15vw;
-
-				.sd-photo
-				{
-					float: right;
-					width: 50%;
-					margin: -1em -1em 1em 1em;
-					border-width: 1.5vw 1.5vw 6vw 1.5vw;
-				}
 			}
 		}
 
@@ -1373,9 +1366,20 @@ a
 			font-size: 1.25em;
 		}
 
-		&.sd-page-2 .sd-box .sd-signature .sd-svg
+		&.sd-page-2 .sd-box
 		{
-			width: 200px;
+
+			.sd-photo
+			{
+				float: right;
+				width: 50%;
+				margin: -1em -1em 1em 1em;
+				border-width: 1.5vw 1.5vw 6vw 1.5vw;
+			}
+			.sd-signature .sd-svg
+			{
+				width: 200px;
+			}
 		}
 
 		&.sd-page-11

@@ -95,8 +95,8 @@ $(function () {
 			{
 				opacity: '1'
 			})
-			.fromTo('.sd-page-2 .sd-photo', 0.6, { 
-				transform: 'translate3d(400%,5%,0) rotate(-260deg) scale(0.85)'
+			.fromTo('.sd-page-2 .sd-photo', 0.4, { 
+				transform: 'translate3d(200%,5%,0) rotate(-260deg) scale(0.85)'
 			},
 			{
 				transform: 'translate3d(0%,0%,0) rotate(4deg) scale(0.85)'
