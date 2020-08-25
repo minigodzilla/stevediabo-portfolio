@@ -39,7 +39,8 @@ gulp.task('js', function() {
 gulp.task('serve', gulp.series('sass','js', function() {
     
     browserSync.init({
-        server: "./"
+        server: "./",
+        ghostMode: false
     });
 
     gulp.watch("./sass/*.scss", gulp.series('sass'));
