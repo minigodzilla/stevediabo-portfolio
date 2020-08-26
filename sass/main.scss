@@ -1,50 +1,6 @@
 @import 'variable';
 @import 'lazy';
 
-/* General
--------------------------------------------------------------- */
-*,
-*:before,
-*:after
-{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-html
-{
-	-ms-content-zooming: none;
-	overflow-x: hidden;
-}
-
-body
-{ 
-	overflow-x: hidden;
-	font-family: 'work sans',sans-serif; 
-	font-weight: 300; 
-	font-size: 16px; 
-	line-height: 1.5; 
-	letter-spacing: 0.25px;
-	-webkit-font-smoothing: antialiased; 
-	text-rendering: optimizeLegibility; 
-	min-height: 100vh;
-	background-color: #fff;
-	color: #000;
-}
-
-.sd-svg-defs
-{
-	display: none;
-}
-
-a
-{
-	display: inline-block;
-	text-decoration: none;
-	transition : $transition3s;
-}
-
 // stripes
 
 .sd-stripe-area
