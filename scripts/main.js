@@ -14,12 +14,12 @@ $(function () {
                 })
                 .on("enter", function () {
                     $this.removeClass('sd-lazy');
-                    $this.attr('src', $this.attr('data-src'));
-                    $this.removeAttr('data-src');
-                    $this.attr('srcset', $this.attr('data-srcset'));
-                    $this.removeAttr('data-srcset');
-                    $this.attr('poster', $this.attr('data-poster'));
-                    $this.removeAttr('data-poster');
+                    $this.attr({
+                    	src:    $this.attr('data-src'),
+                    	srcset: $this.attr('data-srcset'),
+                    	poster: $this.attr('data-poster')
+                    });
+                    $this.removeAttr('data-src data-srcset data-poster');
                 })
                 .addTo(controller);
         });
@@ -45,6 +45,21 @@ $(function () {
 	let controller = new ScrollMagic.Controller();
 
 	lazyLoad();
+
+    // resize detection with 500ms debounce
+    var resizeTimer;
+
+    $(window).on('resize', function (e) {
+
+        clearTimeout(resizeTimer);
+
+        resizeTimer = setTimeout(function () {
+
+            lazyLoad();
+
+        }, 500);
+
+    });
 
 	(() => {
 
