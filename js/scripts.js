@@ -12055,7 +12055,21 @@ $(function () {
 
 		// pg 3
 
-		const page3scene1tween = TweenMax.to('.sd-page-3 .sd-animated-item', 1, { className: '+=sd-animated', ease: Linear.easeNone });
+        $('.sd-page-3 .sd-xs-bezel-container').each(function () {
+
+            var $this = $(this);
+
+            new ScrollMagic.Scene
+                ({
+                    triggerElement: this,
+                    triggerHook: 1,
+                    duration: '350%'
+                })
+                .setTween(TweenMax.to($this, 1, { className: '+=sd-animated', ease: Linear.easeNone }))
+                .addTo(controller);
+        });
+
+		const page3scene1tween = TweenMax.to('.sd-page-3 .sd-stripe-area, .sd-page-3 .sd-stripe-area .sd-animated-item', 1, { className: '+=sd-animated', ease: Linear.easeNone });
 
 		const page3scene1 = new ScrollMagic.Scene
 		({

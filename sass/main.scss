@@ -844,11 +844,13 @@
 			.sd-photo
 			{
 				display: block;
+				box-sizing: content-box;
 				width: 50vw;
+				height: 50vw;
 				margin: 0 auto 1em auto;
 				background-color: #eaeaea;
 				border: solid #eaeaea;
-				border-width: 2vw 2vw 8vw 2vw;
+				border-width: 3vw 3vw 12vw 3vw;
 				box-shadow: 2px 2px 3px rgba(0,0,0,0.25);
 				transform: translate3d(200%,5%,0) rotate(-260deg) scale(0.85);
 			}
@@ -1121,9 +1123,10 @@
 			.sd-photo
 			{
 				float: right;
-				width: 50%;
-				margin: -1em -1em 1em 1em;
+				width: 25vw;
+				height: 25vw;
 				border-width: 1.5vw 1.5vw 6vw 1.5vw;
+				margin: -1em -1em 1em 1em;
 			}
 		}
 
@@ -1367,10 +1370,6 @@
 
 		&.sd-page-2 .sd-box
 		{
-			.sd-photo
-			{
-				width: 40%;
-			}
 
 			.sd-signature .sd-svg
 			{
