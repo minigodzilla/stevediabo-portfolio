@@ -623,22 +623,6 @@
 				background-position: 50% 0px;
 			}
 
-			&.sd-xs-bezel-container
-			{
-				.sd-bezel
-				{
-					.sd-screen-content
-					{
-						filter: brightness(75%) contrast(75%);
-					}
-				}
-			}
-
-			&.sd-lg-bezel-container
-			{
-				display: none;
-			}
-
 			.sd-bezel
 			{
 				position: relative;
@@ -1307,11 +1291,11 @@
 
 @media screen and (max-width: 768px)
 {
-	.sd-page-work-detail .sd-xs-bezel-container .sd-bezel
+	.sd-page-work-detail .sd-bezel-container .sd-bezel
 	{
 		opacity: 1 !important;
 		pointer-events: auto !important;
-		
+
 		&.sd-bezel-wall
 		{
 			margin-bottom: -6%;
@@ -1434,9 +1418,6 @@
 				background-image: none;
 				margin: 0;
 				padding: 0;
-
-				&.sd-xs-bezel-container	{ display: block;  }
-				&.sd-lg-bezel-container	{ display: none; }
 
 				.sd-bezel
 				{
