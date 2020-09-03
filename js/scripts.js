@@ -11923,7 +11923,7 @@ e=e._timeline}this._gc&&this._enabled(!0,!1),(this._totalTime!==a||0===this._dur
 
 	function lazyLoad() {
 
-		$('img.sd-lazy:visible, video.sd-lazy:visible').each(function () {
+		$('img.sd-lazy, video.sd-lazy').each(function () {
 
 			var $this = $(this);
 
@@ -11966,21 +11966,6 @@ e=e._timeline}this._gc&&this._enabled(!0,!1),(this._totalTime!==a||0===this._dur
 	let controller = new ScrollMagic.Controller();
 
 	lazyLoad();
-
-	// resize detection with 500ms debounce
-	var resizeTimer;
-
-	$(window).on('resize', function (e) {
-
-		clearTimeout(resizeTimer);
-
-		resizeTimer = setTimeout(function () {
-
-			lazyLoad();
-
-		}, 500);
-
-	});
 
 	$('.sd-page-simple-title').each(function () {
 

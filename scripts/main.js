@@ -2,7 +2,7 @@
 
 	function lazyLoad() {
 
-		$('img.sd-lazy:visible, video.sd-lazy:visible').each(function () {
+		$('img.sd-lazy, video.sd-lazy').each(function () {
 
 			var $this = $(this);
 
@@ -45,21 +45,6 @@
 	let controller = new ScrollMagic.Controller();
 
 	lazyLoad();
-
-	// resize detection with 500ms debounce
-	var resizeTimer;
-
-	$(window).on('resize', function (e) {
-
-		clearTimeout(resizeTimer);
-
-		resizeTimer = setTimeout(function () {
-
-			lazyLoad();
-
-		}, 500);
-
-	});
 
 	$('.sd-page-simple-title').each(function () {
 
