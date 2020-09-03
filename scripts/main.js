@@ -81,7 +81,6 @@
 		var $this = $(this);
 		var i = $this.attr('sd-page');
 
-
 		// animating stripe areas and stripes
 
 		const stripeTween = TweenMax.to('.sd-page-'+i+' .sd-stripe-area, .sd-page-'+i+' .sd-stripe-area .sd-stripe', 1, { className: '+=sd-animated', ease: Linear.easeNone });
@@ -152,7 +151,7 @@
 
 	// animate bezel container background image position on mobile
 
-	$('.sd-page-work-detail .sd-bezel-container').each(function () {
+	$('.sd-bezel-container').each(function () {
 
 		var $this = $(this);
 
@@ -162,7 +161,7 @@
 		({
 			triggerElement: this,
 			triggerHook: 1,
-			duration: '350%'
+			duration: '300%'
 		})
 		.setTween(tween)
 		.addTo(controller);
