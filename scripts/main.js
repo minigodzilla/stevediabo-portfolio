@@ -193,7 +193,7 @@
 
 	const page3scene2timeline = new TimelineLite();
 		page3scene2timeline
-			.fromTo('.sd-page-3 .sd-lg-bezel-container .sd-bezel-laptop', 0.2, { 
+			.fromTo('.sd-page-3 .sd-xs-bezel-container .sd-bezel-laptop', 0.2, { 
 				opacity: 1,
 				pointerEvents: 'auto',
 				immediateRender: false
@@ -202,7 +202,7 @@
 				opacity: 0,
 				pointerEvents: 'none'
 			})
-			.fromTo('.sd-page-3 .sd-lg-bezel-container .sd-bezel-phone', 0.2, { 
+			.fromTo('.sd-page-3 .sd-xs-bezel-container .sd-bezel-phone', 0.2, { 
 				opacity: 0,
 				pointerEvents: 'none'
 			},
@@ -234,7 +234,7 @@
 
 	const page5scene2timeline = new TimelineLite();
 		page5scene2timeline
-			.fromTo('.sd-page-5 .sd-lg-bezel-container .sd-bezel-laptop', 0.2, { 
+			.fromTo('.sd-page-5 .sd-xs-bezel-container .sd-bezel-laptop', 0.2, { 
 				opacity: 1,
 				pointerEvents: 'none',
 				immediateRender: false
@@ -243,7 +243,7 @@
 				opacity: 0,
 				pointerEvents: 'auto'
 			})
-			.fromTo('.sd-page-5 .sd-lg-bezel-container .sd-bezel-phone', 0.2, { 
+			.fromTo('.sd-page-5 .sd-xs-bezel-container .sd-bezel-phone', 0.2, { 
 				opacity: 0,
 				pointerEvents: 'none'
 			},
@@ -288,7 +288,7 @@
 
 	const page9scene2timeline = new TimelineLite();
 		page9scene2timeline
-			.fromTo('.sd-page-9 .sd-lg-bezel-container .sd-bezel-winphone', 0.2, { 
+			.fromTo('.sd-page-9 .sd-xs-bezel-container .sd-bezel-winphone', 0.2, { 
 				opacity: 1,
 				pointerEvents: 'none',
 				immediateRender: false
@@ -297,7 +297,7 @@
 				opacity: 0,
 				pointerEvents: 'auto'
 			})
-			.fromTo('.sd-page-9 .sd-lg-bezel-container .sd-bezel-surface', 0.2, { 
+			.fromTo('.sd-page-9 .sd-xs-bezel-container .sd-bezel-surface', 0.2, { 
 				opacity: 0,
 				pointerEvents: 'none'
 			},
