@@ -1,8 +1,4 @@
 section.sd-lazy,
-section.sd-lazy::before,
-section.sd-lazy::after,
-section.sd-lazy *,
-section.sd-lazy *::before,
-section.sd-lazy *::after {
+section.sd-lazy * {
     background-image: none !important;
 }

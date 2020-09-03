@@ -2,7 +2,7 @@
 
 	function lazyLoad() {
 
-		$('img.sd-lazy, video.sd-lazy').each(function () {
+		$('.sd-lazy').each(function () {
 
 			var $this = $(this);
 
@@ -14,28 +14,12 @@
 			})
 			.on("enter", function () {
 				$this.removeClass('sd-lazy');
-				$this.attr({
-					src:    $this.attr('data-src'),
-					srcset: $this.attr('data-srcset'),
-					poster: $this.attr('data-poster')
-				});
-				$this.removeAttr('data-src data-srcset data-poster');
-			})
-			.addTo(controller);
-		});
-
-		$('section.sd-lazy').each(function () {
-
-			var $this = $(this);
-
-			new ScrollMagic.Scene
-			({
-				triggerElement: this,
-				triggerHook: 1,
-				offset: -512
-			})
-			.on("enter", function () {
-				$this.removeClass('sd-lazy');
+					$this.attr({
+						src:    $this.attr('data-src'),
+						srcset: $this.attr('data-srcset'),
+						poster: $this.attr('data-poster')
+					});
+					$this.removeAttr('data-src data-srcset data-poster');
 			})
 			.addTo(controller);
 		});
