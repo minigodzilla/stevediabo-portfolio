@@ -1252,9 +1252,9 @@
 
 			.sd-box
 			{
-				width: 50%;
+				width: calc(50% - calc(env(safe-area-inset-right) / 2));
 				max-width: none;
-				margin: 0;
+				margin: 0 0 0 calc(env(safe-area-inset-left) / 2);
 				padding: 10vh 10vw 10vh 5vw;
 
 				.sd-duties
@@ -1300,6 +1300,7 @@
 
 				.sd-box
 				{
+					width: 50%;
 					margin-left: 50%;
 				}
 
