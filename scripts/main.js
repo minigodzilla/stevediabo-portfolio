@@ -138,7 +138,7 @@
 
 	// pg 1
 
-	const page1scene1tween = TweenMax.to('.sd-page-1, .sd-page-1 .sd-stripe-area .sd-stripe', 1, { className: '+=sd-animated', ease: Linear.easeNone });
+	const page1scene1tween = TweenMax.to('.sd-page-1, .sd-page-1 .sd-box, .sd-page-1 .sd-stripe-area .sd-stripe', 1, { className: '+=sd-animated', ease: Linear.easeNone });
 
 	const page1scene1 = new ScrollMagic.Scene
 	({
