@@ -14,12 +14,12 @@
 			})
 			.on("enter", function () {
 				$this.removeClass('sd-lazy');
-					$this.attr({
-						src:    $this.attr('data-src'),
-						srcset: $this.attr('data-srcset'),
-						poster: $this.attr('data-poster')
-					});
-					$this.removeAttr('data-src data-srcset data-poster');
+				$this.attr({
+					src:    $this.attr('data-src'),
+					srcset: $this.attr('data-srcset'),
+					poster: $this.attr('data-poster')
+				});
+				$this.removeAttr('data-src data-srcset data-poster');
 			})
 			.addTo(controller);
 		});
