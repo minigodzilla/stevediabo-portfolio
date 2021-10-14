@@ -2,26 +2,23 @@
   "name": "stevediabo-portfolio",
   "version": "1.0.0",
   "description": "Steve Diabo's portfolio webpage",
-  "main": "index.js",
+  "author": "Steve Diabo",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "build": "gulp build",
+    "prod": "cross-env NODE_ENV=prod gulp"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/minigodzilla/stevediabo-portfolio.git"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.10",
+    "browser-sync": "^2.27.5",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-terser": "^1.3.2"
-  },
-  "browserslist": [
-    "defaults"
-  ]
+  }
 }
