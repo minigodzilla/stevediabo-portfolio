@@ -508,29 +508,31 @@
 
 					.sd-screen-content
 					{
-                        width: (100 / 547.5 * 200%);						// height: (100 / 730 * 500%);
-						top: 50%;
+                        width: auto;
+                        height: (100 / 727 * 340%);
+                        top: 50%;
 						left: 50%;
-						transform: translate(-56.5%, -81.5%);
+						transform: translate(-50.75%,-81%);
 					}
 
 					.sd-overlay
 					{
-						transform: translate(-2%, -12%);
+						transform: translateY(-13%);
 					}
 				}
 
 				&.sd-bezel-laptop
 				{
+                    max-width: 50%;
 
 					.sd-screen-content
 					{
-						width: (100 / 700 * 560%);
+						width: (100 / 414 * 329.5%);
 						// height: (100 / 414 * 350%);
 						height: auto;
-						top: 50%;
+                        top: 50%;
 						left: 50%;
-						margin-top: (-100 / 730 * 12%);
+						margin-top: (-100 / 700 * 12%);
 						transform: translate(-50%,-50%);
 					}
 
