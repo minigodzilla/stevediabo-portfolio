@@ -503,6 +503,23 @@
 					transition: filter 200ms ease;
 				}
 
+				&.sd-bezel-arcade
+				{
+
+					.sd-screen-content
+					{
+                        width: (100 / 547.5 * 200%);						// height: (100 / 730 * 500%);
+						top: 50%;
+						left: 50%;
+						transform: translate(-56.5%, -81.5%);
+					}
+
+					.sd-overlay
+					{
+						transform: translate(-2%, -12%);
+					}
+				}
+
 				&.sd-bezel-laptop
 				{
 
