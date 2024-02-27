@@ -4,9 +4,9 @@
   "description": "Steve Diabo's portfolio webpage",
   "author": "Steve Diabo",
   "scripts": {
-    "start-dev": "node server-dev.js",
-    "start-prod": "forever start server-prod.js",
-    "dev": "nodemon server-dev.js & npm run scss",
+    "start": "node old-portfolio.js",
+    "start-prod": "forever start old-portfolio.js",
+    "dev": "nodemon old-portfolio.js & npm run scss",
     "scss": "sass --watch public/scss/style.scss public/css/style.css"
   },
   "repository": {
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "express": "^4.18.2",
+    "open": "^10.0.4",
     "sass": "^1.63.6"
   },
   "devDependencies": {
